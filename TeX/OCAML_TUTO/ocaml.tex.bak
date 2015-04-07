@@ -1,0 +1,99 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8,twocolumn]{ctexart}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{listings}
+\lstset{numbers=none,numberstyle=\tiny,basicstyle=\ttfamily
+\small,commentstyle=\color{gray},keywordstyle=\color{blue},
+showstringspaces=false,tabsize=4}
+\title{Ocaml手记}
+\author{杨志鹏}
+\date{}
+\begin{document}
+\maketitle
+\paragraph{}
+本文档使用PCL协议：\url{http://voyager2718.github.io/PCL.pdf}
+\\\\
+\section{环境}
+\begin{itemize}
+\item open **;; 打开**模块
+
+\item \#{}use "**";; 打开**文件
+
+\item ocamlc -c ** 在cmd/terminal里面, 将**文件编译
+
+\item 打开一个自定义模块的时候, 需要在cmd/terminal使用以下语法：ocaml ***.cmo（意思是：使用ocaml, 并同时引入***.cmo）
+
+(定义模块的文件名必须为小写, 但是open的时候必须首字母大写)
+
+\item OCaml变量首字母不能大写\\
+ 首字母大写的是只能是某type类型的元素
+
+\item let main () = .. ;; let \underline{ } = main();; 通过let \underline{ } = main()定义main是主函数.
+
+\item 先用ocamlc -c将程序编译出来, 然后用ocamlc -o ** *** ****将程序编译成可执行文件. （其中*为输出文件名, **为依赖文件, ***为源代码（.ml））
+
+\item 带参数运行的方法：./* arg1 arg2 （其中*为可执行文件, arg1, arg2为参数）
+\end{itemize}
+\section{基础知识}
+\begin{lstlisting}[language=C++]
+let (a,b) = (1,"2");;
+(* 将 a , b 的值设置成1和"2"(分别是 int 和 string ) *)
+
+let d = (1,2);;
+(* 将 d 的值设置成(1,2)( d 的类型是 int*int) *)
+
+fst d;;
+(* 将输出 d 中第一个“元素”, 即1 *)
+
+snd d;;
+(* 将输出 d 中第二个“元素”, 即2 *)
+
+for i = 10 to 0 do
+	print_int i;
+done;;
+(* 这个 for 循环的意思是 for ( int i = 10 ; i < 0 ; i++ ){}( C 系语言) *)
+
+for i = 10 to 0 do
+	print_int i;
+done;;
+(* 这个 for 循环的意思是 for ( int i = 10 ; i < 0 ; i++ ){}( C 系语言) *)
+
+type complex = { r: float; i: float};;
+(* 定义了一个复数的类型. 其中 r 和 i 均是float *)
+
+let c = {r= 1.; i= 2.};;
+(* 定义了一个 complex 类型的 c , 并将其值设成 1(float)和2(float) *)
+
+let add_c x y =
+{
+	r=x.r+.y.r;
+	i=x.i+.y.i;
+};;
+(* 定义了一个函数add_c, 将两个complex类型相加并返回 *)
+
+let add_c x y = match (x,y) with
+	({r=x1;i=y1},{r=x2;i=y2})
+->{r=x1+.x2;i=x1+.x2};;
+(* 上一个函数, 使用 match..with 的版本 *)
+
+let c = add_c c c;;
+(* 将 c 作为参数, 返回 2c *)
+
+let c2 = { c with r = 0.};;
+(* 定义了一个 complex 类型的 c1, r=0(float), 其它元素与 c 中的元素相同 *)
+
+Sys.argv;;
+(* 保存运行参数的 string 数组 *)
+\end{lstlisting}
+\section{Big\underline{ }int}
+\begin{lstlisting}[language=CAML]
+let a = 123;
+\end{lstlisting}
+朋友圈加权限专用图片\\\\\\\\
+Powered by \XeLaTeX{}
+\end{document} 

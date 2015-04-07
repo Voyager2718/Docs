@@ -1,0 +1,33 @@
+.while{
+	background-color: white;
+	color: black;
+}
+
+.black{
+	background-color: black;
+	color: white;
+}
+
+.nth{
+	background-color: yellow;
+	color: red;
+}
+
+table{
+	border: solid 1px black;
+}
+
+table tr{
+	border: solid 1px black;
+}
+
+table td{
+	width: 20px;
+	height:20px;
+	border: solid 1px black;
+	text-align: center;
+}
+
+::selection{
+	background-color:
+}

@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="WINRTSqlite1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WINRTSqlite1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnBulkInsert" Grid.Row="1" Content="Bulk Insert,Update,Delete"  Click="btnBulkInsert_Click"></Button>
+        <Button x:Name="btnRead"  Grid.Row="2" Content="Read"  Click="btnRead_Click"></Button>
+        <Button x:Name="btn_Encrypt" Grid.Row="3"   Content="Encrypt"  Click="btn_Encrypt_Click"/>
+        <Button x:Name="btn_Shrink" Grid.Row="4"  Content="Shrink" Click="btn_Shrink_Click"/>
+        <GridView  Name="gridview1" Grid.Row="5" >
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>詩詞文賦</title>
+    <link rel="stylesheet" type="text/css" href="resources/poetry.css" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/poetry/resources/poetry.css" />
+    <script>
+        function conf() {
+            var poem = document.getElementById('poem');
+            var pw = document.getElementById('pw');
+            var pn = document.getElementById('provenance');
+            if (poem.value != '' && pw.value != '' && pn.value != '') {
+                var tf = confirm('确认输入“' + poem.value + '”，（出自《' + pn.value + '》）？');
+                if (tf == false) {
+                    return false;
+                }
+            }
+            else {
+                alert('请填写所有空格');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="poe"></div>
+    <div id="mainblock">
+        <div id="title"></div>
+        <p>请在以下框中输入您认为优美的句子，并输入识别码.</p>
+        <div style="opacity: 0;">
+            <form action="poetry.php?action=query" method="post">
+                <input name="query" style="left: 0; top: 0; position: absolute;" type="text" disabled placeholder="SQL查询" />
+                <input style="left: 0; top: 100px; position: absolute;" type="password" name="qpassword" disabled placeholder="q密码" />
+                <input type="submit" style="left: 0; top: 55px; position: absolute;" disabled value="Query!" />
+            </form>
+        </div>
+        <form action="poetry.php" method="post" onsubmit="return conf()">
+            <input id="poem" style="width: 60%" type="text" name="poem" placeholder="诗句" />
+            <input id="provenance" style="width: 15%" type="text" name="provenance" placeholder="出处（自动添加书名号）" />
+            <input id="pw" style="width: 15%" type="password" name="password" placeholder="识别码" />
+            <br />
+            <br />
+            <input id="submit" type="submit" value="确认" />
+        </form>
+        <br />
+        <br />
+        <br />
+        <br />
+        <script src="poetry.php?action=show">
+        </script>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>

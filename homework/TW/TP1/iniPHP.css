@@ -1,0 +1,42 @@
+body{
+	font-family: sans-serif;
+}
+
+header h1, header h2{
+	text-align: center;
+}
+
+section{
+	background-color: lightyellow;
+	border: dashed 4pt darkgrey;
+	margin: 50px;
+	padding: 3pt;
+}
+
+span.nom{
+	color: darkred;
+	font-weight: bold;
+}
+
+section h2{
+	font-size: 13pt;
+	color: white;
+	background-color: darkred;
+	width: 35%;
+	border-radius: 7pt;
+	margin: 0;
+	margin-bottom: 10pt;
+	text-align: right;
+	padding: 3pt;
+}
+
+#multiplaction{
+	border-collapse: collapse;
+}
+
+table, td, th {
+	border: 1px solid black;
+	text-align: center;
+	height: 30px;
+	width: 30px;
+}

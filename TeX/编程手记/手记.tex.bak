@@ -1,0 +1,132 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage[left=1in, right=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[utf8]{inputenc}%a essayer
+\usepackage{listings}
+\lstset{numbers=none,numberstyle=\tiny,basicstyle=\ttfamily
+\small,commentstyle=\color{gray},keywordstyle=\color{blue},
+showstringspaces=false,tabsize=4}
+
+\title{编程手记}
+\author{杨志鹏}
+\begin{document}
+\maketitle
+\pagestyle{fancy}
+\tableofcontents
+\newpage
+\section{C/C++}
+\subsection{类}
+\begin{itemize}
+\item {\LARGE 虚函数}
+
+    在基类中声明虚函数的话，用基类的指针指向基类的对象的时候会调用基类的函数，指向派生类的对象的时候会调用派生类的函数。（一旦在基类中声明虚函数，派生类中相同的函数同时也成为虚函数）
+
+虚函数在基类中使用virtual定义，如：
+\begin{lstlisting}[language=C++]
+virtual void function(){...}
+\end{lstlisting}
+\item {\LARGE 纯虚函数}
+
+纯虚函数在基类中用virtual和=0定义，有纯虚函数的类都是抽象类，如：
+\begin{lstlisting}[language=C++]
+virtual void function()=0
+\end{lstlisting}
+\item {\LARGE 虚基类}
+
+设class A,B,C,D。A中有变量a，且B、C继承A，D继承B、C。
+
+如果有D d。此时若cout<<d.a<<endl;会出错。因为d.a可能是B继承的a，也可能是C继承的a。
+
+所以在B、C继承A的时候，要加virtual，声明B、C用虚基类的方式继承A（必须B、C同时声明）。那么当D继承B、C的时候，B和C只保留一份a的副本。也就是说d.A::a、d.B::a、d.C::a、d.a在内存中均指向一个地址。
+
+{\color{red}※类B、C、D中不能再定义a}
+
+虚基类使用如下方法定义：
+\begin{lstlisting}[language=C++]
+class A{
+public:
+    int a;
+};
+class B: virtual public A{
+    ...
+};
+class C: virtual public A{
+    ...
+};
+class D: public B, public C{
+    ...
+};
+\end{lstlisting}
+\end{itemize}
+\subsection{指针}
+\begin{itemize}
+\item {\LARGE 普通函数指针}
+
+使用如下方法定义一个指向返回值为int*，参数为int*的函数的指针：
+\begin{lstlisting}[language=C++]
+int (*(*pf)(int*));
+\end{lstlisting}
+\item {\LARGE 参数为函数指针且返回函数指针的函数}
+
+使用如下方法定义一个参数为函数指针且返回函数指针的函数：
+\begin{lstlisting}[language=C++]
+int* (*func2(int (*(*pf)(int*)),int *p))(int*){}
+\end{lstlisting}
+
+或（C++11）
+
+\begin{lstlisting}[language=C++]
+int* (*func2(int (*(*pf)(int*)),int *p))(int*){}
+\end{lstlisting}
+auto func3(int (*(*pf)(int*)),int *p) -> int *(*)(int*){}
+\item {\LARGE 使用typedef定义函数指针}
+
+使用如下方法定义一个指向返回值为int*，参数为int*的函数的指针：
+\begin{lstlisting}[language=C++]
+typedef int*(*PF)(int*);
+\end{lstlisting}
+\end{itemize}
+\subsection{vector(C++)}
+头文件：
+\begin{lstlisting}[language=C++]
+#include<vector>
+\end{lstlisting}
+\subsection{多线程}
+\section{C\#}
+\section{Java}
+\begin{itemize}
+\item 按位右移，并补0（下列例子结果是000000010，如果用>>，则是0000010）：
+
+\begin{lstlisting}[language=Java]
+8>>>2
+\end{lstlisting}
+\end{itemize}
+\section{\LaTeX{}}
+\begin{itemize}
+\item 定义字体颜色：
+
+\begin{lstlisting}[language=TeX]
+{\color{red/blue/black..} TEXT}
+\end{lstlisting}
+
+或
+
+\begin{lstlisting}[language=TeX]
+{\color[rgb]{0.0/0.0/0.0} TEXT}
+\end{lstlisting}
+\end{itemize}
+\section{PHP}
+\section{MySQL}
+\section{Javascript}
+\section{Python}
+\section{Ocaml}
+\end{document}

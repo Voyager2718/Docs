@@ -1,0 +1,135 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\author{杨志鹏}
+\title{PHP/SQL学习日志}
+\begin{document}
+\noindent
+\maketitle
+\pagenumbering{arabic}
+\pagestyle{empty}
+\tableofcontents
+\pagestyle{fancy}
+\newpage{}
+\section{SQL语法}
+\subsection{SELECT}
+\noindent
+SELECT\ <列>\ FROM\ <表>
+
+在<表>中选择<列>
+\\
+SELECT\ <列1>,<列2>\ FROM <表>
+
+在<表>中选择<列1><列2>
+\\
+SELECT\ *\ FROM\ <表>
+
+在<表>中选择所有对象
+\\
+SELECT\ <列>\ FROM\ <表>\ WHERE\ <列><运算符><值>
+
+在<表>的<列>中选择所有符合条件的行
+
+//如:SELECT\ name\ FROM\ Person\ WHERE\ name='张三'
+\\\\
+\noindent
+可用的运算符如下:
+
+\begin{itemize}
+\item =\ 等于
+\item <>\ 不等于
+\item >\ 大于
+\item <\ 小于
+\item >=\ 大于等于
+\item <=\ 小于等于
+\item BETWEEN\ 在范围之内
+\item LIKE\ 搜索某种模式
+\end{itemize}
+SELECT\ *\ FROM\ <表>\ WHERE\ <列1><运算符><值1>\ AND(或OR)\ <列2><运算符><值2>
+
+在<表>中选择满足<值1>和<值2>的行(满足<值1>或<值2>的行)
+\\
+SELECT\ DISTINCT\ <列>\ FROM\ <表>
+
+在<表>中选择<列>并忽略所有相同的数值
+\\
+SELECT\ <列>\ FROM\ <表>\ ORDER\ BY\ <列>
+
+在<表>中选择<列>并按照<列>顺序排序
+\\
+SELECT\ <列1>,<列2>\ FROM\ <表>\ ORDER\ BY\ <列1>\ DESC,<列2>\ ASC
+
+在<表>中选择<列1><列2>并按照先<列1>顺序后<列2>倒序排序
+\subsection{INSERT}
+\noindent
+INSERT\ INTO\ <表>\ VALUES\ (<值1>,<值2>,..)
+
+在<表>中插入新行并顺序填充数据
+\\
+INSERT\ INTO\ <表>\ (<列1>,<列3>,..)\ VALUES\ (<值1>,<值2>,..)
+
+在<表>中插入新行并给<列1>赋<值1>,<列3>赋<值2>
+\subsection{UPDATE}
+\noindent
+UPDATE\ <表>\ SET\ <列>=<值1>\ WHERE\ <列>=<值2>
+
+在<表>中找到<列>等于<值2>的行并将<列>的数据更新为<值1>
+\\
+UPDATE\ <表>\ SET\ <列1>=<值1>,<列2>=<值2>\ WHERE\ <列3>=<值3>
+
+在<表>中找到<列3>等于<值3>的行并将<列1><列2>的数据分别更新为<值1><值2>
+\subsection{DELETE}
+\noindent
+DELETE\ FROM\ <表>\ WHERE\ <列>=<值>
+
+在<表>中找到<列>等于<值>的行并删除改行
+\\
+DELETE\ *\ FROM\ <表>
+
+在<表>中删除所有数据
+
+\subsection{CREATE}
+\noindent
+CREATE\ DATABASE\ <数据库名>
+\section{PHP×SQL}
+\subsection{连接数据库}
+\noindent
+连接数据库以及错误处理：
+\begin{lstlisting}[language=PHP]
+<?php
+$conn=mysql_connect();
+if(!$conn){
+    die('Couldn\'t connect to the database. '.mysql_error());
+}
+else{
+}
+?>
+\end{lstlisting}
+关闭数据库连接:
+\begin{lstlisting}[language=PHP]
+<?php
+    mysql_close($conn);
+?>
+\end{lstlisting}
+
+\subsection{创建数据库}
+连接数据库后，创建新数据库:
+\begin{lstlisting}[language=PHP]
+<?php
+if (mysql_query("CREATE DATABASE my_db",$con))
+    {
+    echo "Database created";
+    }
+else
+    {
+    echo "Error creating database: " . mysql_error();
+    }
+?>
+\end{lstlisting}
+
+\end{document} 

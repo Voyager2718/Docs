@@ -1,0 +1,27 @@
+\contentsline {paragraph}{}{3}{section*.2}
+\contentsline {section}{\numberline {1}心情}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}喜欢的事情}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}喜欢的感觉}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}讨厌的事情（排名分先后）}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}身体上的怪癖}{4}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}精神上的怪癖}{4}{subsection.1.5}
+\contentsline {section}{\numberline {2}价值观、人生观、世界观}{4}{section.2}
+\contentsline {section}{\numberline {3}梦想}{6}{section.3}
+\contentsline {section}{\numberline {4}行为}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}兴趣}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}喜欢的行为}{6}{subsection.4.2}
+\contentsline {section}{\numberline {5}信仰}{7}{section.5}
+\contentsline {section}{\numberline {6}派系}{7}{section.6}
+\contentsline {section}{\numberline {7}最喜欢的…}{7}{section.7}
+\contentsline {subsection}{\numberline {7.1}帝王}{7}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}食物}{7}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}颜色}{8}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}虚构人物}{8}{subsection.7.4}
+\contentsline {section}{\numberline {8}优点}{8}{section.8}
+\contentsline {section}{\numberline {9}缺点}{8}{section.9}
+\contentsline {section}{\numberline {10}目前烦恼}{9}{section.10}
+\contentsline {section}{\numberline {11}希望成为…}{9}{section.11}
+\contentsline {section}{\numberline {12}喜欢的类型（男）}{9}{section.12}
+\contentsline {section}{\numberline {13}喜欢的类型（女）}{10}{section.13}
+\contentsline {paragraph}{}{11}{section*.3}
+\contentsline {section}{\numberline {14}用词标准}{11}{section.14}

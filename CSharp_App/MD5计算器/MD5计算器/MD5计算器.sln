@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5计算器", "MD5计算器\MD5计算器.csproj", "{A01A4B0F-4795-4E4E-8CE8-65ADB66B9B6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A01A4B0F-4795-4E4E-8CE8-65ADB66B9B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01A4B0F-4795-4E4E-8CE8-65ADB66B9B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01A4B0F-4795-4E4E-8CE8-65ADB66B9B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01A4B0F-4795-4E4E-8CE8-65ADB66B9B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

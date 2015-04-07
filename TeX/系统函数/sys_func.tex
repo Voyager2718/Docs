@@ -1,0 +1,84 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{color}
+\title{系统参数}
+\author{杨志鹏}
+\begin{document}
+\maketitle
+\pagestyle{fancy}
+\tableofcontents{}
+\section{系统变量类型}
+\begin{itemize}
+\item \textcolor{blue}{string}：字符串
+\item \textcolor{blue}{int}：整型
+\item \textcolor{blue}{float}：浮点数
+\item \textcolor{blue}{bool}：布尔量
+\item \textcolor{blue}{sec}：秒（格式：$*s$，$*\in[-128,127]$）（8bits）
+\item \textcolor{blue}{min}：分钟（格式：$*i$，$*\in[-32768,32767]$）（16bits）
+\item \textcolor{blue}{hour}：小时（格式：$*h$，$*\in[-32768,32767]$）（16bits）
+\item \textcolor{blue}{day}：天（格式：$*d$，$*\in[-32768,32767]$）（16bits）
+\item \textcolor{blue}{month}：月（格式：$*m$，$*\in[-32768,32767]$）（16bits）
+\item \textcolor{blue}{year}：年（格式：$*y$，$*\in[-32768,32767]$）（16bits）
+\item \textcolor{blue}{now}：系统即时时间。
+\item \textcolor{blue}{user}：用于管理用户的一个类。
+\end{itemize}
+\section{用户组}
+\noindent
+管理员
+\begin{itemize}
+\item 系统：最高权限用户。（\textcolor[rgb]{0.9,0.6,0}{class 0}）
+\item 受信任的伴侣：最高权限用户。（\textcolor[rgb]{0.9,0.6,0}{class 0}）
+\item 女朋友/伴侣：特权用户。（\textcolor[rgb]{0.9,0.6,0}{class 1}）
+\item 受信任的亲属：特权用户。（\textcolor[rgb]{0.9,0.6,0}{class 1}）
+\item 受信任的好朋友：高级用户。（\textcolor[rgb]{0.9,0.6,0}{class 2}）
+\item 好朋友：中高级用户。（\textcolor[rgb]{0.9,0.6,0}{class 3}）
+\end{itemize}
+普通用户
+\begin{itemize}
+\item 朋友：普通用户。（\textcolor[rgb]{0.9,0.6,0}{class 5}）
+\item 陌生人：不受信任用户。（\textcolor[rgb]{0.9,0.6,0}{class 6}）
+\end{itemize}
+受限用户
+\begin{itemize}
+\item 受限：可能会造成危险用户。（\textcolor[rgb]{0.9,0.6,0}{class 8}）
+\item 危险：危险用户。（\textcolor[rgb]{0.9,0.6,0}{class 9}）
+\end{itemize}
+\section{系统函数}
+\subsection{普通系统函数}
+\begin{itemize}
+\item \textcolor{blue}{string} yzp\underline{ }query\underline{ }doing\underline{ }what(\textcolor{blue}{now}/\textcolor{blue}{hour});\\
+接受一个\textcolor{blue}{now}或\textcolor{blue}{hour}（只接受小于等于24h的值）型参数。\\
+\textcolor{blue}{now}/\textcolor{blue}{hour}->某段时间。\\
+返回某段时间内，即将做的事情。
+\end{itemize}
+\subsection{高级系统函数}
+\begin{itemize}
+\item \textcolor{blue}{bool} yzp\underline{ }delete\underline{ }user(\textcolor{blue}{user});\\
+接受一个\textcolor{blue}{user}型参数。\\
+\textcolor{blue}{user}->需要删除的用户。\\
+允许高级别管理员从系统中删除某用户：除\textcolor[rgb]{0.9,0.6,0}{class 3}以外的管理员可以删除比自己低2级或以上用户。返回\textcolor{blue}{true}或\textcolor{blue}{false}。
+\item \textcolor{blue}{bool} yzp\underline{ }alter\underline{ }friend\underline{ }level(\textcolor{blue}{user},\textcolor{blue}{int});\\
+接受一个\textcolor{blue}{user}型和一个\textcolor{blue}{int}型参数。\\
+\textcolor{blue}{user}->需要修改等级的用户。\\
+\textcolor{blue}{int}->修改后等级（只能比原来等级低）。\\
+允许高级别管理员从系统中修改对某用户的亲密度。返回\textcolor{blue}{true}或\textcolor{blue}{false}。
+\item \textcolor{blue}{int} yzp\underline{ }query\underline{ }user\underline{ }level(\textcolor{blue}{user});\\
+接受一个\textcolor{blue}{user}型参数。\\
+\textcolor{blue}{user}->需要查询的用户。\\
+允许管理员查询与自己一样或比自己等级低的用户的用户组。返回参数中用户的等级。
+\item \textcolor{blue}{void} yzp\underline{ }activate(\textcolor{blue}{void});\\
+没有参数。\\
+允许管理员激活焦点。无返回值。
+\item \textcolor{blue}{void} yzp\underline{ }focus(\textcolor{blue}{void});\\
+没有参数。\\
+允许管理员激活焦点。无返回值。（与yzp\underline{ }activate()功能相同）
+\end{itemize}
+\end{document} 

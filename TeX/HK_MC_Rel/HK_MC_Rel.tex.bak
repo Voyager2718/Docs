@@ -1,0 +1,14 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\title{借条}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}

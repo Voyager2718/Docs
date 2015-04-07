@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++GUI", "C++GUI\C++GUI.vcxproj", "{9D2E0FAA-D6DE-4104-B52B-B581DA1A161E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D2E0FAA-D6DE-4104-B52B-B581DA1A161E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D2E0FAA-D6DE-4104-B52B-B581DA1A161E}.Debug|Win32.Build.0 = Debug|Win32
+		{9D2E0FAA-D6DE-4104-B52B-B581DA1A161E}.Release|Win32.ActiveCfg = Release|Win32
+		{9D2E0FAA-D6DE-4104-B52B-B581DA1A161E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

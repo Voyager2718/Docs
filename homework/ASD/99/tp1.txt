@@ -1,0 +1,28 @@
+ZINGOUCAI Emilie
+YANG Zhipeng
+
+Question 1: Voir le fichier test_tp1.ml
+
+Question 2 
+Pour etudier la complexité de cet algorithme, on utilise un compteur pour compter le nombre de comparaison entre les marqueurs et les marqueurs positifs dans la boucle "for".
+
+Question 3: 
+Il n'existe pas de pire des cas car on est dans une boucle "for"
+
+Question 4: 
+c1(m,p) = m * p 
+
+Question 5: 
+Voir le fichier test_tp1.ml
+
+Question 6: 
+Le pire des cas est losqu'il y a un petit nombre de marqueurs, et de marqueurs positifs, car il trie d'abord les marqueurs positifs puis il fait la comparaison entre les marqueurs et les marqueurs positifs, il est donc mieux d'utiliser la premiere méthode car il fait plus d'operation inutilement.
+c2(m,p)=
+
+Question 7:
+Voir le fichier test_tp1.ml
+
+Question 8: 
+Le pire des cas est lorsqu'il y a le meme nombre de marqueurs et de marqueurs positifs.
+Car il trie les marqueurs positifs et les marqueurs puis compare les deux. 
+c3(m,p) = 

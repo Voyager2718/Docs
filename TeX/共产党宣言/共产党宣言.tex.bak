@@ -1,0 +1,18 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{color}
+\title{简历}
+\author{整理：杨志鹏}
+\begin{document}
+\maketitle
+\pagestyle{fancy}
+\tableofcontents{}
+\newpage

@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.birth2014.MainActivity" >
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#40000000"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:text="@string/title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp" />
+
+    <!-- 吹蜡烛按钮 -->
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick_Event"
+        android:text="@string/start" />
+
+    <!-- 蛋糕图层 -->
+
+    <!-- 火焰s -->
+	<!-- 蛋糕 -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/cake"
+        android:gravity="bottom"
+        android:src="@drawable/birthdaycake" />
+
+    <ImageView
+        android:id="@+id/ImageView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageView0"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="78dp"
+        android:layout_toRightOf="@+id/button1"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire0" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_marginRight="27dp"
+        android:layout_toLeftOf="@+id/button1"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire2" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginRight="22dp"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire1" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView7"
+        android:layout_toRightOf="@+id/imageView11"
+        android:layout_marginLeft="-10dp"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire0" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView6"
+        android:layout_marginTop="-15dp"
+        android:layout_toLeftOf="@+id/ImageView0"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire7" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView11"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginLeft="14dp"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire6" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView6"
+        android:layout_alignLeft="@+id/imageView7"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire8" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView10"
+        android:layout_toLeftOf="@+id/imageView9"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView0"
+        android:layout_alignRight="@+id/textView0"
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="193dp"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire4"
+        tools:ignore="UnknownIdInLayout" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView12"
+        android:layout_below="@+id/imageView5"
+        android:layout_marginTop="-10dp"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire5" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView8"
+        android:layout_toLeftOf="@+id/imageView11"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire3" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView8"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:contentDescription="@string/fire"
+        android:src="@drawable/fire3" />
+
+</RelativeLayout>

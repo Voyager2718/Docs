@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Birth2014</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="title">2014生日快乐</string>
+    <string name="start">吹蜡烛</string>
+    <string name="fire">火光</string>
+    <string name="cake">蛋糕</string>
+
+</resources>

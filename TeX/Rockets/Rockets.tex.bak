@@ -1,0 +1,86 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8,twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{listings}
+\lstset{numbers=none,numberstyle=\tiny,basicstyle=\ttfamily \small,commentstyle=\color{gray},keywordstyle=\color{blue},showstringspaces=false,tabsize=4}
+
+\title{\textbf{Rockets}\\\small{The most incredible artificiality in the world!}}
+\author{YANG Zhipeng}
+\date{}
+\begin{document}
+\maketitle
+\section{Momentum Theorem}
+In our world, we have an universal theorem, which named the Momentum Theorem.
+
+According to this theorem, when someone push the other one, he will also receive a force from whom he pushed.
+
+Futhermore, we have this formula to explain the momentum.
+
+\begin{align}
+m_{1}v_{1}&=m_{2}v_{2}\\
+Ft&=mv
+\end{align}
+When the rocket engine thrust. There will be a force pushing the rockets go up.
+
+For example, if a rocket thrust 100kg fuel per second with a speed of $1000m/s$, according to the formula mentioned above, we have:
+\begin{align}
+F&=\frac{mv}{t}\\
+F&=\frac{100kg\times1000m/s}{1s}\\
+F&=100000N
+\end{align}
+So we can send a rocket to space by using these princeples.
+\section{Orbits}
+But, to pin a rocket to the space, we need to consider a little more.
+
+It's the orbits.
+
+Why can a rocket go around the earth, but not falling down? The answer is both simple and complex. It's the speed.
+
+It's the time for formulas.
+\begin{align}
+F&=G\frac{m_{1}m_{2}}{r^{2}}\\
+F&=m_{2}\frac{v^{2}}{r}
+\end{align}
+G is Gravitational Constant, which is $6.67\times10^{-11}$. $m_{1}$ is the weight of our earth. $m_{2}$ is the weight of the satellite. And $r$ is the radius of our earth.
+
+So, after a little calculation, we have:
+\begin{align}
+F=G\frac{m_{1}m_{2}}{r^{2}}&=m_{2}\frac{v^{2}}{r}\\
+G\frac{m_{1}}{r}&=v^{2}\\
+v&=\sqrt{G\frac{m_{1}}{r}}\\
+v&\approx7907.13m/s
+\end{align}
+It means, if a satellite take off with a speed of 7907.13m/s, it can automatically go around the earth. $7907.13m/s$ is also the first cosmic velocity.
+\section{Escape Velocity}
+We have 3 cosmic velocities, which named 1st cosmic velocity, 2nd cosmic velocity, 3rd cosmic velocity.
+
+A satellite can lift-off with the speed of the 1st cosmic velocity.
+
+If a satellite wants to leave our earth, it has to have the 2nd cosmic velocity which is $11.2km/s$.
+
+If it wants to go out of our solar system, it is going to have the 3rd cosmic velocity which is $16.7km/s$.
+\section{Age Of Discovery}
+In my opinion, we are going to have the new Age of Discovery in decades.
+
+Just like hundreds of years ago, we invented a ships which can travel all over the world. So we have discovered the world.
+
+Whatmore in noadays, we have a lot of rockets, and we have invented a lot of technologies that will help us travelling around our solar system.
+
+So, in my view point, we are going to have a new Age of Discovery.
+\section{References}
+\noindent
+\url{http://en.wikipedia.org/wiki/Momentum}\\
+\url{http://en.wikipedia.org/wiki/Saturn_V}\\
+\url{http://en.wikipedia.org/wiki/Escape_velocity}\\
+\url{http://www.pep.com.cn/}
+\paragraph{}
+\rightline{Powered By \LaTeX{}}
+\end{document} 

@@ -1,0 +1,17 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\title{常用法律及其案例}
+\author{杨志鹏}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{《刑法》}
+
+\end{document} 

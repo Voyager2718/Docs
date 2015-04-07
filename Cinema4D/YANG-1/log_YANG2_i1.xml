@@ -1,0 +1,323 @@
+<batchrender>
+  <environmentinfo>
+    <machineinfo>
+      <machinename>YANG-PC</machinename>
+      <username>YANG</username>
+      <processortype>GenuineIntel, stepping 7, model 10, instruction family 6</processortype>
+      <processorname> Intel Core i5-2410M CPU </processorname>
+      <processornumber>4</processornumber>
+      <ostype>WINDOWS 64 BIT</ostype>
+      <osversion>Windows 7, 64 Bit, Ultimate Edition Service Pack 1 (build 7601)</osversion>
+      <oglvendorname>Intel</oglvendorname>
+      <oglrendername>Intel(R) HD Graphics Family</oglrendername>
+      <oglversion>3.1.0 - Build 8.15.10.2538</oglversion>
+    </machineinfo>
+    <c4dinfo>
+      <c4dversion>14042</c4dversion>
+      <c4dplugins>addons alembic allplan ArchiCADExchange bitmapfilter bp2lw bp2max bp2maya bp2xsi browser characteranim cameramapper collada14 collada15 compositing dwg dwgobjects fbx expressiontag graphviewcore modeling motioncam newman objects onlinehelp onlineupdater OpenEXR python relaxuv sculpt shader sla spacemouse updatemerge xtensions advancedrender cineman sky walkthrough dynamics2 iges OkinoComClient hair ca2 clothilde mocca motiongraphics settings.cof sketch thinkingparticles tpoperators </c4dplugins>
+    </c4dinfo>
+  </environmentinfo>
+  <fileinfo>
+    <filename>Yang-1.c4d</filename>
+    <filepath>C:\Users\YANG\Desktop\Cinema 4D\YANG-1</filepath>
+    <renderdatainfo>
+      <rendersettings>&#x6211;&#x7684;&#x6E32;&#x67D3;&#x8BBE;&#x7F6E;</rendersettings>
+      <camera>&#x6444;&#x50CF;&#x673A;</camera>
+      <width>800</width>
+      <height>600</height>
+      <filmaspect>1.333</filmaspect>
+      <pixelaspect>1</pixelaspect>
+      <fps>30</fps>
+      <from>0</from>
+      <to>270</to>
+      <steps>1</steps>
+      <saveinfo>
+        <imagepath>C:\Users\YANG\Desktop\Cinema 4D\YANG-1</imagepath>
+        <imagedepth>8</imagedepth>
+        <imageformat>AVI &#x5F71;&#x7247;</imageformat>
+      </saveinfo>
+      <videopost>
+        <effect id="1001007" name="&#x5BF9;&#x8C61;&#x8F89;&#x5149;" />
+      </videopost>
+    </renderdatainfo>
+  </fileinfo>
+  <renderinfo>
+    <imageinfo id="0" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="1" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="2" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="3" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="4" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="5" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="6" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="7" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="8" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="9" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="10" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="11" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="12" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="13" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="14" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="15" time="00:00:00 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="16" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="17" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="18" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="19" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="20" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="21" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="22" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="23" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="24" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="25" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="26" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="27" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="28" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="29" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="30" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="31" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="32" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="33" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="34" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="35" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="36" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="37" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="38" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="39" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="40" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="41" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="42" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="43" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="44" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="45" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="46" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="47" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="48" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="49" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="50" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="51" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="52" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="53" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="54" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="55" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="56" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="57" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="58" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="59" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="60" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="61" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="62" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="63" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="64" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="65" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="66" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="67" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="68" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="69" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="70" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="71" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="72" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="73" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="74" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="75" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="76" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="77" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="78" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="79" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="80" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="81" time="00:00:03 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="82" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="83" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="84" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="85" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="86" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="87" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="88" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="89" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="90" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="91" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="92" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="93" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="94" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="95" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="96" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="97" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="98" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="99" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="100" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="101" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="102" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="103" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="104" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="105" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="106" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="107" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="108" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="109" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="110" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="111" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="112" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="113" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="114" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="115" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="116" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="117" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="118" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="119" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="120" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="121" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="122" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="123" time="00:00:04 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="124" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="125" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="126" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="127" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="128" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="129" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="130" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="131" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="132" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="133" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="134" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="135" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="136" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="137" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="138" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="139" time="00:00:05 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="140" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="141" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="142" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="143" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="144" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="145" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="146" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="147" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="148" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="149" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="150" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="151" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="152" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="153" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="154" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="155" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="156" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="157" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="158" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="159" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="160" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="161" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="162" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="163" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="164" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="165" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="166" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="167" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="168" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="169" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="170" time="00:00:06 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="171" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="172" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="173" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="174" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="175" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="176" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="177" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="178" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="179" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="180" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="181" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="182" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="183" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="184" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="185" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="186" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="187" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="188" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="189" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="190" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="191" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="192" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="193" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="194" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="195" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="196" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="197" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="198" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="199" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="200" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="201" time="00:00:07 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="202" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="203" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="204" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="205" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="206" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="207" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="208" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="209" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="210" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="211" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="212" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="213" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="214" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="215" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="216" time="00:00:09 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="217" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="218" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="219" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="220" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="221" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="222" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="223" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="224" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="225" time="00:00:08 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="226" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="227" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="228" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="229" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="230" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="231" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="232" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="233" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="234" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="235" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="236" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="237" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="238" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="239" time="00:00:12 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="240" time="00:00:13 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="241" time="00:00:13 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="242" time="00:00:13 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="243" time="00:00:13 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="244" time="00:00:11 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="245" time="00:00:12 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="246" time="00:00:10 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="247" time="00:00:02 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="248" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="249" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="250" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="251" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="252" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="253" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="254" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="255" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="256" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="257" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="258" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="259" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="260" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="261" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="262" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="263" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="264" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="265" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="266" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="267" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="268" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="269" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+    <imageinfo id="270" time="00:00:01 " name="C:\Users\YANG\Desktop\Cinema 4D\YANG-1\YANG2_i1.avi" />
+  </renderinfo>
+  <batchinfo>
+    <added>2014/2/11, 22:56:29</added>
+    <started>2014/2/11, 23:20:22</started>
+    <rendertime>00:28:20 </rendertime>
+    <result>&#x5DF2;&#x5B8C;&#x6210;</result>
+  </batchinfo>
+</batchrender>

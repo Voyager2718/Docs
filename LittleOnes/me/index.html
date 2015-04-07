@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>"我的好友印象墙，写下我在你心中的印象</title>
+    <meta name="description" content="我的好友印象墙，写下我在你心中的印象" />
+    <meta name="keywords" content="我的好友印象墙，写下我在你心中的印象" />
+    <script src="http://voyager2718.github.io/CLT/resources/general.js">
+    </script>
+</head>
+<body style="background-color: rgb(205, 234, 255); text-align: center;" onload="document.getElementById('navi').value = getBrowserVersion()">
+    <h1 style="background-color: rgb(255, 216, 0); font-size: 100px;">杨志鹏=￣ω￣=</h1>
+    <h2 style="background-color: rgb(0, 255, 144); font-size: 100px;">我在你眼中是什么样子？</h2>
+    <div>
+        <form action="upload.php" method="post">
+            <input name="navi" id="navi" type="text" disabled style="position: absolute; left: 0px; top: 0px; opacity: 0;" />
+            <input type="text" style="height: 100px; width: 50%; font-size: 100px;" placeholder="对我的印象" name="desc" />
+            <input type="text" style="height: 100px; width: 20%; font-size: 100px;" placeholder="名字" name="name" />
+            <input type="submit" style="height: 100px; width: 20%; font-size: 100px; line-height: 100px;" value="提交" onclick="document.getElementById('navi').disabled = false;" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\title{GoDaddy}
+\author{YANG Zhipeng}
+\begin{document}
+\maketitle
+\section{Nameserver}
+\noindent
+NS10.DOMAINCONTROL.COM NS12.DOMAINCONTROL.COM\\
+NS14.DOMAINCONTROL.COM NS19.DOMAINCONTROL.COM\\
+NS21.DOMAINCONTROL.COM NS22.DOMAINCONTROL.COM\\
+NS29.DOMAINCONTROL.COM NS46.DOMAINCONTROL.COM\\
+NS48.DOMAINCONTROL.COM NS56.DOMAINCONTROL.COM\\
+NS66.DOMAINCONTROL.COM NS67.DOMAINCONTROL.COM\\
+NS77.DOMAINCONTROL.COM
+\section{Ping Test}
+\noindent
+changletech.com/t.html
+\section{Nameserver}
+\noindent
+changletech.com/t2.html
+\section{Address}
+\noindent
+150 RUE DE LA GARE CROIX
+\paragraph{}
+Powered by \XeLaTeX{}
+\end{document} 

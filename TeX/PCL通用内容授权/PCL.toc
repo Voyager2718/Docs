@@ -1,0 +1,14 @@
+\contentsline {paragraph}{}{2}{section*.2}
+\contentsline {section}{\numberline {1}导言}{2}{section.1}
+\contentsline {section}{\numberline {2}定义}{2}{section.2}
+\contentsline {section}{\numberline {3}非商业用户的许可}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}使用及传播}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}修改}{3}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}计算机程序或源代码}{3}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}文章、书籍、图画等}{3}{subsubsection.3.2.2}
+\contentsline {subsection}{\numberline {3.3}用户性质转变}{3}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}许可}{4}{subsection.3.4}
+\contentsline {section}{\numberline {4}商业用户的使用许可}{4}{section.4}
+\contentsline {section}{\numberline {5}终止授权}{4}{section.5}
+\contentsline {section}{\numberline {6}专利权}{4}{section.6}
+\contentsline {section}{\numberline {7}免责声明}{4}{section.7}
