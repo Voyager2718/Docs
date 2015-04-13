@@ -27,9 +27,6 @@
     <ClCompile Include="..\monmalloc\monmalloc.c">
       <Filter>资源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TP5.main">
-      <Filter>资源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\monmalloc\monmalloc.h">

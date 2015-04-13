@@ -1,0 +1,12 @@
+package trie;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
+
+public class Trie {
+	private Vertex root;
+	protected class Vertex{
+		
+	}
+}

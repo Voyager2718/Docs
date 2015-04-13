@@ -1,0 +1,17 @@
+package trie;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
+
+public class Trie {
+	private int SIZE;
+	private Trie root;
+
+	private class TrieNode {
+		private int num;
+		private Trie[] son;
+		private boolean isEnd;
+		private char val;
+	}
+}

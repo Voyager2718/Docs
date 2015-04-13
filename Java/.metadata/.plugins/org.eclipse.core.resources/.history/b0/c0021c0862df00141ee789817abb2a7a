@@ -1,0 +1,13 @@
+package trie;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Trie {
+	private int SIZE;
+	private Trie root;
+
+	private class TrieNode{
+		private 
+	}
+}

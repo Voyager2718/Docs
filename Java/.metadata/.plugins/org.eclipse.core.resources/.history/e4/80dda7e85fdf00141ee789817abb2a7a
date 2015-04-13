@@ -1,0 +1,23 @@
+package trie;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Trie {
+	private List<Trie> l = new ArrayList<Trie>();
+	private char value;
+
+	public Trie(char value) {
+		this.value = value;
+	}
+
+	public void addNode(Trie node) {
+		this.l.add(node);
+	}
+
+	public char getValue(Trie node) {
+		return node.value;
+	}
+	
+	
+}

@@ -68,7 +68,6 @@
     <ClCompile Include="..\monmalloc\monmalloc_afaire.c" />
     <ClCompile Include="..\monmalloc\monmalloc_essai.c" />
     <ClCompile Include="..\monmalloc\monmalloc_infra.c" />
-    <ClCompile Include="TP5.main" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\monmalloc\monmalloc.h" />

@@ -1,39 +1,50 @@
-#include<iostream>
+#include <iostream>
+#include <bitset>
+#include <typeinfo>
+#include <cstdio>
+//
 using namespace std;
+//template<typename T, typename P, T P:: *s>
+//struct H
+//{
+//
+//};
+//
+//struct AA
+//{
+//	int i, j;
+//	double d;
+//	char c;
+//};
+//
+//template<int a>struct Z
+//{
+//	Z(){
+//		cout << a << endl;
+//	}
+//};
+//
+//int main()
+//{
+//	typedef  int const AA::*PI;
+//	const PI pi = &AA::i;
+//	cout << typeid(pi).name() << endl;
+//	cout << typeid(&AA::i).name() << endl;
+//
+//	H<int, AA, &AA::i> h1; /// ok
+//	//H<int, AA, pi> h2; /// compile error
+//
+//	Z<10> z;
+//	system("pause");
+//	return 0;
+//}
+
+
 int main(void){
-	int a[] = { 73, 50, 128, 170, 87, 108, 130, 74, 88, 139 };
-	int b[] = { 30, 20, 60, 80, 40, 50, 60, 30, 40, 60 };
-	double s_a = 0, moy_a = 0, s_b = 0, moy_b = 0;
-
-	for (int i = 0; i < 10; i++){
-		moy_a += a[i];
-	}
-	moy_a /= 10;
-	for (int i = 0; i < 10; i++){
-		s_a += (a[i] - moy_a)*(a[i] - moy_a);
-	}
-
-	for (int i = 0; i < 10; i++){
-		moy_b += b[i];
-	}
-	moy_b /= 10;
-	for (int i = 0; i < 10; i++){
-		s_b += (b[i] - moy_b)*(b[i] - moy_b);
-	}
-
-	double cv = 0;
-	for (int i = 0; i < 10; i++){
-		cv += (a[i] - moy_a)*(b[i] - moy_b);
-	}
-
-	cout << "Moy x:" << moy_b << endl;
-	cout << "Ecart x:" << sqrt(s_b / 10) << endl;
-	cout << "Vari x:" << (s_b / 10) << endl;
-	cout << endl;
-	cout << "Moy y:" << moy_a << endl;
-	cout << "Ecart y:" << sqrt(s_a / 10) << endl;
-	cout << "Vari y:" << (s_a / 10) << endl;
-	cout << endl;
-	cout << "Covar:" << cv / 10 << endl;
+	int a = 10, b = 20, *pa = &a;
 	system("pause");
+	int *pb = &b;
+	cout << (int)pa - (int)pb << endl;
+	system("pause");
+	return 0;
 }
