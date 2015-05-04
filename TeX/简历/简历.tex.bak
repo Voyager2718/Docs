@@ -7,7 +7,7 @@
             linkcolor=black,
             urlcolor=black
             ]{hyperref}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr} 
 \usepackage{color}
 \title{简历}
 \author{杨志鹏}
@@ -39,6 +39,7 @@
 例子：\\
 为了在重要的网站上根据网站不同而使用不同密码，本人使用C\#{}设计了一个用MD5加密密码的工具：\url{http://t.cn/R7YfzkB}
 \item C/C++开发
+\item Java
 \item OCaml
 \item Ruby（主要用来使用RGSS）
 \item 3D动画：Cinema 4D
@@ -86,7 +87,7 @@
 
 如果发现有不完美的地方，（即使是标点符号也）一定会将其修改并Commit。
 \section{职位期待}
-由于女朋友在国内，希望在暑假（2015-6中旬至2015-8中旬）的时候回国实习以陪伴女朋友。
+%由于女朋友在国内，希望在暑假（2015-6中旬至2015-8中旬）的时候回国实习以陪伴女朋友。
 
 本人希望在实习的过程中，担任技术开发的工作。
 

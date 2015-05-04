@@ -1,58 +1,168 @@
-%!Mode::"TeX:UTF-8"
-\documentclass[UTF8]{ctexart}
-\usepackage{amsmath}
-\usepackage{xltxtra}
-\usepackage{mflogo,texnames}
-\usepackage[colorlinks,
-            linkcolor=black,
-            urlcolor=black
-            ]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{color}
-\title{CV}
-\author{YANG Zhipeng}
-\date{03-Mar-2015}
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{info}
+% moderncv 主题
+
+
+\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+
+% 个人信息
+\name{黄}{峰达}
+
+%\title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
+\address{陕西省西安市太白南路168号}{710065}            % 可选项、如不需要可删除本行
+\phone[mobile]{+18209219631}              % 可选项、如不需要可删除本行
+% 可选项、如不需要可删除本行
+\email{h@phodal.com}                    % 可选项、如不需要可删除本行
+\homepage{www.phodal.com}                  % 可选项、如不需要可删除本行
+\extrainfo{Power by \LaTeX  }                 % 可选项、如不需要可删除本行
+\photo[64pt][0.2pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+\quote{期望职位 计算机/互联网/通信/嵌入系统}
 \begin{document}
+\begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
 \maketitle
-\pagestyle{fancy}
-\section{Practical Infos}
-\begin{itemize}
-\item First name/Surname: Zhipeng YANG
-\item Date of birth: 27-Nov-1992
-\item Nationality: Chinese
-\item Gender: Male
-\item Education: Bachelor
-\item Profession: Computer Science
-\item Study abroad exp: France
-\item School: Lille University of Science and Technology
-\item E-mail add: oyager2718.GitHub@QQ.com or Voyager2718@Gmail.com
-\item Tel: +33 695328879
-\item GitHub: http://voyager2718.github.io
-\end{itemize}
-\section{Skills}
-\begin{itemize}
-\item Web page dev(CSS3/JS/PHP/MySQL/Ajax)
-\item C\#{} Desktop App Dev
-\item C/C++ Dev
-\item OCaml
-\item 3D Animation: Cinema 4D
-\item Video production: Premiere/After Effect
-\item Document production: \LaTeX
-\item Cantonese/Chinese/French/English
-\item Adobe Edge Animation
-\end{itemize}
-\section{Study Exp}
-While learning in France, we studied the C programming language, OCaml, CSS, PHP, Java, Javascript, etc.
 
-In France, we always finish our job on Linux (Debian).
+\section{{教育经历}}
+\tlcventry{2010.9}{2014.6}{{本科在读}}{电子信息工程}{西安文理学院}{西安}{}
 
-I used to use C\#{}.Net to develop desktop applications.
 
-And also we've been trained to develop a web page using PHP and MySQL.
+\subsection{{在校情况}}
+\tllabelcventry{2010.9}{2011.1}{2010.9-2011.1}{墨颀多媒体文学社?社长}{西安文理学院}{}{}{
+\begin{tightitemize}
+    \item 社团创始人之一兼第一任社长
+\end{tightitemize}}
 
-I love developing web pages or desktop apps.
-\section{Work Exp}
-While studying in France, I used to develop a page for France Express (using PHP and GoDaddy).
-\section{Self-evaluation}
-I love new technologies, and I always want to have a try. Though our university didn't ask us to learn C++, \LaTeX{}, Ajax, etc, but I learned them. And I always try to solve a problem in different ways.
-\end{document} 
+\tllabelcventry{2012.8}{2012.12}{2012.12}{挑战杯科技制作大赛特等奖}{西安文理学院}{}{}{
+\begin{tightitemize}
+    \item 名称:《基于Android与Arduino的远程智能家居控制系统》
+    \item 职责: Android客户端编写、服务端编程、网站制作及运营、项目规划
+\end{tightitemize}}
+\tllabelcventry{2012.10}{2013.6}{2013.6}{第九届 陕西省大学生课外学术科技作品竞赛二等奖}{}{}{}{
+\begin{tightitemize}
+    \item 名称:《远程控制的智能云家居系统》
+    \item 职责: Android客户端编写、服务端编程、网站制作及运营、项目规划、文档编写
+\end{tightitemize}}
+\tllabelcventry{2013.1}{2013.7}{2013.7}{第八届全国大学生“飞思卡尔”杯}{西部赛区 电磁组三等奖}{}{}{}
+
+\section{专业技能}
+\subsection{开发}
+\cvcomputer{语言}{C/C++,Python, Java, JavaScript, C51, Lisp, C\# ,Erlang}
+           {Web}{HTML,DIV+CSS3, Nodejs, jQuery, AJAX, REST, Socket , Discuz,Wordpress}
+\cvcomputer{框架}{Django, Pomelo, Bootstrap, jQuery,jQuery Mobile, Cocos2d-X}
+           {数据库}{MySQL, MongoDB, SQLite}
+
+\subsection{工具}
+\cvcomputer{办公}{iWork, OpenOffice/LibreOffice, Microsoft Office, \LaTeX, Graphviz}
+           {操作系统}{Mac OS X, GNU/Linux(penSUSE, Centos), Windows}
+\cvcomputer{Design}{InkScape, Photoshop, GIMP, Dot, Texworks}
+           {编辑器}{Emacs, VIM, Coda, Sublime Text,  Notepad++, Eclipse, Aptana}
+
+\subsection{嵌入式}
+\cvcomputer{芯片}{Atmega family, 51, STM32, MSP430, Freescale K60, Freescale XS128, ARM}
+           {开发环境}{IAR for ARM, Keil C51, ADS, Arduino IDE, Android Sudio,Eclipse,Energia}
+\cvcomputer{EOS}{$\mu$C/OS $\Pi$,openWRT Linux,Linux for ARM}
+        {其他}{openCV, TTS, Raspberry Pi, MATLAB}
+
+
+\newpage
+
+
+\section{工作经验}
+\subsection{网站设计}
+\tllabelcventry{2012.6}{2012.10}{2012.10}{福建荣宇有限公司}{官网升级}{网站前端}{}{
+\begin{tightitemize}
+        \item 网站前端设计 后台运维
+        \item 公司主页: {\httplink{www.fjrongyu.com/}}
+\end{tightitemize}}
+\tllabelcventry{2013.7}{2013.9}{2013.7}{陕西省福建商会}{官网迁移}{网站前端}{}{
+\begin{tightitemize}
+        \item 网站前端设计
+        \item 公司主页: {\httplink{www.sxsfjsh.com/}}
+\end{tightitemize}}
+\section{{项目经历}}
+\tllabelcventry{2012.10}{2013.6}{}{远程控制的智能云家居系统}{项目负责人}{}{}{
+\begin{tightitemize}
+        \item 关键技术:Django, RESTful API,Android ADK,物联网, Ajax,XBEE
+        \item 编程语言:Python,Java,C/C++,Processing,
+        \item 采用RESTful Web服务来实现网络控制与传输。
+        \item 采用Ajax技术实现数据实时更新。
+        \item 采用XBee来实现无线传感器网络。
+        \item wiki主页:{\httplink{api.phodal.com/wiki/}}
+\end{tightitemize}}
+\tllabelcventry{2012}{2013.4}{}{{远程控制的智能云家居系统Android客户端}}{主要开发人员}{编程语言: Java}{}{
+\begin{tightitemize}
+        \item 关键技术: RESTful,Java,
+        \item 实现手机对用电器控制及与单片机通讯
+        \item 项目主页: {\httplink{code.google.com/p/home-anywhere/}}
+\end{tightitemize}}
+\tllabelcventry{2012}{0}{}{{远程控制的智能云家居系统服务端与网站}}{主要开发人员}{}{}{
+\begin{tightitemize}
+        \item 关键技术:HTTP, 协议分析, RESTful,Ajax,jQuery Mobile
+        \item 编程语言:Bash,Javascript,Python,
+        \item 采用Ajax技术实现数据实时更新
+        \item 采用jQuery及jQuery Mobile来实现用户界面优化及多平台访问
+        \item 项目主页: {\httplink{api.phodal.com}}
+\end{tightitemize}}
+
+\subsection{其他经历}
+\tlcventry{2010.12}{0}{其他课程项目、研究}{}{}{}{
+\begin{tightitemize}
+ \item 使用QT4完成移动蜂窝模型通信系统构建
+ \item 使用Node.j和WebSocket实现了简易在线聊天系统  {\httplink{socket.phodal.com}}
+ \item 使用flex和bison ,antlr完成了简单的翻译器
+ \item 使用Python、Django、 Bootstrap维护的个人网站 {\httplink{www.phodal.com}}
+ \item 使用Freescale K60实现寻线小车,使用Freescale XS128实现飞思上尔电磁车
+ \item 个人博客、SEO优化、微数据(Microdata) {\httplink{blog.phodal.com}}
+ \item 使用LFS编译自己的Linux系统
+ \item 移植GCC for ARM到Android G1 {\httplink{blog.csdn.net/phodal}}
+ \item 使用OpenWRT Linux实现路由器上运行Python，运行RESTful服务
+\end{tightitemize}}
+
+\section{语言技能}
+\cvitemwithcomment{英语}{}{精通读写}
+\cvitemwithcomment{闽南语}{}{精通听说}
+
+
+
+
+
+
+\newpage
+\section{个人信息}
+\cvitem{特长}{\small 计算机相关，互联网相关，网站创作、设计及运维，嵌入式系统设计，架构设计， DIY，设计，开源}
+\cvitem{职业技能}{\small 精通GNU/Linux，能在不同的平台编程，精通Emacs，熟练使用Vim，同时能使用Eclipse/及Visual studio编程，熟练使用Android与单片机通讯，不同单片机设备间的通讯。精通不同平台的排版及文档创作，精通使用office，以及tex/latex/miktex/生成文档，dot生成文档，系统构架分析及设计。}
+\cvitem{自我评价}{\small 涉猎甚广，除计算机外，所学不精。永无休止的求知欲和好奇心，擅长辞令，诙谐幽默。更喜欢各种研究性的、独立的、创造性的、与观念或事务打交道的工作；比较喜欢现实性的、操作性的、户外的、与事务打交道的工作；还喜欢艺术性、创造性、独立性、与观念打交道的工作。}
+\cvitem{兴趣爱好}{\small 计算机，漫游互联网，接触各种电子产品，喜欢玩不同手机，策略类游戏，DIY，电子diy，羽毛球，网球，爬山，骑自行车。素描，喜欢科幻片，旅游——到不同的地方。侦探小说，三国演义，福尔摩斯。喜欢中国风歌曲，写诗。}
+
+\renewcommand{\listitemsymbol}{-}             % 改变列表符号
+
+% 来自BibTeX文件但不使用multibib包的出版物
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
+
+% 来自BibTeX文件并使用multibib包的出版物
+%\section{出版物}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+
+\clearpage\end{CJK}
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.  

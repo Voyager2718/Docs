@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.7.8)  4 MAR 2015 09:30
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.7.8)  21 APR 2015 16:55
 entering extended mode
 **CV.tex
-(C:\Users\YANG\Documents\GitHub\TeX\CV-EN\CV.tex
+(C:\Users\YANG\Documents\GitHub\Docs\TeX\CV-EN\CV.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (C:\CTEX\MiKTeX\tex\latex\ctex\ctexart.cls
@@ -765,7 +765,7 @@ tly
 \f@ncyO@olf=\skip63
 \f@ncyO@orf=\skip64
 )
-(C:\Users\YANG\Documents\GitHub\TeX\CV-EN\CV.aux)
+(C:\Users\YANG\Documents\GitHub\Docs\TeX\CV-EN\CV.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
@@ -869,8 +869,8 @@ LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
 LaTeX Info: Redefining \nameref on input line 15.
 
-(C:\Users\YANG\Documents\GitHub\TeX\CV-EN\CV.out)
-(C:\Users\YANG\Documents\GitHub\TeX\CV-EN\CV.out)
+(C:\Users\YANG\Documents\GitHub\Docs\TeX\CV-EN\CV.out)
+(C:\Users\YANG\Documents\GitHub\Docs\TeX\CV-EN\CV.out)
 \@outlinefile=\write3
 
 (C:\CTEX\MiKTeX\tex\generic\oberdiek\se-ascii-print.def
@@ -886,9 +886,9 @@ Overfull \hbox (8.61069pt too wide) in paragraph at lines 28--29
 ]
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.54> not available
-(Font)              size <10.95> substituted on input line 40.
+(Font)              size <10.95> substituted on input line 41.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
@@ -896,10 +896,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
- (C:\Users\YANG\Documents\GitHub\TeX\CV-EN\CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 58.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 58.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
+ (C:\Users\YANG\Documents\GitHub\Docs\TeX\CV-EN\CV.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 61.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 61.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -908,7 +908,7 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  20442 strings out of 430478
- 390958 string characters out of 3191503
+ 390983 string characters out of 3191503
  418127 words of memory out of 3000000
  23327 multiletter control sequences out of 15000+200000
  8764 words of font info for 47 fonts, out of 3000000 for 9000
