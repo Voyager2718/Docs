@@ -79,18 +79,46 @@ void vectorTest(){
 	printf("\nsize = %d, capacity = %d, max_size = %d\n", vec.size(), vec.capacity(), vec.max_size());
 }
 
+void listTest(){
+	/* ÉùÃ÷ */
+	list<int> lst;
+
+	for (unsigned int i = 0; i < 10; i++)
+		lst.push_front(i);
+
+	lst.insert(lst.begin(), 100);
+
+	for (list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
+		cout << *it << " ";
+	cout << endl;
+	lst.pop_front();
+	cout << lst.front() << endl;
+	printf("\nsize = %d, max_size = %d\n", lst.size(), lst.max_size());
+}
+
 void mapTest(){
 	map<string, int> mp;
 }
 
-void listTest(){
-	list<int> lst;
-	for (unsigned int i = 0; i < 10; i++){
-		lst.push_back(i);
-	}
+void decltypeTest(){
+
+}
+
+void lambdaTest(){
+
+}
+
+void testVoid(void *arr, int size){
+	void *tmp;
+	tmp = arr;
+	//*arr = *(arr + size);
 }
 
 int main(int argc, char**args){
-	vectorTest();
+	//vectorTest();
+	//listTest();
+	int a = 10;
+	void *pa = &a;
+	
 	system("pause");
 }
