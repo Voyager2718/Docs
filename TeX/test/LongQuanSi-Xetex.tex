@@ -1,0 +1,184 @@
+
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%%%%%%%%%上面的别删%%%%%%%%%%%
+
+%%%%写在前面%%%%%%%%
+%%%% 1.这是xetex，不是letex，类似两个*nix系统的区别，所以有些包不能混用
+%%%% 2.如果要查某个包的说明文档，shell里敲：texdoc 包名
+%%%% 3.基础的语法，请查阅MacTex帮助中的快速入门
+%%%% 4.If this document cannot display correctly, please change your TexShop Encode setting to UTF-8.
+%%%%
+
+\documentclass[11pt]{article}  %文档开始，注意，这里保存的是UTF-8
+%行间距
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+
+%%%%%%声明部分%%%%%%
+%%%          包含内容
+%%%
+%%%  1.页面设置
+%%%  2.字体设置
+%%%  3.双重脚注设置
+%%%  4.页眉页脚设置
+%%%  5.正文图文混排
+%%%  6.脚注区图文混排
+%%%%%%%%%%%%%%%%%
+
+
+%%%%1.页面设置%%%%%%%%%
+% 输出样式设置:宽210mm，高285mm，上边距1.2in，下边距1.2in，左边距1.2in，右边距1，正文区390*530pt
+\usepackage[centering,paperwidth=210mm,paperheight=285mm,%
+body={390pt,530pt},marginparsep=10pt,marginpar=50pt,top=1.2in,bottom=1.2in,left=1.2in,right=1in ]{geometry}
+ %\usepackage[parfill]{parskip}    % 备选：用空一行取代正文缩进
+
+
+
+%%%%2.字体设置%%%%%%%%%
+%%注解用宋体
+%%标题用黑体
+%%正文是仿宋体
+%\usepackage{xeCJK} %使用cjk包以支持中文
+%\setCJKmainfont[BoldFont=FangSong, ItalicFont=FangSong]{FangSong}%正文仿宋字
+%\setCJKsansfont[BoldFont=SimHei]{SimHei}
+
+\usepackage{fontspec,xltxtra,xunicode} %严防乱码
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text} %设置某些字用某种字体，比如小写字母用
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+%\setromanfont{SimSun}
+
+%\setromanfont{Arial} %设置正文字体为仿宋
+\XeTeXlinebreaklocale “zh”
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt %文章内中文自动换行，可以自行调节
+%\newfontfamily{\F}{FangSong}
+%\newfontfamily{\S}{SimSun} %设定注释为宋体
+%\newfontfamily{\H}{SimHei} %设定标题为黑体
+%\newfontfamily{\A}{Arial} %设定一些奇怪的符号为Arial
+%%%%字体设置完成%%%%%%%%%
+
+
+
+%%%%3.双重脚注%%%%%%%
+
+%脚注文字格式区
+\usepackage{footmisc}
+%\makefootnoteparagraph
+
+ %启用大脚注区域
+\usepackage{bigfoot,manyfoot}
+
+\makeatletter
+\def\@Arabic#1{
+	 \ifcase#1\or (1)\or (2)\or (3)\or (4)\or (5)\or (6)\or (7)\or (8)\or (9)\or (10)\or
+	 (11)\or (12)\or (13)\or (14)\or (15)\or (16)\or (17)\or (18)\or (19)\or (20)\or (21)\or (22)\or (23)\or (24)\or
+	 (25)\or (26)\else ?a?\fi} % 定义带括号数字
+
+\DeclareNewFootnote{A}[Arabic] % 声明使用footnoteA，相当于原来的尾注
+\DeclareNewFootnote{B}[arabic] % 声明使用footnoteB，相当于原来的脚注
+\MakeSortedPerPage{footnoteA}  % footnoteA每页进行重新编号
+\MakeSortedPerPage{footnoteB}  % footnoteB每页进行重新编号
+
+
+
+%%%%4.页眉页脚设置%%%%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[OL]{\H 奇数试验}
+\fancyhead[ER]{\H 偶数实验}
+
+
+
+%\usepackage{titlesec}
+%\newpagestyle{mystyle}{\sethead[][][\H 偶数页试验]{}{}{\H 单页试验}\setfoot[][][\thepage]{}{}{\thepage}\headrule}
+%\pagestyle{mystyle}
+%\newpagestyle{main}{
+% \sethead[][][偶数]{\H 奇数页左页眉实验}{111}{}\headrule}
+%\pagestyle{main}
+
+%\usepackage[insidefoot]{pageno}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+
+
+
+%%%%章节标题%%%%%
+%\usepackage[center,pagestyles]{titlesec}
+%\titleformat{\section}[shape]{format}{label}{sep}{before}{after}%一级章节标题
+
+%\titleformat{\section}[shape]{format}{label}{sep}{before}{after}
+
+
+
+%%%%版权信息%%%%%%
+%\title{Brief Article}    %这里设置文章名字
+%\author{The Author} %这里设置作者名字
+%\date{}                    % 启用这项来显示时间
+%%%%版权信息完结%%%%
+
+
+
+
+%%%%%文档开始区%%%%%%%%%%%%%%%%
+\begin{document}  %正文开始
+
+%\maketitle  %如果启用这项，就有一个大标题
+
+
+	\begin{center} %中心对齐
+		\huge{\textbf{{\H 昙无德部四分律删补随机}\footnoteB{\S 删补随机：删繁补缺，以应时机。对过去流传的四分律部各种羯磨译本、集本，道宣律师删除其中繁琐杂乱的地方，增补缺失不足的部分，又博采融汇其他律部，从而重新著作了一部适应当时时代特点和满足佛教现实需要的羯磨书。}{\H 羯磨}\footnoteB{{\S 羯磨：以大众和合之共业成就如法僧事。梵语音译，意译为“业”，或译为“事”“所作”“法”“办事”“办事作法”“行为”等。}}{\A •}{\H 序}}}
+	\end{center}
+	
+	\begin{center}
+	      {\F 京\footnoteA{{\S “京”前，底本有“唐”字，据赵城本、毗卢本、高丽本、正保本、大谷本、敦甲本、敦乙本、敦丙本、敦丁本、敦戊本、敦己本、敦庚本、金刚寺本、七寺本删。}}{\F 兆}\footnoteB{{\S 京兆：这里指唐朝都城长安。}}{\F 崇义寺}\footnoteB{{\S 崇义寺：位于长安左卫长寿坊，本是隋朝时延寿公于诠的宅邸，唐武德二年（619），高祖赐与桂阳公主及驸马赵慈景。驸马后战死疆场，公主布施宅舍为寺，妻为夫造，恩义深重，故高祖赐名“崇义”。道宣律师于隋末出家，住于日严道场。唐武德七年日严道场被朝廷废止，道宣律师便随同其师慧頵被朝廷指定住入新立的崇义寺。同年，他隐居终南山紵麻兰若。因为日严寺已被废，故道宣律师的著作多标“崇义寺”，以示所属。后造《四分律删补随机羯磨》时，题首亦标“崇义寺”。}}{\F 沙门道宣集}}
+	\end{center}
+
+%\newpage
+\clearpage %为了能强制换页，请不要使用\newpage，否则会空了一大块
+
+	{\F 原夫\footnoteB{{\S 原夫：原，推究。夫，语气助词。}}{\F 大雄}\footnoteB{{\S 大雄：对佛的尊称。《正源记》卷1：“‘大雄’者，目至圣之人也。以修行大、趣理大、证果大、所化大，雄雄然，非吾佛而案谁？[1]”}}{\F 御宇}\footnoteB{\S 御宇：统治天下，这里借指佛出现世间，教化三千大千世界。御，指统治、治理。宇，上下四方所有的空间。}{\F，意惟}\footnoteA{\S 意惟拯拔一人：佛陀出世的本意，是为了救拔一切众生脱离轮回，究竟成佛。《羯磨经序解》卷1：“‘意’下，出世尊下化众生之本意。‘一人’者，则佛称‘一人’也。[2]”}{\F 拯拔一人；大教膺期}\footnoteB{\S 膺期：承受期运，通指受天命为帝王。这里借指佛顺应众生因缘，弘扬教法。膺，音yīng，承，当，承应。}，{\F 总归为显一理}\footnoteB{\S 总归为显一理：佛一生宣说了种种教法，最终目的是要开显一实相理，令众生悟入佛之知见。}。{\F 但由群生著欲}\footnoteB{\S 著欲：耽着种种欲望。}{\F ，欲本所谓“我”心}\footnoteB{\S 欲本所谓“我”心：欲望的根源是我执。}{\F ；故能随其所怀}\footnoteB{\S 随其所怀：随顺众生的喜好欲求。}，{\F 开示止心之法。然则心为生欲之本，灭欲必止心元}\footnoteB{\S 元：根源，根本。}{\F ；止心由乎明慧，慧起假}\footnoteB{\S 假：凭借，依靠。}{\F 於定发；发定之功，非戒不弘\footnoteB{\S 弘：广大。}{\F ，是故特须尊重於戒。故经云：“戒为无上菩提本，应当一心}\footnoteA{\S “一心”，正保本、大谷本作“具足”。}{\F 持净戒。” }\footnoteB{\S “经云”至“持净戒”：《大方广佛华严经》卷6：“若信恭敬一切佛，则持净戒顺正教；若持净戒顺正教，诸佛贤圣所赞叹。戒是无上菩提本，应当具足持净戒；若能具足持净戒，一切如来所赞叹。[3]”}{\F 持戒之心，要唯二辙}\footnoteB{\S 要唯二辙：要点只在止持、作持这两种轨则。辙，原意指车轮碾地的痕迹，引申为途径、道路、法则。}{\F ：止持则戒本最为标首}\footnoteB{\S 标首：首要。}{\F ，作持则羯磨结其大科}\footnoteB{\S 羯磨结其大科：羯磨汇集了作持的大纲。科，类别。}。{\F 后进}\footnoteB{\S 后进：后辈学人。}{\F 、前修}\footnoteB{\S 前修：前圣先贤。}{\F ，妙宗}}	
+	
+\clearpage %为了能强制换页，请不要使用\newpage，否则会空了一大块	
+
+	{\F 斯法}\footnoteB{{\S 妙宗斯法：尊崇戒本、羯磨，以此为修行的精深微妙之处。《正源记》卷1：“要妙在于宗承戒本、羯磨二法耳。[4]”}}{\F 。故律云：“若不诵戒、羯磨，尽形不离依止。”} \footnoteB{{\S 尽形不离依止：终身不得离开依止师（和尚、阿阇梨）独立修学。}}{\F 自慧日西隐，法水东流，}\footnoteB{{\S 自慧日西隐，法水东流：自从佛涅槃后，教法向东传播。慧日，比喻佛。法水，比喻教法。《羯磨经序解》卷1：“‘自’下，佛慧如日，忽汎于西土，即涅槃时也。‘法水’，以三藏教法，能涤众生心垢，故喻如水。自西‘流’至于东汉，即灭后一千年时也。[5]”}}{\F 时兼像、正，人通淳薄。}\footnoteB{{\S 时兼像、正，人通淳薄：从佛涅槃后到唐朝，佛法传播经历了正法、像法两个时期，人心也随之由淳朴厚道变为虚浮刻薄。}}{\F 初则二部、五部之殊，中则十八、五百之别，末则众锋互举，各竞先驱。}\footnoteB{{\S “初则二部”至“各竞先驱”：律藏最初结集时形成上座与大众两部，再后分成昙无德、萨婆多等五部；中期更有十八、五百部派之分；后期则众见纷出，互相争执，各尊己意，互不退让。锋，刀剑的锋芒，这里比喻见解争执的激烈。 《毗尼作持续释》卷1：“文中虽序三时，其义所重在末，因两土传持多沿讹故。……若以此方律学论之，则《僧祇》肇弘于曹魏，《四分》滥觞于大唐，中历晋、宋、齐、梁、隋代以来，《十诵》《五分》俱有司持。而诸部继宗者不无矜己抑他，致令说锋互举，各欲争竞先驱，以显化导之胜。[6]”}}{\F 人或从缘，法无倾坠。}\footnoteB{{\S 人或从缘，法无倾坠：人或随顺因缘存在部派分歧，而正法觉悟众生的作用并无衰减。倾坠,意为陷落、倒塌，引申为衰败。《羯磨经序解》卷1：“皆有悟道之人，使正法亦无堕地。[7]”《正源记》卷1：“故《涅槃》说：‘由此异想，朋党相援，互相诤讼，皆悉悟道。’又《大集》云：‘五部虽各别，不妨诸佛法界涅槃。[8]”}}{\F 然则道由信发}\footnoteB{{\S 道由信发：佛法由信心开启。《大方广佛华严经》卷6：“信为道元功德母，增长一切诸善法，除灭一切诸疑惑，示现开发无上道。[9]”《大智度论》卷1：“佛法大海，信为能入，智为能度。‘如是’义者，即是信。若人心中有信清净，是人能入佛法；若无信，是人不能入佛法。[10]”}}{\F ，弘之在人，人几颠危，法宁澄正？}\footnoteB{{\S 人几颠危，法宁澄正：弘传教法的人，知见尚且颠倒偏颇，所弘传的法，又怎能确保清净纯正呢？危：不正，偏颇。}}
+\clearpage %为了能强制换页，请不要使用\newpage，否则会空了一大块	
+%\newpage	
+
+	所以羯磨圣教，绵历古今， 世渐增繁，徒盈卷轴。\footnoteB{{\S 世渐增繁，徒盈卷轴：世代累积增加，内容越显繁杂，但只是徒劳增加它的篇幅而已。卷轴，指卷数、轴数。}}{\F 考其实录，多约前闻；覆}\footnoteA{{\S “覆”，底本作“覈”，据赵城本、高丽本、敦甲本、敦乙本、敦丙本、敦丁本、敦戊本、敦己本、敦庚本、金刚寺本、七寺本改。}}\footnoteB{{\S 覆：审察，查核。}}其宗绪\footnoteB{{\S 宗绪：指某种见解的师承和依据。宗，宗本。绪，头绪。}}，略无\footnoteB{{\S 略无：全无，毫无。}}本据。\footnoteB{{\S “考其实录”至“略无本据”：考察其摘录援引之文的实际出处，大多是前人的师徒口传耳闻；查核其见解的源头，丝毫没有清净的经论依据。}}师心制法者不少，披而行诵者极多，轻侮圣言，动絓\footnoteB{{\S 絓：音guà，绊住，缠住，引申为触犯。}}刑网。\footnoteB{{\S “师心制法”至“动絓刑网”：不遵圣教，依己妄见制定法规者不少；披览羯磨本，而谨守字句、不择是非，如此诵羯磨作法者极多。轻慢毁侮佛语，所作时时触犯律法。刑网，比喻戒律。}}
+	
+	
+	
+\clearpage %为了能强制换页，请不要使用\newpage，否则会空了一大块		
+%\newpage	
+
+
+	皆务异同之见，竞执是非\footnoteA{{\S “是非”，毗卢本、正保本、大谷本、敦甲本、敦丙本、敦丁本、敦戊本、敦己本、金刚寺本、七寺本作“是昔”。弘注：“‘是非’，燉煌古本作‘是昔’。”}}之迷，\footnoteB{{\S 皆务异同之见，竞执是非之迷：指互相争执是非，党同伐异，迷执深重。}}不思返\footnoteA{{\S “返”，底本作“反”，据毗卢本、敦甲本、敦乙本、敦丙本、敦戊本、敦己本、敦庚本、金刚寺本、七寺本改。}}隅\footnoteB{{\S 返隅：指类推，能由此而知彼。羯磨法针对现实中的事缘，故须依据戒律中的原则加以灵活变通，不可仅仅“披而行诵”。返，多写作“反”。隅，角落。语出《论语‧述而》：“举一隅不以三隅反，则不复也。”　《瑜伽师地论》卷69：“云何良慧喻补特伽罗？谓如有一于上所说十羯磨中，唯依于义不依于文，唯随义转不随音声。虽于此中未作如是羯磨言词，然能依义发起语言，行于此义。云何鹦鹉喻补特伽罗？谓如有一唯依于文不依于义，唯随文转不随于义，不能依义发异言词。[11]”}}，更增昏结\footnoteB{{\S 昏结：愚痴，迷惑。}}，致使正法与时潜地……
+
+	
+
+
+
+\clearpage %为了能强制换页，请不要使用\newpage，否则会空了一大块
+%\newpage
+
+
+\end{document}
+
+
+\end{document}

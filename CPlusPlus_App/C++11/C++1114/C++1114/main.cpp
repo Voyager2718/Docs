@@ -117,8 +117,14 @@ void testVoid(void *arr, int size){
 int main(int argc, char**args){
 	//vectorTest();
 	//listTest();
-	int a = 10;
-	void *pa = &a;
-	
+	/*char **arr = (char**)malloc(10 * sizeof(char*));
+	for (int i = 0; i < 10; i++)
+	{
+	arr[i] = (char*)malloc(10 * sizeof(char));
+	}
+	arr[1] = "123123";
+	cout << arr[1] << endl;
+	cout << sizeof(char) << endl;*/
+
 	system("pause");
 }
