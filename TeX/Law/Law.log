@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.5.7)  1 JUN 2015 22:53
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.5.7)  2 JUN 2015 16:21
 entering extended mode
 **Law.tex
-(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law_brief\Law.tex
+(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (C:\CTEX\MiKTeX\tex\latex\ctex\ctexart.cls
@@ -795,7 +795,7 @@ Normal \count register pool exhausted, switching to extended pool.
 LaTeX Warning: Unused global option(s):
     [utf-8].
 
-(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law_brief\Law.aux)
+(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
@@ -899,8 +899,8 @@ LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
 LaTeX Info: Redefining \nameref on input line 16.
 
-(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law_brief\Law.out)
-(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law_brief\Law.out)
+(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.out)
+(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.out)
 \@outlinefile=\write3
 
 *geometry* detected driver: pdftex
@@ -1061,7 +1061,7 @@ Requested font "SimSun/ICU" at 14.4pt
 Requested font "SimHei/ICU:mapping=tex-text;" at 14.4pt
  -> C:/Windows/Fonts/simhei.ttf
 
-(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law_brief\Law.toc
+(C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.toc
 Requested font "SimSun" at 10.0pt
  -> C:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
 Requested font "SimSun/ICU" at 10.0pt
@@ -1106,8 +1106,7 @@ Requested font "cmex7" at 5.0pt
  -> cmex7
  [1])
 \tf@toc=\write4
-
-[2]
+ [2]
 Requested font "[lmroman12-bold]:mapping=tex-text" at 12.0pt
  -> C:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman12-bold.otf
 .................................................
@@ -1144,25 +1143,27 @@ Requested font "SimSun/ICU" at 8.0pt
 .................................................
 Requested font "SimSun/ICU:mapping=tex-text;" at 8.0pt
  -> C:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
- [3] [4] [5] [6] [7] [8] [9] [10]
+ [3]
+[4] [5] [6] [7] [8] [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 339.
+(hyperref)                removing `\\' on input line 384.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
 [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
- (C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law_brief\Law.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 388.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 388.
+ (C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 388.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 388.
  ) 
 Here is how much of TeX's memory you used:
- 21080 strings out of 430478
- 402173 string characters out of 3191503
- 457376 words of memory out of 3000000
- 23937 multiletter control sequences out of 15000+200000
+ 21083 strings out of 430478
+ 402194 string characters out of 3191503
+ 461609 words of memory out of 3000000
+ 23940 multiletter control sequences out of 15000+200000
  7776 words of font info for 62 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,12n,44p,835b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,44p,835b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Law.pdf (12 pages).
+Output written on Law.pdf (13 pages).
