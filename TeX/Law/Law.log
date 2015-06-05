@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.5.7)  2 JUN 2015 16:21
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.5.7)  5 JUN 2015 09:32
 entering extended mode
 **Law.tex
 (C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.tex
@@ -1144,26 +1144,26 @@ Requested font "SimSun/ICU" at 8.0pt
 Requested font "SimSun/ICU:mapping=tex-text;" at 8.0pt
  -> C:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
  [3]
-[4] [5] [6] [7] [8] [9] [10]
+[4] [5] [6] [7] [8] [9] [10] [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 384.
+(hyperref)                removing `\\' on input line 413.
 
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 388.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 388.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
  (C:\Users\YANG\Documents\MyFiles\GitHub\Docs\TeX\Law\Law.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 388.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 388.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 417.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 417.
  ) 
 Here is how much of TeX's memory you used:
- 21083 strings out of 430478
- 402194 string characters out of 3191503
- 461609 words of memory out of 3000000
- 23940 multiletter control sequences out of 15000+200000
+ 21085 strings out of 430478
+ 402226 string characters out of 3191503
+ 458907 words of memory out of 3000000
+ 23942 multiletter control sequences out of 15000+200000
  7776 words of font info for 62 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,12n,44p,835b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Law.pdf (13 pages).
+Output written on Law.pdf (14 pages).
