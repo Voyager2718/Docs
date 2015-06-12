@@ -1,0 +1,28 @@
+%!Mode::"TeX:UTF-8"
+\documentclass[utf-8,10pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black
+            ]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\fancyhead[OL]{常用法律法规及其解析}
+\fancyhead[OCR]{\thepage{}}
+%\usepackage{titlesec}
+\title{\textbf{常用法律法规及其解析}}
+\begin{document}
+\setcounter{page}{0}
+\maketitle
+\thispagestyle{empty}
+\newpage
+\pagestyle{fancy}
+\tableofcontents
+\newpage{}
+\paragraph{}
+\noindent{}
+\paragraph{免责声明}
+本文不为任何行动提供担保责任。也不对任何用户使用阅读本文后实施的一切行动所造成的任何后果负责。
+\section{《刑法》}

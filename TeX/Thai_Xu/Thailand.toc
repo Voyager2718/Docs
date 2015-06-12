@@ -1,0 +1,7 @@
+\contentsline {paragraph}{}{1}{section*.2}
+\contentsline {paragraph}{}{1}{section*.3}
+\contentsline {section}{\numberline {1}紧急电话与安全}{1}{section.1}
+\contentsline {section}{\numberline {2}可能需要准备的物品}{1}{section.2}
+\contentsline {section}{\numberline {3}衣服}{2}{section.3}
+\contentsline {section}{\numberline {4}其他注意事项}{2}{section.4}
+\contentsline {section}{\numberline {5}相关应用}{3}{section.5}
