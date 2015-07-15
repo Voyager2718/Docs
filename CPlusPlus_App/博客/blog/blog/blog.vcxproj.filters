@@ -21,9 +21,15 @@
     <ClCompile Include="singlyList.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="stack.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="singlyList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

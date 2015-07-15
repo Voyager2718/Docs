@@ -1,36 +1,36 @@
-#ifndef SINGLYLIST_H
-#define SINGLYLIST_H
+#ifndef SINGLYlistNode_H
+#define SINGLYlistNode_H
 
-typedef struct _linkedList{
+typedef struct _linkedlist{
 	int data;
-	_linkedList *next;
-	_linkedList();
-	_linkedList(int data);
-} node;
+	_linkedlist *next;
+	_linkedlist();
+	_linkedlist(int data);
+} listNode;
 
-node* createNode(int);
+listNode* createlistNode(int);
 
-int length(node **);
+int length(listNode **);
 
-void printList(node**);
+void printlistNode(listNode**);
 
-bool isEmpty(node**);
+bool isEmpty(listNode**);
 
-node* getFront(node**);
+listNode* getFront(listNode**);
 
-node* getBack(node**);
+listNode* getBack(listNode**);
 
-void clearList(node**&);
+void clearlistNode(listNode**&);
 
-void clearListRec(node**&);
+void clearlistNodeRec(listNode**&);
 
-node** pushFront(node*, node**&);
+listNode** pushFront(listNode*, listNode**&);
 
-node** pushBack(node*, node**&);
+listNode** pushBack(listNode*, listNode**&);
 
-node** popFront(node**&);
+listNode** popFront(listNode**&);
 
-node** popBack(node**&);
+listNode** popBack(listNode**&);
 
 void printTest();
 

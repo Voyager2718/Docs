@@ -1,117 +1,141 @@
-#include "singlyList.h"
+#include "singlylist.h"
 #include<iostream>
 using std::cout;
 using std::endl;
 
-_linkedList::_linkedList(){
-	this->next = NULL;
+_linkedlist::_linkedlist() :data(0), next(NULL){
 }
-_linkedList::_linkedList(int data) :data(data), next(NULL){
-}
-
-node* createNode(int data){
-	return new node(data);
+_linkedlist::_linkedlist(int data) : data(data), next(NULL){
 }
 
-int length(node ** linkedList){
-	if (!linkedList || !*linkedList)
+listNode* createlistNode(int data){
+	return new listNode(data);
+}
+
+int length(_linkedlist ** linkedlistNode){
+	if (!linkedlistNode || !*linkedlistNode)
 		return 0;
-	return length(&((*linkedList)->next)) + 1;
+	return length(&((*linkedlistNode)->next)) + 1;
 }
 
-void printList(node** linkedList){
-	if (!linkedList || !*linkedList)
+void printlistNode(_linkedlist** linkedlistNode){
+	if (!linkedlistNode || !*linkedlistNode)
 		return;
-	cout << (*linkedList)->data << " ";
-	printList(&(*linkedList)->next);
+	cout << (*linkedlistNode)->data << " ";
+	printlistNode(&(*linkedlistNode)->next);
 }
 
-bool isEmpty(node** linkedList){
-	if (!linkedList)
+bool isEmpty(_linkedlist** linkedlistNode){
+	if (!linkedlistNode)
 		return true;
 	return false;
 }
 
-node* getFront(node** linkedList){
-	if (!linkedList)
+listNode* getFront(_linkedlist** linkedlistNode){
+	if (!linkedlistNode)
 		return NULL;
-	return *linkedList;
+	return *linkedlistNode;
 }
 
-node* getBack(node** linkedList){
-	if (!linkedList)
+listNode* getBack(_linkedlist** linkedlistNode){
+	if (!linkedlistNode)
 		return NULL;
-	if (!(*linkedList)->next)
-		return *linkedList;
-	return getBack(&((*linkedList)->next));
+	if (!(*linkedlistNode)->next)
+		return *linkedlistNode;
+	return getBack(&((*linkedlistNode)->next));
 }
 
-void clearList(node**& linkedList){
-	node *pNode = *linkedList;
-	while (pNode){
-		node *pNext = pNode->next;
-		delete pNode;
-		pNode = pNext;
-		pNext = pNode->next;
+void clearlistNode(_linkedlist**& linkedlistNode){
+	listNode *plistNode = *linkedlistNode;
+	while (plistNode){
+		listNode *pNext = plistNode->next;
+		delete plistNode;
+		plistNode = pNext;
+		pNext = plistNode->next;
 	}
-	linkedList = NULL;
+	linkedlistNode = NULL;
 }
 
-void clearListRec(node**& linkedList){
-	if (!linkedList || !*linkedList)
+void clearlistNodeRec(_linkedlist**& linkedlistNode){
+	if (!linkedlistNode || !*linkedlistNode)
 		return;
-	node **pNode = &(*linkedList)->next;
-	clearListRec(pNode);
-	delete *linkedList;
-	linkedList = NULL;
+	_linkedlist **plistNode = &(*linkedlistNode)->next;
+	clearlistNodeRec(plistNode);
+	delete *linkedlistNode;
+	linkedlistNode = NULL;
 }
 
-node** pushFront(node* newLinkedList, node**& existLinkedList){
-	if (!existLinkedList)
+listNode** pushFront(listNode* newLinkedlistNode, _linkedlist**& existLinkedlistNode){
+	if (!existLinkedlistNode)
 	{
-		existLinkedList = &newLinkedList;
+		existLinkedlistNode = &newLinkedlistNode;
 	}
 	else{
-		newLinkedList->next = *existLinkedList;
-		existLinkedList = &newLinkedList;
+		newLinkedlistNode->next = *existLinkedlistNode;
+		existLinkedlistNode = &newLinkedlistNode;
 	}
-	return existLinkedList;
+	return existLinkedlistNode;
 }
 
-node** pushBack(node* newLinkedList, node**& existLinkedList){
-	if (!existLinkedList)
+listNode** pushFront(int data, _linkedlist**& existLinkedlistNode){
+	listNode *pNode = new listNode(data);
+	if (!existLinkedlistNode)
 	{
-		existLinkedList = &newLinkedList;
+		existLinkedlistNode = &pNode;
 	}
 	else{
-		getBack(existLinkedList)->next = newLinkedList;
+		pNode->next = *existLinkedlistNode;
+		existLinkedlistNode = &pNode;
 	}
-	return existLinkedList;
+	return existLinkedlistNode;
 }
 
-node** popFront(node**& linkedList){
+listNode** pushBack(listNode* newLinkedlistNode, _linkedlist**& existLinkedlistNode){
+	if (!existLinkedlistNode)
+	{
+		existLinkedlistNode = &newLinkedlistNode;
+	}
+	else{
+		getBack(existLinkedlistNode)->next = newLinkedlistNode;
+	}
+	return existLinkedlistNode;
+}
+
+listNode** pushBack(int data, _linkedlist**& existLinkedlistNode){
+	listNode *pNode = new listNode(data);
+	if (!existLinkedlistNode)
+	{
+		existLinkedlistNode = &pNode;
+	}
+	else{
+		getBack(existLinkedlistNode)->next = pNode;
+	}
+	return existLinkedlistNode;
+}
+
+listNode** popFront(_linkedlist**& linkedList){
 	if (linkedList){
-		node *pNext = (*linkedList)->next;
+		listNode *pNext = (*linkedList)->next;
 		delete *linkedList;
 		linkedList = &pNext;
 	}
 	return linkedList;
 }
 
-node** popBack(node**& linkedList){
-	if (linkedList){
-		node *pNode = *linkedList,
-			*pNext = (*linkedList)->next;
+listNode** popBack(_linkedlist**& linkedlistNode){
+	if (linkedlistNode){
+		_linkedlist *plistNode = *linkedlistNode,
+			*pNext = (*linkedlistNode)->next;
 		while (true){
 			if (!pNext->next)
 			{
-				pNode->next = NULL;
+				plistNode->next = NULL;
 				delete pNext;
-				return linkedList;
+				return linkedlistNode;
 			}
-			pNode = pNode->next;
+			plistNode = plistNode->next;
 			pNext = pNext->next;
 		}
 	}
-	return linkedList;
+	return linkedlistNode;
 }
