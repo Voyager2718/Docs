@@ -26,7 +26,11 @@ void clearlistNodeRec(listNode**&);
 
 listNode** pushFront(listNode*, listNode**&);
 
+listNode** pushFront(int, listNode**&);
+
 listNode** pushBack(listNode*, listNode**&);
+
+listNode** pushBack(int, listNode**&);
 
 listNode** popFront(listNode**&);
 

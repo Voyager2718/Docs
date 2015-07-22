@@ -9,7 +9,12 @@ _linkedlist::_linkedlist(int data) : data(data), next(NULL){
 }
 
 listNode* createlistNode(int data){
-	return new listNode(data);
+	listNode *pNode = new listNode(data);
+	if (!pNode){
+		cout << "Error." << endl;
+		exit(0);
+	}
+	return pNode;
 }
 
 int length(_linkedlist ** linkedlistNode){
@@ -117,7 +122,10 @@ listNode** popFront(_linkedlist**& linkedList){
 	if (linkedList){
 		listNode *pNext = (*linkedList)->next;
 		delete *linkedList;
-		linkedList = &pNext;
+		if (pNext)
+			linkedList = &pNext;
+		else
+			linkedList = NULL;
 	}
 	return linkedList;
 }
@@ -139,3 +147,5 @@ listNode** popBack(_linkedlist**& linkedlistNode){
 	}
 	return linkedlistNode;
 }
+
+//popBack May need to be modified(if(next==NULL))

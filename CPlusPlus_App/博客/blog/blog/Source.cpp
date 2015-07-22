@@ -9,7 +9,6 @@ typedef struct _stack{
 	_stack(int data) :data(data), next(NULL){}
 }stackNode;
 
-
 stackNode* createStackNode(int data){
 	return new stackNode(data);
 }
@@ -35,9 +34,7 @@ _stack** push(int data, _stack**& stack){
 
 _stack** push(stackNode* newStackNode, _stack**& stack){
 	if (!stack)
-	{
 		stack = &newStackNode;
-	}
 	else{
 		newStackNode->next = *stack;
 		stack = &newStackNode;
@@ -45,15 +42,23 @@ _stack** push(stackNode* newStackNode, _stack**& stack){
 	return stack;
 }
 
-stackNode* pop(_stack**& stack){
-	if (stack){
-		stackNode *pNext = (*stack)->next, *pNode = *stack;
+int pop(_stack** stack){
+	/*if (stack){
+		int data = (*stack)->data;
+		stackNode *pNext = (*stack)->next;
 		delete *stack;
+		if (pNext)
 		stack = &pNext;
-		return pNode;
-	}
-	return NULL;
-}//bug
+		else
+		stack = NULL;
+		return data;
+		}
+		return NULL;*/
+
+	cout << stack << " " << *stack << endl;
+
+	return 0;
+}
 
 stackNode* get(_stack** stack){
 	if (stack)
@@ -67,13 +72,34 @@ bool isEmpty(_stack**& stack){
 	return false;
 }
 
-int main(int argc, char**args){
-	_stack** stack = NULL;
-	for (int i = 5; i > 0; i--){
-		push(new stackNode(i), stack);
+
+struct t{
+	int a;
+	t(int i){
+		a = i;
+		next = NULL;
 	}
-	cout << pop(stack)->data << endl;
-	cout << endl;
+	t *next;
+};
+
+void test(int a, t** ppT){
+	t *p = new t(a);
+	cout << p << " " << ppT << " " << *ppT << endl;
+	p->next = *ppT;
+	*ppT = p;
+	cout << p << " " << ppT << " " << *ppT << endl;
+}
+
+int main(int argc, char**args){
+	_stack **stack = NULL;
+
+	t *p = new t(10), **ppT = &p;
+	test(5, ppT);
+
+	delete p;
+
+	cout << ppT << " " << *ppT << (*ppT)->a << endl;
+
 	system("pause");
 	return 0;
 }
