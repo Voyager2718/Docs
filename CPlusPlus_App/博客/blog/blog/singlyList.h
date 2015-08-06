@@ -1,41 +1,24 @@
 #ifndef SINGLYlistNode_H
 #define SINGLYlistNode_H
 
-typedef struct _linkedlist{
-	int data;
-	_linkedlist *next;
-	_linkedlist();
-	_linkedlist(int data);
-} listNode;
+template < class Type >
+class node {
+public:
+	Type data;
+	node *next;
+	node();
+	node(Type);
+};
 
-listNode* createlistNode(int);
+template < class Type >
+class list{
+private:
 
-int length(listNode **);
-
-void printlistNode(listNode**);
-
-bool isEmpty(listNode**);
-
-listNode* getFront(listNode**);
-
-listNode* getBack(listNode**);
-
-void clearlistNode(listNode**&);
-
-void clearlistNodeRec(listNode**&);
-
-listNode** pushFront(listNode*, listNode**&);
-
-listNode** pushFront(int, listNode**&);
-
-listNode** pushBack(listNode*, listNode**&);
-
-listNode** pushBack(int, listNode**&);
-
-listNode** popFront(listNode**&);
-
-listNode** popBack(listNode**&);
-
-void printTest();
+public:
+	node<Type> **head;
+	list();
+	void pushBack(Type);
+	void pushFront(Type);
+};
 
 #endif

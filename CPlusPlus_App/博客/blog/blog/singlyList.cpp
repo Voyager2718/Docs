@@ -3,149 +3,51 @@
 using std::cout;
 using std::endl;
 
-_linkedlist::_linkedlist() :data(0), next(NULL){
-}
-_linkedlist::_linkedlist(int data) : data(data), next(NULL){
-}
-
-listNode* createlistNode(int data){
-	listNode *pNode = new listNode(data);
-	if (!pNode){
-		cout << "Error." << endl;
-		exit(0);
-	}
-	return pNode;
+template<class Type>
+node<Type>::node(){
+	this->data = NULL;
+	this->next = NULL;
 }
 
-int length(_linkedlist ** linkedlistNode){
-	if (!linkedlistNode || !*linkedlistNode)
-		return 0;
-	return length(&((*linkedlistNode)->next)) + 1;
+template<class Type>
+node<Type>::node(Type data){
+	this->data = data;
+	this->next = NULL;
 }
 
-void printlistNode(_linkedlist** linkedlistNode){
-	if (!linkedlistNode || !*linkedlistNode)
+template<class Type>
+list<Type>::list(){
+	this->head = NULL;
+}
+
+template<class Type>
+void list<Type>::pushBack(Type data){
+	if (this->head == NULL){
+		this->head = new node<Type>*;
+		*this->head = new node<Type>(data);
 		return;
-	cout << (*linkedlistNode)->data << " ";
-	printlistNode(&(*linkedlistNode)->next);
-}
-
-bool isEmpty(_linkedlist** linkedlistNode){
-	if (!linkedlistNode)
-		return true;
-	return false;
-}
-
-listNode* getFront(_linkedlist** linkedlistNode){
-	if (!linkedlistNode)
-		return NULL;
-	return *linkedlistNode;
-}
-
-listNode* getBack(_linkedlist** linkedlistNode){
-	if (!linkedlistNode)
-		return NULL;
-	if (!(*linkedlistNode)->next)
-		return *linkedlistNode;
-	return getBack(&((*linkedlistNode)->next));
-}
-
-void clearlistNode(_linkedlist**& linkedlistNode){
-	listNode *plistNode = *linkedlistNode;
-	while (plistNode){
-		listNode *pNext = plistNode->next;
-		delete plistNode;
-		plistNode = pNext;
-		pNext = plistNode->next;
 	}
-	linkedlistNode = NULL;
-}
-
-void clearlistNodeRec(_linkedlist**& linkedlistNode){
-	if (!linkedlistNode || !*linkedlistNode)
-		return;
-	_linkedlist **plistNode = &(*linkedlistNode)->next;
-	clearlistNodeRec(plistNode);
-	delete *linkedlistNode;
-	linkedlistNode = NULL;
-}
-
-listNode** pushFront(listNode* newLinkedlistNode, _linkedlist**& existLinkedlistNode){
-	if (!existLinkedlistNode)
-	{
-		existLinkedlistNode = &newLinkedlistNode;
-	}
-	else{
-		newLinkedlistNode->next = *existLinkedlistNode;
-		existLinkedlistNode = &newLinkedlistNode;
-	}
-	return existLinkedlistNode;
-}
-
-listNode** pushFront(int data, _linkedlist**& existLinkedlistNode){
-	listNode *pNode = new listNode(data);
-	if (!existLinkedlistNode)
-	{
-		existLinkedlistNode = &pNode;
-	}
-	else{
-		pNode->next = *existLinkedlistNode;
-		existLinkedlistNode = &pNode;
-	}
-	return existLinkedlistNode;
-}
-
-listNode** pushBack(listNode* newLinkedlistNode, _linkedlist**& existLinkedlistNode){
-	if (!existLinkedlistNode)
-	{
-		existLinkedlistNode = &newLinkedlistNode;
-	}
-	else{
-		getBack(existLinkedlistNode)->next = newLinkedlistNode;
-	}
-	return existLinkedlistNode;
-}
-
-listNode** pushBack(int data, _linkedlist**& existLinkedlistNode){
-	listNode *pNode = new listNode(data);
-	if (!existLinkedlistNode)
-	{
-		existLinkedlistNode = &pNode;
-	}
-	else{
-		getBack(existLinkedlistNode)->next = pNode;
-	}
-	return existLinkedlistNode;
-}
-
-listNode** popFront(_linkedlist**& linkedList){
-	if (linkedList){
-		listNode *pNext = (*linkedList)->next;
-		delete *linkedList;
-		if (pNext)
-			linkedList = &pNext;
-		else
-			linkedList = NULL;
-	}
-	return linkedList;
-}
-
-listNode** popBack(_linkedlist**& linkedlistNode){
-	if (linkedlistNode){
-		_linkedlist *plistNode = *linkedlistNode,
-			*pNext = (*linkedlistNode)->next;
-		while (true){
-			if (!pNext->next)
-			{
-				plistNode->next = NULL;
-				delete pNext;
-				return linkedlistNode;
-			}
-			plistNode = plistNode->next;
-			pNext = pNext->next;
+	node<Type> *pNode = *this->head,
+		*pNextNode = (*this->head)->next;
+	while (1){
+		if (!pNextNode){
+			pNode->next = new node<Type>(data);
+			return;
 		}
+		pNode = pNextNode;
+		pNextNode = pNextNode->next;
 	}
-	return linkedlistNode;
 }
 
-//popBack May need to be modified(if(next==NULL))
+template<class Type>
+void list<Type>::pushFront(Type data){
+	if (this->head == NULL){
+		this->head = new node<Type>*;
+		*this->head = new node<Type>(data);
+		return;
+	}
+	node<Type> *pNode = *this->head;
+	*this->head = new node<Type>(data);
+	(*this->head)->next = pNode;
+	return;
+}

@@ -1,104 +1,32 @@
 #include<iostream>
-using std::cout;
-using std::endl;
+#include"singlyList.cpp"
 
-typedef struct _stack{
-	_stack *next;
-	int data;
-	_stack() :data(0), next(NULL){}
-	_stack(int data) :data(data), next(NULL){}
-}stackNode;
+#include<vector>
 
-stackNode* createStackNode(int data){
-	return new stackNode(data);
-}
+//using std::cout;
+//using std::endl;
 
-int length(_stack** stack){
-	if (!stack || !*stack)
-		return 0;
-	return length(&((*stack)->next)) + 1;
-}
+using namespace std;
 
-_stack** push(int data, _stack**& stack){
-	stackNode *pNode = new stackNode(data);
-	if (!stack)
-	{
-		stack = &pNode;
-	}
-	else{
-		pNode->next = *stack;
-		stack = &pNode;
-	}
-	return stack;
-}
-
-_stack** push(stackNode* newStackNode, _stack**& stack){
-	if (!stack)
-		stack = &newStackNode;
-	else{
-		newStackNode->next = *stack;
-		stack = &newStackNode;
-	}
-	return stack;
-}
-
-int pop(_stack** stack){
-	/*if (stack){
-		int data = (*stack)->data;
-		stackNode *pNext = (*stack)->next;
-		delete *stack;
-		if (pNext)
-		stack = &pNext;
-		else
-		stack = NULL;
-		return data;
-		}
-		return NULL;*/
-
-	cout << stack << " " << *stack << endl;
-
-	return 0;
-}
-
-stackNode* get(_stack** stack){
-	if (stack)
-		return *stack;
-	return NULL;
-}
-
-bool isEmpty(_stack**& stack){
-	if (!stack)
-		return true;
-	return false;
-}
-
-
-struct t{
+struct Obj{
 	int a;
-	t(int i){
-		a = i;
-		next = NULL;
+	Obj(){}
+	Obj(int a){
+		this->a = a;
 	}
-	t *next;
 };
 
-void test(int a, t** ppT){
-	t *p = new t(a);
-	cout << p << " " << ppT << " " << *ppT << endl;
-	p->next = *ppT;
-	*ppT = p;
-	cout << p << " " << ppT << " " << *ppT << endl;
-}
-
 int main(int argc, char**args){
-	_stack **stack = NULL;
+	Obj a(10), b(20), c(30);
+	list<Obj>lst;
+	lst.pushBack(b);
+	lst.pushFront(a);
+	lst.pushBack(c);
 
-	t *p = new t(10), **ppT = &p;
-	test(5, ppT);
+	cout << (*lst.head)->next->data.a << endl;
 
-	delete p;
-
-	cout << ppT << " " << *ppT << (*ppT)->a << endl;
+	vector<Obj>vec;
+	vec.push_back(a);
 
 	system("pause");
 	return 0;
