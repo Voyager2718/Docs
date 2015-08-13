@@ -64,11 +64,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="inherit.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="singlyList.cpp" />
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inherit.h" />
     <ClInclude Include="singlyList.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>

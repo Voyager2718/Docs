@@ -1,32 +1,24 @@
 #include<iostream>
-#include"singlyList.cpp"
 
-#include<vector>
+using std::cout;
+using std::endl;
 
-//using std::cout;
-//using std::endl;
+//using namespace std;
 
-using namespace std;
+#include"singlyList.h"
 
-struct Obj{
+struct test
+{
 	int a;
-	Obj(){}
-	Obj(int a){
-		this->a = a;
+	test(){
+		this->a = 10;
 	}
 };
 
 int main(int argc, char**args){
-	Obj a(10), b(20), c(30);
-	list<Obj>lst;
-	lst.pushBack(b);
-	lst.pushFront(a);
-	lst.pushBack(c);
+	list<int>lst;
 
-	cout << (*lst.head)->next->data.a << endl;
 
-	vector<Obj>vec;
-	vec.push_back(a);
 
 	system("pause");
 	return 0;
