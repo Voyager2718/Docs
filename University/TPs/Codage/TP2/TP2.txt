@@ -1,0 +1,76 @@
+YANG Zhipeng
+
+Question 1
+print("%x,%o,%X"%(999,999,999))
+>>>3e7,1747,3E7
+
+bin(999)
+>>>'0b1111100111'
+
+oct(999)
+>>>'0o1747'
+
+hex(999)
+>>>'0x3e7'
+
+Question 2
+"{:b}".format(1331)
+>>>'10100110011'
+
+"{:o}".format(1331)
+>>>'2463'
+
+"{:x}".format(1331)
+>>>'533'
+
+Question 3
+n=0,chr(ord('0')+n)=0
+n=1,chr(ord('0')+n)=1
+n=2,chr(ord('0')+n)=2
+n=3,chr(ord('0')+n)=3
+n=4,chr(ord('0')+n)=4
+n=5,chr(ord('0')+n)=5
+n=6,chr(ord('0')+n)=6
+n=7,chr(ord('0')+n)=7
+n=8,chr(ord('0')+n)=8
+n=9,chr(ord('0')+n)=9
+n=10,chr(ord('0')+n)=:
+n=11,chr(ord('0')+n)=;
+n=12,chr(ord('0')+n)=<
+n=13,chr(ord('0')+n)==
+n=14,chr(ord('0')+n)=>
+n=15,chr(ord('0')+n)=?
+n=16,chr(ord('0')+n)=@
+n=17,chr(ord('0')+n)=A
+n=18,chr(ord('0')+n)=B
+n=19,chr(ord('0')+n)=C
+
+Question 4
+
+
+Question 5
+def entier_en_chiffre(n):
+     assert n <= 15 and n >= 0
+     if(n < 10):
+             return chr(n+48)
+     return chr(n+55)
+	 
+Question 6
+def ent_chn(n,b):
+     assert b != 1 and b <= 16
+     if (n == 0):
+             return ""
+     ord = n % b
+     c = entier_en_chiffre(ord)
+     return entier_en_chaine(n//b, b) + c
+	 
+def entier_en_chaine(n,b):
+     if(ent_chn(n,b)==""):
+             return "0"
+     return ent_chn(n,b)
+	 
+	 
+Question 7
+def afficher():
+      for i in range(0,21):
+           builtins.print("{:3d}:{:8d}{:3d}  {}".format(i,int(entier_en_chaine(i,2)),int(entier_en_chaine(i,8)),entier_en_chaine(i,16)))

@@ -1,0 +1,23 @@
+public class Trap implements Room {
+
+	@Override
+	public void addNextRoom(Room room, String direction) {
+	}
+
+	@Override
+	public Room getNextRoom(String direction) {
+		return null;
+	}
+
+	@Override
+	public boolean isPossibleDirection(String direction) {
+		return false;
+	}
+
+	@Override
+	public Room go(String command) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

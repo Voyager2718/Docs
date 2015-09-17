@@ -1,0 +1,80 @@
+def create(value, color):
+     v = ("1","2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
+     c = ("heart","spade","club","diamond")
+     assert (value in v)and(color in c),"Para error."
+     return {"value":value,"color":color}
+
+def color(card):
+     return card["color"]
+
+def value(card):
+     return card["value"]
+
+def compare(c1,c2):
+     v = ("2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
+     c = ("club","diamond","heart","spade")
+     c1v = v.index(value(c1))
+     c1c = c.index(color(c1))
+     c2v = v.index(value(c2))
+     c2c = c.index(color(c2))
+     if(c1v>c2v):
+          return 1
+     elif(c1v<c2v):
+          return -1
+     else:
+          if(c1c>c2c):
+               return 1
+          elif(c1c<c2c):
+               return -1
+          else:
+               return 0
+
+def compare_value(c1,c2):
+     v = ("2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
+     i1 = v.index(value(c1))
+     i2 = v.index(value(c2))
+     if(i1>i2):
+          return 1
+     elif(i1<i2):
+          return -1
+     else:
+          return 0
+
+def compare_color(c1,c2):
+     c = ("club","diamond","heart","spade")
+     i1 = c.index(color(c1))
+     i2 = c.index(color(c2))
+     if(i1>i2):
+          return 1
+     elif(i1<i2):
+          return -1
+     else:
+          return 0
+		  		  
+def to_string(c):
+     print("{} of {}".format(value(c),color(c)))
+
+c1 = create('Ace','heart')
+c2 = create('King','heart')
+c3 = create('Ace','spade')
+c1bis = create('Ace','heart')
+compare(c1,c2) > 0
+compare(c2,c1) < 0
+compare(c1,c3) < 0
+compare(c1,c1bis) == 0
+color(c1)
+value(c1)
+compare_color(c1,c3) < 0
+compare_value(c2,c1) < 0
+compare_value(c1,c3) == 0
+to_string(c1)
+
+
+def createCardSet():
+      card = ()
+      v = ("2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
+      c = ("club","diamond","heart","spade")
+      for i in range(0,13):
+              for j in range(0,4):
+                      card += ({"value":v[i],"color":c[j]},)
+      return card

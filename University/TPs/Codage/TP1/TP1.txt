@@ -1,0 +1,94 @@
+YANG Zhipeng
+
+Excercice 1
+Question 1
+Entiers Binaire Hexadécimal
+1		0001	      1
+10		1010		  A
+100		01100100	  64
+1000	001111101000  3E8
+
+Question 2
+Binaire Décimale Hexadécimal
+1		01			1
+10		2			2
+100		4			4
+1000	8			8
+
+Excercice 2
+Question 1
+t = 1 15
+t = 2 255
+t = 3 4095
+t = 4 65535
+t = 5 1048575
+t = 6 16777215
+
+Question 2
+t = 1 7
+t = 2 63
+t = 3 511
+t = 4 4095
+t = 5 32767
+t = 6 262143
+
+Excercice 3
+Question 2
+
+
+Question 3
+
+
+Question 4
+Cigale1.txt 642   octets
+Cigale2.txt 648   octets
+Cigale1.odt 16971 octets
+
+Question 5
+Q5-1
+
+
+Q5-2
+
+
+Excercice 4
+Question 2
+
+
+Question 3
+adage.gif 5057  octets
+adage.bmp 82874 octets
+
+Question 4
+
+
+Question 5
+
+
+Question 6
+Il se casser. Parce ce que gif est un format compressé.
+
+Question 7
+
+
+Excercice 5
+Question 1
+1.Oui. Elle est commutative.
+2.Oui. L'élément neutre est 0.
+3.Oui. C'est 5. Oui, a XOR a = 0. b XOR b = 0.
+
+Question 2
+Il calcule les 2 nombres bit à bit. Si un bit et un autre bit est pareil, il retourne 0, sinon 1.
+
+10001 XOR 01110 = 11111
+10010 XOR 01001 = 11011
+
+Excercice 7
+Question 1
+a = 2
+a Lsh 1 = 4
+a Lsh 2 = 8
+a Lsh 3 = 16
+
+Question 2
+Lsh fait décalage à gauche en binaire. Donc si 2(base 10) = 10(base 2) <- 1bit = 100(base 2) = 4

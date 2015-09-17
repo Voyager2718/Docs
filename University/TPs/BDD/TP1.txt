@@ -1,0 +1,49 @@
+YANG Zhipeng
+OUAAKA Marouane
+
+Exercice 1.
+Q1.1.
+project[fnom](Fournisseurs);
+
+Q1.2.
+select[fad='Paris'](Fournisseurs);
+
+Q1.3.
+project[fnom](select[fad='Paris'](Fournisseurs));
+
+Q1.4.
+project[anom](select[acoul='vert'](Articles));
+
+Q1.5.
+project[aid](select[prix<=20](Catalogue));
+
+Q1.6.
+project[fid](select[prix<=20](Catalogue));
+
+Q.1.7.
+project[fid](select[prix>=10 AND prix<=20](Catalogue));
+
+Q1.8.
+project[fid]((select[prix>=10](Catalogue))intersect(select[prix<=20](Catalogue)));\
+
+Q1.9.
+project[anom](select[acoul='vert' OR acoul='rouge'](Articles));
+
+Exercice 3.
+Q.3.1.
+project[anom](Catalogue join Articles);
+
+Q3.2.
+project[anom,prix,fnom](Catalogue join Articles join Fournisseurs);
+
+Q3.3.
+project[fid](select[acoul='rouge'](Articles) join Catalogue);
+
+Q3.4.
+project[fnom](select[prix<20](Catalogue) join Fournisseurs);
+
+Q3.5.
+project[fid](select[prix>10000](Catalogue));
+
+Q3.6.
+

@@ -1,0 +1,5 @@
+
+public class CantGoException extends Exception {
+	private String message;
+	
+}
