@@ -2,7 +2,7 @@ YANG Zhipeng
 
 Excercice 1
 Question 1
-Entiers Binaire Hexadécimal
+Entiers Binaire Hexadecimal
 1		0001	      1
 10		1010		  A
 100		01100100	  64
@@ -34,10 +34,11 @@ t = 6 262143
 
 Excercice 3
 Question 2
-
+Oui. .odt il ne marche pas.
+cigale1.txt et cigale2.txt, il n'y a pas de difference.
 
 Question 3
-
+.odt il marche maintenant.
 
 Question 4
 Cigale1.txt 642   octets
@@ -46,30 +47,32 @@ Cigale1.odt 16971 octets
 
 Question 5
 Q5-1
-
+Je connais que le cigale1.txt et cigale2.txt. Mais les ascents des 2 fichiers sont disparus.
+Je ne connais pas cigale1.odt.
 
 Q5-2
-
+cigale1.txt a utilisé 2 points pour représenter la entrer or cigale2.txt a utilisé 4 points pour représenter la rentrer.
 
 Excercice 4
 Question 2
-
+Non, il n'y a pas de difference.
 
 Question 3
 adage.gif 5057  octets
 adage.bmp 82874 octets
 
 Question 4
-
+bmp est un fichier non compreesé. Or gif est un fichier compressé.
+bmp coder chaque pixels avec ses RGB.
 
 Question 5
-
+Il y a quelque lignes qui ont changé sa couleur.
 
 Question 6
 Il se casser. Parce ce que gif est un format compressé.
 
 Question 7
-
+36(16)
 
 Excercice 5
 Question 1
@@ -82,6 +85,25 @@ Il calcule les 2 nombres bit à bit. Si un bit et un autre bit est pareil, il re
 
 10001 XOR 01110 = 11111
 10010 XOR 01001 = 11011
+
+Excercice 6
+OR
+Question 1
+1.Oui. Elle est commutative.
+2.Oui. L'élément neutre est 0.
+3.Non. Il n'existe pas. Oui, pour tout entier autre que 5 n'ont pas a tel a xor (un entier) = 0.
+
+Question 2
+Il calcule les 2 nombres bit à bit. Si au moins un bit des 2 est 1, il retourne 1, sinon 0.
+
+AND
+Question 1
+1.Oui. Elle est commutative.
+2.Non. Suppose A, il n'existe que A tel que A and A = A.
+3.Oui. C'est 0. 0 and 5 = 0. Puis, pour tout entiere autre que 5, a = 0 tel que a and (un entier) = 0.
+
+Question 2
+Il calcule les 2 nombres bit à bit. Si tous les bits sont 1, il retourne 1, sinon 0.
 
 Excercice 7
 Question 1

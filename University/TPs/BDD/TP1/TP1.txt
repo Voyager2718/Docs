@@ -46,4 +46,20 @@ Q3.5.
 project[fid](select[prix>10000](Catalogue));
 
 Q3.6.
+project[fnom,fad](select[prix>1000](Catalogue) join Fournisseurs);
+
+Q3.7.
+
+Q3.8.
+
+Q3.9.
+
+Q3.10.
+
+Q3.11.
+project[fnom](select[acoul='noir'](Articles) join Catalogue join Fournisseurs);
+
+Q3.12.
+
+Q3.13.
 
