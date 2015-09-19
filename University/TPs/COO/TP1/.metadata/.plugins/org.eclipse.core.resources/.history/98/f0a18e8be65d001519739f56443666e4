@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class NormalRoom extends Room {
+	Map<String, Room> rooms = new HashMap<String, Room>();
+
+	public NormalRoom(String type) {
+		super(type);
+	}
+
+	private boolean directionAvailable(String direction) {
+		List<String> dir = new ArrayList<String>();
+		dir.add("east");
+		dir.add("south");
+		dir.add("west");
+		dir.add("north");
+		return dir.contains(direction);
+	}
+
+	public void addRoom(String direction, Room room) {
+		if(!)
+		if (this.rooms.containsKey(direction)) {
+			System.out.println("Already have a room there.");
+			return;
+		}
+		this.rooms.put(direction, room);
+	}
+
+	public boolean isPossibleDirection(String direction) {
+		return this.rooms.containsKey(direction);
+	}
+
+	public Room getNextRoom(String direction) {
+
+	}
+}

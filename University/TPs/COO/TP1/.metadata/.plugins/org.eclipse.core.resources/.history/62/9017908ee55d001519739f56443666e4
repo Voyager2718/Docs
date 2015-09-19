@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class NormalRoom extends Room {
+	Map<String, Room> rooms = new HashMap<String, Room>();
+
+	public NormalRoom(String type) {
+		super(type);
+	}
+
+	public void addRoom(String direction, Room room) {
+		try{
+			
+		}
+		this.rooms.put(direction, room);
+	}
+}

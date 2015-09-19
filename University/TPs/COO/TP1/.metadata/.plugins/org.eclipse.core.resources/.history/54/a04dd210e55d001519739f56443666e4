@@ -1,0 +1,10 @@
+import java.util.Map;
+
+public class NormalRoom extends Room {
+	Map<String,Room> rooms = new HashMap<String,Room>();
+	
+	public NormalRoom(String type) {
+		super(type);
+	}
+
+}

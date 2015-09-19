@@ -1,4 +1,4 @@
-from random import *
+import random
 import copy
 def create(value, color):
       v = ("1","2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
@@ -66,14 +66,15 @@ def createCardSet():
       return card
 
 def shuffle(cardSet):
-     return shuffle(cardSet)
+     random.shuffle(cardSet)
+     return cardSet
 
-def distributeCard(*args):
+def distributeCard(cardSet):
     c = [[],[]]
     for i in range(0,16):
-        c[0] += [args[0][i]]
+        c[0] += [cardSet[i]]
     for i in range(16,32):
-        c[1] += [args[0][i]]
+        c[1] += [cardSet[i]]
     return c		
 
 def getPlayer1FirstCard(cardSet):
@@ -97,34 +98,6 @@ def deletePlayer1FirstCard(cardSet):
 
 def deletePlayer2FirstCard(cardSet):
      cardSet[1][0:1] = []
-
-def play():
-     cards = shuffle(createCardSet())
-     plays = distributeCard(cards)
-     tmp = [[],[]]
-     while(getWinner(plays) != 1 and getWinner(plays) != 0):
-             a = compare(getPlayer1FirstCard(plays),getPlayer2FirstCard(plays))
-             print(to_string(getPlayer1FirstCard(plays)))
-             print(to_string(getPlayer2FirstCard(plays)))
-             print("\n")
-             if(a==0):
-                     while(a == 0):
-                             tmp += [getPlayer1FirstCard(plays)]
-                             tmp += [getPlayer2FirstCard(plays)]
-                             deletePlayer1FirstCard(plays)
-                             deletePlayer2FirstCard(plays)
-                             a = compare(getPlayer1FirstCard(plays),getPlayer2FirstCard(plays))
-             else:
-                     deletePlayer1FirstCard(plays)
-                     deletePlayer2FirstCard(plays)
-             if(a < 0):
-                     plays[0] += tmp
-             else:
-                     plays[1] += tmp
-     if(getWinner(plays)==0):
-             print("Player 0 won.");
-     else:
-             print("Player 1 won.");
 
 c1 = create('Ace','heart')
 c2 = create('King','heart')

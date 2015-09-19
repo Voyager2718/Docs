@@ -1,0 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Entrance {
+	Map<String, Room> rooms = new HashMap<String, Room>();
+}

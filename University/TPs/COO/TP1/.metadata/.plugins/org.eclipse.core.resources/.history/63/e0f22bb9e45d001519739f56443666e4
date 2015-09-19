@@ -1,0 +1,12 @@
+public class Room{
+	String type;
+	
+	
+	public Room(String type){
+		this.type = type;
+	}
+	
+	public String getType(){
+		
+	}
+}
