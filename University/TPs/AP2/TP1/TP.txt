@@ -92,9 +92,9 @@ def getPlayer2FirstCard(cardSet):
 def getWinner(cardSet):
      if(len(cardSet[0])==0 and len(cardSet[1])==0):
              return -99
-     if(len(cardSet[0])==0):
+     if(len(cardSet[1])==0):
              return 0
-     elif(len(cardSet[1])==0):
+     elif(len(cardSet[0])==0):
              return 1
      else:
              return -1
