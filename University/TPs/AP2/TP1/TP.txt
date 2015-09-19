@@ -56,6 +56,7 @@ def compare_color(c1,c2):
 def to_string(c):
       return ("{} of {}".format(value(c),color(c)))
 
+#Create a set of card(52 cards), return a list contain 52 cards.
 def createCardSet(): 
       card = []
       v = ("2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
@@ -65,10 +66,12 @@ def createCardSet():
                       card += [{"value":v[i],"color":c[j]}]
       return card
 
+#Shuffle all elements. Return and modify the object entered.
 def shuffle(cardSet):
      random.shuffle(cardSet)
      return cardSet
 
+#Distribute cards to 2 players. Return a list contains 2 lists of cards.([[Cards of player 1],[Cards of player 2]])
 def distributeCard(cardSet):
     c = [[],[]]
     for i in range(0,16):
@@ -77,12 +80,15 @@ def distributeCard(cardSet):
         c[1] += [cardSet[i]]
     return c		
 
+#Get first card of player 1.
 def getPlayer1FirstCard(cardSet):
      return cardSet[0][0];
 
+#Get first card of player 2.
 def getPlayer2FirstCard(cardSet):
      return cardSet[1][0];
 
+#Get winner. If player 1 won, return 0. If player 2 won, return 1. If there's not a winner, return -1. If there're errors, return -99.
 def getWinner(cardSet):
      if(len(cardSet[0])==0 and len(cardSet[1])==0):
              return -99
@@ -93,12 +99,58 @@ def getWinner(cardSet):
      else:
              return -1
 
+#Remove the first card of player 1.
 def deletePlayer1FirstCard(cardSet):
      cardSet[0][0:1] = []
 
+#Remove the first card of player 2.
 def deletePlayer2FirstCard(cardSet):
      cardSet[1][0:1] = []
 
+#Convert a integer to string. If parameter equals to 0, return "Player 1 won the game.", if 1, return "Player 2 won the game", if -1, return "No result.", else return "Error.".
+def winner_to_string(integer):
+          if(integer == 0):
+                  return "Player 1 won the game."
+          elif(integer == 1):
+                  return "Player 2 won the game."
+          elif(integer == -1):
+                  return "No result."
+          else:
+                  return "Error."
+
+def play():
+    cs = distributeCard(shuffle(createCardSet()))
+    i = 0
+    while(getWinner(cs)==-1):
+            cmp = compare(getPlayer1FirstCard(cs),getPlayer2FirstCard(cs))
+            i += 1
+            print("Turn {}".format(i))
+            print("Player1:"+to_string(getPlayer1FirstCard(cs))+"\nPlayer2:"+to_string(getPlayer2FirstCard(cs)))
+            if(cmp==0):
+                    print("Draw.\n")
+                    tmp = []
+                    while(cmp==0):#If 2 players have 2 same cards, put them into a temp list. If finally they have a winner, give all cards to the winner.
+                            tmp+=getPlayer1FirstCard(cs)
+                            tmp+=getPlayer2FirstCard(cs)
+                            deletePlayer1FirstCard(cs)
+                            deletePlayer2FirstCard(cs)
+                            cmp = compare(getPlayer1FirstCard(cs),getPlayer2FirstCard(cs))
+                            i += 1
+                            print("Turn {}".format(i))
+                            print("Player1:"+to_string(getPlayer1FirstCard(cs))+"\nPlayer2:"+to_string(getPlayer2FirstCard(cs)))
+            elif(cmp==1):#Case if player 1 won.
+                    print("Player 1 won.\n")
+                    cs[0] += [getPlayer2FirstCard(cs)]
+                    deletePlayer2FirstCard(cs)
+                    cs[0] = shuffle(cs[0])
+            else:#Case if player 2 won.
+                    print("Player 2 won.\n")
+                    cs[1] += [getPlayer1FirstCard(cs)]
+                    deletePlayer1FirstCard(cs)
+                    cs[0] = shuffle(cs[0])
+    print(winner_to_string(getWinner(cs)))
+
+#These are tests if all functions are correct.
 c1 = create('Ace','heart')
 c2 = create('King','heart')
 c3 = create('Ace','spade')
@@ -113,3 +165,6 @@ compare_color(c1,c3) < 0
 compare_value(c2,c1) < 0
 compare_value(c1,c3) == 0
 to_string(c1)
+
+#I put "play()" into comment, because it may print lots of things which is difficult to read. Remove "#" to test the play()
+#play()
