@@ -1,7 +1,7 @@
 import random
 import copy
 def create(value, color):
-      v = ("1","2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
+      v = ("2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
       c = ("heart","spade","club","diamond")
       assert (value in v)and(color in c),"Para error."
       return {"value":value,"color":color}
@@ -55,6 +55,12 @@ def compare_color(c1,c2):
 
 def to_string(c):
       return ("{} of {}".format(value(c),color(c)))
+
+#Pick a random card from 52 cards.
+def random_card():
+     v = ("1","2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace")
+     c = ("heart","spade","club","diamond")
+     return {"value":v[int(random.random()*13)],"color":c[int(random.random()*4)]}
 
 #Create a set of card(52 cards), return a list contain 52 cards.
 def createCardSet(): 
@@ -117,11 +123,6 @@ def winner_to_string(integer):
                   return "No result."
           else:
                   return "Error."
-
-#Pick a random card from 52 cards.
-def random_card():
-     cs = shuffle(createCardSet())
-     return cs[0]
 
 def play():
     cs = distributeCard(shuffle(createCardSet()))
