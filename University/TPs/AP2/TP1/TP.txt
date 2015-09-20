@@ -118,6 +118,11 @@ def winner_to_string(integer):
           else:
                   return "Error."
 
+#Pick a random card from 52 cards.
+def random_card():
+     cs = shuffle(createCardSet())
+     return cs[0]
+
 def play():
     cs = distributeCard(shuffle(createCardSet()))
     i = 0
