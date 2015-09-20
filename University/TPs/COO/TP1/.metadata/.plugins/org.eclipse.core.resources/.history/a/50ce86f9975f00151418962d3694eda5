@@ -1,0 +1,10 @@
+import java.util.List;
+
+public class TreasureRoom extends Room {
+	private List<Equipement> equipements;
+
+	public TreasureRoom() {
+		super("Treasure");
+	}
+
+}

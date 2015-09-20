@@ -1,0 +1,10 @@
+
+public class TreasureRoom extends Room {
+	private List<Equipement> equipements;
+
+	public TreasureRoom(String type) {
+		super(type);
+		// TODO Auto-generated constructor stub
+	}
+
+}

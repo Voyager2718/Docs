@@ -1,11 +1,6 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class NormalRoom extends Room {
-	public NormalRoom(String type) {
-		super(type);
+	public NormalRoom() {
+		super("Normal");
 	}
 
 	public void addRoom(String direction, Room room) {
