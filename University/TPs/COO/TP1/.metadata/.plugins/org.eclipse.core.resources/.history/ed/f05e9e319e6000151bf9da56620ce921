@@ -1,0 +1,6 @@
+
+public class R {
+	public String getType(){
+		
+	}
+}

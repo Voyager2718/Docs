@@ -1,0 +1,6 @@
+
+public class NormalRoom extends Room {
+	public NormalRoom() {
+		this.type = "Normal";
+	}
+}

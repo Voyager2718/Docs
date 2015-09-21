@@ -1,0 +1,5 @@
+public class Entrance extends Room {
+	public Entrance() {
+		this.type = "Entrance";
+	}
+}

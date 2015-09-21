@@ -1,0 +1,6 @@
+package Room;
+public class Entrance extends R {
+	public Entrance() {
+		this.type = "Entrance";
+	}
+}

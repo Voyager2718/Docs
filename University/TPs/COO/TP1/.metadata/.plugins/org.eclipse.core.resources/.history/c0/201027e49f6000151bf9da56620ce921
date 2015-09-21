@@ -1,0 +1,20 @@
+package Room;
+public class LockedRoom extends Room {
+	private boolean locked = true;
+
+	public LockedRoom() {
+		this.type = "Lock";
+	}
+
+	public void unlock() {
+		this.locked = false;
+	}
+
+	public void lock() {
+		this.locked = true;
+	}
+
+	public boolean getLocked() {
+		return this.locked;
+	}
+}

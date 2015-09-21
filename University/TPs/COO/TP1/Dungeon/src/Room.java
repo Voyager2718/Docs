@@ -3,24 +3,43 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Room{
-	String type;
-	Map<String, Room> rooms = new HashMap<String, Room>();
-	
+public class Room extends R {
+	protected Map<String, Room> rooms = new HashMap<String, Room>();
+
+	public Room(String type, String description) {
+		super(type, description);
+	}
+
 	protected boolean directionAvailable(String direction) {
 		List<String> dir = new ArrayList<String>();
 		dir.add("east");
 		dir.add("south");
 		dir.add("west");
 		dir.add("north");
-		return dir.contains(direction);
+		if (!dir.contains(direction))
+			return false;
+		return this.rooms.containsKey(direction);
 	}
-	
-	public Room(String type){
-		this.type = type;
+
+	protected void addRoom(String direction, Room room) {
+		if (!this.directionAvailable(direction)) {
+			System.out.println("I don't know what you mean.");
+			return;
+		}
+		if (this.rooms.containsKey(direction)) {
+			System.out.println("Already have a room there.");
+			return;
+		}
+		this.rooms.put(direction, room);
 	}
-	
-	public String getType(){
-		return this.type;
+
+	protected Room getNextRoom(String direction) throws CantGoException {
+		if (!this.directionAvailable(direction)) {
+			System.out.println("I don't know what you mean.");
+			return null;
+		}
+		if (!this.rooms.containsKey(direction))
+			throw new CantGoException("Can't go " + direction);
+		return this.rooms.get(direction);
 	}
 }

@@ -1,0 +1,8 @@
+
+public class Exit extends R {
+	public Exit() {
+		this.type = "Exit";
+	}
+	
+	
+}

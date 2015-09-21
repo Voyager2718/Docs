@@ -1,0 +1,8 @@
+
+public class R {
+	protected String type;
+
+	public String getType() {
+		return this.type;
+	}
+}

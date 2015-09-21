@@ -1,34 +1,9 @@
+
 public class LockedRoom extends Room {
 	private boolean locked = true;
 
 	public LockedRoom() {
-		super("Locked");
-	}
-
-	public void addRoom(String direction, Room room) {
-		if (!this.directionAvailable(direction)) {
-			System.out.println("I don't know what you mean.");
-			return;
-		}
-		if (this.rooms.containsKey(direction)) {
-			System.out.println("Already have a room there.");
-			return;
-		}
-		this.rooms.put(direction, room);
-	}
-
-	public boolean isPossibleDirection(String direction) {
-		return this.rooms.containsKey(direction);
-	}
-
-	public Room getNextRoom(String direction) throws CantGoException {
-		if (!this.directionAvailable(direction)) {
-			System.out.println("I don't know what you mean.");
-			return null;
-		}
-		if (!this.rooms.containsKey(direction))
-			throw new CantGoException("Can't go " + direction);
-		return this.rooms.get(direction);
+		super("Lock", "This room is locked, you have to find a key to unlock it.");
 	}
 
 	public void unlock() {
@@ -39,7 +14,7 @@ public class LockedRoom extends Room {
 		this.locked = true;
 	}
 
-	public boolean getLock() {
+	public boolean getLocked() {
 		return this.locked;
 	}
 }

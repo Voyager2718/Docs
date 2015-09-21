@@ -1,0 +1,5 @@
+public class Trap extends R {
+	public Trap() {
+		this.type = "Trap";
+	}
+}
