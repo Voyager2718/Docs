@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Room extends R {
-	protected Map<String, Room> rooms = new HashMap<String, Room>();
+	protected Map<String, R> rooms = new HashMap<String, R>();
 
 	public Room(String type, String description) {
 		super(type, description);
@@ -18,12 +18,12 @@ public class Room extends R {
 		dir.add("north");
 		if (!dir.contains(direction))
 			return false;
-		return this.rooms.containsKey(direction);
+		return true;
 	}
 
-	protected void addRoom(String direction, Room room) {
+	protected void addRoom(String direction, R room) {
 		if (!this.directionAvailable(direction)) {
-			System.out.println("I don't know what you mean.");
+			System.out.println("I don't know what you mean, use east, south, west, north please.");
 			return;
 		}
 		if (this.rooms.containsKey(direction)) {
@@ -33,7 +33,7 @@ public class Room extends R {
 		this.rooms.put(direction, room);
 	}
 
-	protected Room getNextRoom(String direction) throws CantGoException {
+	protected R getNextRoom(String direction) throws CantGoException {
 		if (!this.directionAvailable(direction)) {
 			System.out.println("I don't know what you mean.");
 			return null;
@@ -41,5 +41,9 @@ public class Room extends R {
 		if (!this.rooms.containsKey(direction))
 			throw new CantGoException("Can't go " + direction);
 		return this.rooms.get(direction);
+	}
+
+	protected String getDescription() {
+		return this.description;
 	}
 }

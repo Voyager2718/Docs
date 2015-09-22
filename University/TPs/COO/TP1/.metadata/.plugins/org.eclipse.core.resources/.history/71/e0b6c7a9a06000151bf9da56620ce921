@@ -1,3 +1,0 @@
-public class Dungeon {
-	private List<Equipement> equipements = new ArrayList<Equipement>();
-}

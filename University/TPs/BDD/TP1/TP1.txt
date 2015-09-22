@@ -43,23 +43,28 @@ Q3.4.
 project[fnom](select[prix<20](Catalogue) join Fournisseurs);
 
 Q3.5.
-project[fid](select[prix>10000](Catalogue));
+project[fid](Catalogue) minus project[fid](select[prix<10000](Catalogue));
 
 Q3.6.
-project[fnom,fad](select[prix>1000](Catalogue) join Fournisseurs);
+project[fnom,fad](Catalogue join Fournisseurs) minus project[fnom,fad](select[prix<1000](Catalogue join Fournisseurs));
 
 Q3.7.
+project[aid](select[acoul='vert'](Articles)) times project[aid](select[acoul='rouge'](Articles));
 
 Q3.8.
+project[aid](Articles) minus project[aid](Catalogue);
 
 Q3.9.
+project[anom](Articles) minus project[anom](Articles times Catalogue);
 
 Q3.10.
+project[fid](select[acoul='vert'](Articles join Catalogue)) intersect project[fid](select[acoul='rouge'](Articles join Catalogue));
 
 Q3.11.
-project[fnom](select[acoul='noir'](Articles) join Catalogue join Fournisseurs);
+project[fnom](select[acoul='noir'](Articles)join Fournisseurs join Catalogue);
 
 Q3.12.
+project[fid](select[fidp<>fid and aidp=aid](rename[fidp,aidp,prixp](Catalogue)times(Catalogue)));
 
 Q3.13.
-
+project[fid](Fournisseurs) minus project[fid](Fournisseurs join project[fid](Catalogue join (select[acoul='noir'](Articles)union select[acoul='argente'](Articles))));

@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Dungeon {
+	protected List<Equipement> equipements = new ArrayList<Equipement>();
+	protected R currentRoom = new Entrance();
+	protected final Scanner scanner = new Scanner(System.in);
+
+	public R getCurrentRoom() {
+		return this.currentRoom;
+	}
+
+	public void interpretCommand() {
+		String command = this.scanner.nextLine();
+		if (command.substring(0, 3).equals("go ")) {
+
+		} else if (command.substring(0, 4).equals("use ")) {
+
+		} else if (command.equals("description")) {
+			System.out.println(this.currentRoom.getDescription());
+		} else {
+			System.out.println("I don't know what you mean.");
+		}
+	}
+
+	public boolean gameIsWon() {
+		return this.currentRoom instanceof Exit;
+	}
+
+	public boolean gameIsLost() {
+		return this.currentRoom instanceof Trap;
+	}
+	
+	public boolean gameIsFinished(){
+		return 
+	}
+
+	public static void main(String[] args) {
+		Exit e0 = new Exit(), e1 = new Exit();
+	}
+}

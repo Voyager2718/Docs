@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Dungeon {
+	protected List<Equipement> equipements = new ArrayList<Equipement>();
+	protected R currentRoom;
+	protected final Scanner scanner = new Scanner(System.in);
+
+	public Dungeon() {
+		Exit e = new Exit();
+		((Entrance) this.currentRoom).addRoom("North", e);
+	}
+
+	public R getCurrentRoom() {
+		return this.currentRoom;
+	}
+
+	public void setCurrentRoom(R room) {
+		this.currentRoom = room;
+	}
+
+	public void interpretCommand() {
+		String command = this.scanner.nextLine();
+		if (command.substring(0, 3).equals("go ")) {
+			String direction = command.substring(3);
+			if (this.getCurrentRoom() instanceof Room) {
+				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
+					try {
+						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+					} catch (CantGoException e) {
+						System.out.println(e.getMessage());
+					}
+			}
+		} else if (command.substring(0, 4).equals("use ")) {
+
+		} else if (command.equals("description")) {
+			System.out.println(this.currentRoom.getDescription());
+		} else {
+			System.out.println("I don't know what you mean.");
+		}
+	}
+
+	public boolean gameIsWon() {
+		return this.currentRoom instanceof Exit;
+	}
+
+	public boolean gameIsLost() {
+		return this.currentRoom instanceof Trap;
+	}
+
+	public boolean gameIsFinished() {
+		return gameIsWon() || gameIsLost();
+	}
+
+	public void start() {
+		while (!this.gameIsFinished()) {
+			System.out.println("You are in " + getCurrentRoom().getType() + "Room.");
+			System.out.println("What do you want to do?");
+			System.out.print("> ");
+			interpretCommand();
+		}
+		if (this.gameIsWon())
+			System.out.println("You won.");
+
+	}
+
+	public static void main(String[] args) {
+	}
+}

@@ -1,8 +1,0 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Dungeon {
-	protected List<Equipement> equipements = new ArrayList<Equipement>();
-	protected R currentRoom
-	
-}
