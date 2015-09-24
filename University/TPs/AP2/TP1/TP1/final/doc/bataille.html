@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bataille module &mdash; TPcard_ZINGOUCAI_YANG 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="TPcard_ZINGOUCAI_YANG 0 documentation" href="index.html" />
+    <link rel="next" title="The war" href="main.html" />
+    <link rel="prev" title="card module" href="card.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="The war"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="card.html" title="card module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">TPcard_ZINGOUCAI_YANG 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bataille-module">
+<h1><code class="docutils literal"><span class="pre">bataille</span></code> module<a class="headerlink" href="#bataille-module" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="index.html"><em>back</em></a></p>
+<span class="target" id="module-bataille"></span><p>A program using card module. Type <code class="docutils literal"><span class="pre">usage()</span></code>.</p>
+<dl class="function">
+<dt id="bataille.createCardSet">
+<code class="descclassname">bataille.</code><code class="descname">createCardSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#createCardSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.createCardSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a set of card(52 cards)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>(element of ``card and color``)</em> &#8211;return a list contain 52 cards</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.deletePLayer1FirstCard">
+<code class="descclassname">bataille.</code><code class="descname">deletePLayer1FirstCard</code><span class="sig-paren">(</span><em>CardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#deletePLayer1FirstCard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.deletePLayer1FirstCard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the first card of player 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cardSet</strong> &#8211; a set of card</li>
+<li><strong>type</strong> &#8211; card</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.deletePlayer2FirstCard">
+<code class="descclassname">bataille.</code><code class="descname">deletePlayer2FirstCard</code><span class="sig-paren">(</span><em>cardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#deletePlayer2FirstCard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.deletePlayer2FirstCard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the first card of player 2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cardSet</strong> &#8211; a set of card</li>
+<li><strong>type</strong> &#8211; card</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.distributeCard">
+<code class="descclassname">bataille.</code><code class="descname">distributeCard</code><span class="sig-paren">(</span><em>cardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#distributeCard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.distributeCard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distribute cards to 2 players.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cardSet</strong> &#8211; a set of card</li>
+<li><strong>type</strong> &#8211; card</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><em>(a set of ``card``)</em> &#8211;Return a list contains 2 lists of cards.([[Cards of player 1],[Cards of player 2]])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.getPlayer1FirstCard">
+<code class="descclassname">bataille.</code><code class="descname">getPlayer1FirstCard</code><span class="sig-paren">(</span><em>cardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#getPlayer1FirstCard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.getPlayer1FirstCard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get first card of player 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cardSet</strong> &#8211; a set of card</li>
+<li><strong>type</strong> &#8211; card</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The first card from the pile of player 2 cards</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.getPlayer2FirstCard">
+<code class="descclassname">bataille.</code><code class="descname">getPlayer2FirstCard</code><span class="sig-paren">(</span><em>cardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#getPlayer2FirstCard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.getPlayer2FirstCard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get first card of player 2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cardSet</strong> &#8211; a set of card</li>
+<li><strong>type</strong> &#8211; card</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The first card from the pile of player 2 cards</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.getWinner">
+<code class="descclassname">bataille.</code><code class="descname">getWinner</code><span class="sig-paren">(</span><em>cardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#getWinner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.getWinner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get winner. If player 1 won, return 0. If player 2, return 1. If there&#8217;s not a winner, return -1. If there&#8217;re errors, return -99</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> &#8211; card</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">return 0, if player 1 won</td>
+</tr>
+</tbody>
+</table>
+<p>return 1, if player 2 won
+return -1, if there&#8217;s not a winner
+return -99, if there&#8217;re errors</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.shuffle">
+<code class="descclassname">bataille.</code><code class="descname">shuffle</code><span class="sig-paren">(</span><em>cardSet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#shuffle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.shuffle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuffle all elements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cardSet</strong> &#8211; a set of card</li>
+<li><strong>type</strong> &#8211; card</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><em>(a set of ``card``)</em> &#8211;Return and modify the object entered.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bataille.winner_to_string">
+<code class="descclassname">bataille.</code><code class="descname">winner_to_string</code><span class="sig-paren">(</span><em>integer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bataille.html#winner_to_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bataille.winner_to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a integer to string. If parameter equals to 0, return &#8220;Player 1 won the game.&#8221;
+if 1, return &#8220;Player 2 won the game&#8221;, if -1, return &#8220;No result.&#8221;, else return &#8220;Error&#8221;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>integer</strong> &#8211; -1 if the cards are of identical heights, and 0 or 1 if player 1 or player 2 won the game.</li>
+<li><strong>type</strong> &#8211; int</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><em>(string)</em> &#8211; Return a string, giving the winner or not.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_FIL.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="card.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">card</span></code> module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="main.html"
+                        title="next chapter">The war</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bataille.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="The war"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="card.html" title="card module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">TPcard_ZINGOUCAI_YANG 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Emilie ZINGOUCAI &lt;AUTHOR&gt; Zhipeng YANG , FIL - IEEA - Univ-lille1.
+      Last updated on 23/09/2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

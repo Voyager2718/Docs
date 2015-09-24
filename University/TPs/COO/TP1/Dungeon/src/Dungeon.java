@@ -7,6 +7,30 @@ public class Dungeon {
 	protected R currentRoom = new Entrance();
 	protected final Scanner scanner = new Scanner(System.in);
 
+	// testing
+	protected int health = 100;
+
+	public void hurt() {
+		this.health -= 10;
+	}
+
+	public void hurt(int hurt) {
+		this.health -= hurt;
+	}
+
+	public void heal() {
+		this.health += 10;
+	}
+
+	public void heal(int heal) {
+		this.health += heal;
+	}
+
+	public int getHealth() {
+		return this.health;
+	}
+	// end testing
+
 	public Dungeon() {
 		Exit e = new Exit();
 		NormalRoom n = new NormalRoom();
@@ -24,15 +48,21 @@ public class Dungeon {
 
 	public void interpretCommand() {
 		String command = this.scanner.nextLine();
-		if (command.substring(0, 3).equals("go ")) {
+		if (command.substring(0, 3).equals("go ")) {// Case go+direction
 			String direction = command.substring(3);
-			if (this.getCurrentRoom() instanceof Room) {
+			if (this.getCurrentRoom() instanceof NormalRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
 					} catch (CantGoException e) {
 						System.out.println(e.getMessage());
 					}
+			} else if (this.getCurrentRoom() instanceof LockedRoom) {
+
+			} else if (this.getCurrentRoom() instanceof MonsterRoom) {
+
+			} else if (this.getCurrentRoom() instanceof TreasureRoom) {
+
 			}
 		} else if (command.substring(0, 4).equals("use ")) {
 
