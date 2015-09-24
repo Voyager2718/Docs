@@ -1,0 +1,120 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 12.4
+//  \   \         Application : sch2hdl
+//  /   /         Filename : toplevel.vf
+// /___/   /\     Timestamp : 09/23/2015 09:11:01
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog /home/l3/yangz/Documents/TPs/Archi/Archi/toplevel.vf -w /home/l3/yangz/Documents/TPs/Archi/Archi/toplevel.sch
+//Design Name: toplevel
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module OBUF8_MXILINX_toplevel(I, 
+                              O);
+
+    input [7:0] I;
+   output [7:0] O;
+   
+   
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_30 (.I(I[0]), 
+                 .O(O[0]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_31 (.I(I[1]), 
+                 .O(O[1]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_32 (.I(I[2]), 
+                 .O(O[2]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_33 (.I(I[3]), 
+                 .O(O[3]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_34 (.I(I[7]), 
+                 .O(O[7]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_35 (.I(I[6]), 
+                 .O(O[6]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_36 (.I(I[5]), 
+                 .O(O[5]));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  I_36_37 (.I(I[4]), 
+                 .O(O[4]));
+endmodule
+`timescale 1ns / 1ps
+
+module IBUF8_MXILINX_toplevel(I, 
+                              O);
+
+    input [7:0] I;
+   output [7:0] O;
+   
+   
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_30 (.I(I[4]), 
+                 .O(O[4]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_31 (.I(I[5]), 
+                 .O(O[5]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_32 (.I(I[6]), 
+                 .O(O[6]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_33 (.I(I[7]), 
+                 .O(O[7]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_34 (.I(I[3]), 
+                 .O(O[3]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_35 (.I(I[2]), 
+                 .O(O[2]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_36 (.I(I[1]), 
+                 .O(O[1]));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_37 (.I(I[0]), 
+                 .O(O[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module toplevel(switches, 
+                anodes, 
+                led, 
+                sevenseg);
+
+    input [7:0] switches;
+   output [3:0] anodes;
+   output [7:0] led;
+   output [6:0] sevenseg;
+   
+   wire [7:0] data;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   IBUF8_MXILINX_toplevel  XLXI_1 (.I(switches[7:0]), 
+                                  .O(data[7:0]));
+   (* HU_SET = "XLXI_3_1" *) 
+   OBUF8_MXILINX_toplevel  XLXI_3 (.I(data[7:0]), 
+                                  .O(led[7:0]));
+   x7seg  XLXI_4 (.sw(data[3:0]), 
+                 .anodes(anodes[3:0]), 
+                 .sevenseg(sevenseg[6:0]));
+endmodule

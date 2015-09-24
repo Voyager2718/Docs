@@ -1,0 +1,6 @@
+public class main {
+	public static void main(String args[]) {
+		Exit exit0 = new Exit(), exit1 = new Exit();
+		System.out.println(exit0.equals(exit1));
+	}
+}

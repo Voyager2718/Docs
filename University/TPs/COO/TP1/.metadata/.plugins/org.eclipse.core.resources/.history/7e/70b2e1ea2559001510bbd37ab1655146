@@ -1,0 +1,24 @@
+public interface Room {
+	/**
+	 * A function to add next room into the map.
+	 * @param room
+	 * @param direction
+	 */
+	public void addNextRoom(Room room, String direction);
+
+	/**
+	 * 
+	 * @param direction
+	 * @return
+	 */
+	public Room getNextRoom(String direction);
+
+	public boolean isPossibleDirection(String direction);
+
+	public Room go(String command) throws Exception;
+
+	public String getType();
+
+	public String getCondition();
+
+}

@@ -1,0 +1,37 @@
+import java.util.Map;
+
+public class Exit implements Room {
+	protected String type;
+	protected String condition;
+
+	public Exit() {
+		this.type = "exit";
+		this.condition = "normal";
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public String getCondition() {
+		return this.condition;
+	}
+
+	@Override
+	public Room getNextRoom(String direction) {
+		if (!isPossibleDirection(direction))
+			return null;
+		return this.neighbours.get(direction);
+	}
+
+	@Override
+	public boolean isPossibleDirection(String direction) {
+		return this.neighbours.containsKey(direction);
+	}
+
+	@Override
+	public Room go(String command) {
+		return null;
+	}
+
+}

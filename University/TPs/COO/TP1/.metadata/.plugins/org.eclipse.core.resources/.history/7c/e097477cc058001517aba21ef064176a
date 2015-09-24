@@ -1,0 +1,7 @@
+import java.util.Map;
+
+public interface Room {
+	public Room getNextRoom(String direction);
+	public isPossibleDirection(String direction);
+	//public addNextRoom(Room r, String direction);
+}

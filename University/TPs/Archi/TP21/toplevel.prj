@@ -1,0 +1,3 @@
+verilog work "circuit2.vf"
+verilog work "circuit1.vf"
+verilog work "toplevel.vf"

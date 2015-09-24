@@ -1,0 +1,31 @@
+import java.util.Map;
+
+public class Entrance implements Room {
+	protected Map<String, Room> neighbours;
+	protected String type;
+	protected String condition;
+
+	@Override
+	public void addNextRoom(Room r, String direction) {
+
+	}
+
+	@Override
+	public Room getNextRoom(String direction) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isPossibleDirection(String direction) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Room go(String command) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

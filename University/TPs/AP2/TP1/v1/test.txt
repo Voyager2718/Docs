@@ -1,0 +1,9 @@
+def play():
+     cards = shuffle(createCardSet())
+     plays = distributeCard(cards)
+     tmp = [[],[]]
+             a = compare(getPlayer1FirstCard(plays),getPlayer2FirstCard(plays))
+             print(to_string(getPlayer1FirstCard(plays)))
+             print(to_string(getPlayer2FirstCard(plays)))
+             print("\n")
+             

@@ -1,0 +1,9 @@
+public class NormalExit implements Exit {
+
+	@Override
+	public boolean exit() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}

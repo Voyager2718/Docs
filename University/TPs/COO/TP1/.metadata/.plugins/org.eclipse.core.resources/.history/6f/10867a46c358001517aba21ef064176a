@@ -1,0 +1,40 @@
+import java.util.Map;
+
+public class NormalRoom implements Room {
+	protected Map<String, Room> neighbours;
+	protected String type;
+	protected String condition;
+
+	/**
+	 * Constructor
+	 * @param type 
+	 * @param condition
+	 */
+	NormalRoom(String type, String condition) {
+		this.type = type;
+		this.condition = condition;
+	}
+
+	
+	public void addNextRoom(Room room, String direction) {
+		this.neighbours.put(direction, room);
+	}
+
+	@Override
+	public Room getNextRoom(String direction) {
+		return this.neighbours.get(direction);
+	}
+
+	@Override
+	public boolean isPossibleDirection(String direction) {
+		return this.neighbours.containsKey(direction);
+	}
+
+	@Override
+	public Room exit(String command) {
+		if (isPossibleDirection(command)) {
+			return getNextRoom(command);
+		} else
+			return null;
+	}
+}

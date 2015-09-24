@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 12.4
+//  \   \         Application : sch2hdl
+//  /   /         Filename : circuit2.vf
+// /___/   /\     Timestamp : 09/23/2015 09:49:43
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog /home/l3/yangz/Documents/TPs/Archi/TP21/circuit2.vf -w /home/l3/yangz/Documents/TPs/Archi/TP21/circuit2.sch
+//Design Name: circuit2
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module circuit2(a, 
+                b, 
+                c, 
+                s);
+
+    input a;
+    input b;
+    input c;
+   output s;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   INV  XLXI_4 (.I(c), 
+               .O(XLXN_2));
+   INV  XLXI_5 (.I(b), 
+               .O(XLXN_1));
+   NOR2  XLXI_7 (.I0(XLXN_2), 
+                .I1(XLXN_1), 
+                .O(XLXN_3));
+   NOR2  XLXI_10 (.I0(XLXN_3), 
+                 .I1(a), 
+                 .O(XLXN_5));
+   NOR2  XLXI_11 (.I0(c), 
+                 .I1(b), 
+                 .O(XLXN_6));
+   NOR2  XLXI_12 (.I0(XLXN_6), 
+                 .I1(XLXN_5), 
+                 .O(s));
+endmodule

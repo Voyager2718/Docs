@@ -1,0 +1,59 @@
+import java.util.Map;
+
+public class NormalRoom implements Room {
+	protected Map<String, Room> neighbours;
+	protected String type;
+	protected String condition;
+
+	/**
+	 * Constructor
+	 * @param type 
+	 * @param condition
+	 */
+	NormalRoom(String type, String condition) {
+		this.type = type;
+		this.condition = condition;
+	}
+
+	/**
+	 * Add next room to the map.
+	 * @param room A room.
+	 * @param direction The direction to place the room.
+	 */
+	@Override
+	public void addNextRoom(Room room, String direction) {
+		this.neighbours.put(direction, room);
+	}
+
+	/**
+	 * Get next room with the direction.
+	 * @param direction Get next room from the direction entered. If the direction doesn't exist, return null.
+	 */
+	@Override
+	public Room getNextRoom(String direction) {
+		if(!isPossibleDirection(direction))
+			return null;
+		return this.neighbours.get(direction);
+	}
+
+	/**
+	 * Check if there's a room from the direction entered.
+	 * @param direction The direction needs to be checked.
+	 */
+	@Override
+	public boolean isPossibleDirection(String direction) {
+		return this.neighbours.containsKey(direction);
+	}
+
+	/**
+	 * Try to go to next room. If it's impossible to go, return null, else return the next room.
+	 * @param command A command begin with "Go" end with a direction(Such as "Go north", "Go south"). 
+	 */
+	@Override
+	public Room exit(String command) {
+		if (isPossibleDirection(command.substring(2))) {
+			return getNextRoom(command);
+		} else
+			return null;
+	}
+}

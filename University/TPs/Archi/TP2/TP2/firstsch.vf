@@ -1,0 +1,64 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 12.4
+//  \   \         Application : sch2hdl
+//  /   /         Filename : firstsch.vf
+// /___/   /\     Timestamp : 09/23/2015 09:32:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog /home/l3/yangz/Documents/TPs/Archi/TP2/TP2/firstsch.vf -w /home/l3/yangz/Documents/TPs/Archi/TP2/TP2/firstsch.sch
+//Design Name: firstsch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module firstsch(a, 
+                b, 
+                s0, 
+                s1, 
+                s2, 
+                s3, 
+                s4, 
+                s5, 
+                s6);
+
+    input a;
+    input b;
+   output s0;
+   output s1;
+   output s2;
+   output s3;
+   output s4;
+   output s5;
+   output s6;
+   
+   
+   AND2  XLXI_1 (.I0(b), 
+                .I1(a), 
+                .O(s0));
+   NAND2  XLXI_3 (.I0(b), 
+                 .I1(a), 
+                 .O(s2));
+   NOR2  XLXI_4 (.I0(b), 
+                .I1(a), 
+                .O(s3));
+   OR2  XLXI_5 (.I0(b), 
+               .I1(a), 
+               .O(s4));
+   XOR2  XLXI_6 (.I0(b), 
+                .I1(a), 
+                .O(s6));
+   XNOR2  XLXI_7 (.I0(b), 
+                 .I1(a), 
+                 .O(s5));
+   INV  XLXI_8 (.I(a), 
+               .O(s1));
+endmodule

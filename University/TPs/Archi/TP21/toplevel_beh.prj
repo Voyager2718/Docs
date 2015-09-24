@@ -1,0 +1,4 @@
+verilog work "circuit2.vf"
+verilog work "circuit1.vf"
+verilog work "toplevel.vf"
+verilog work "/opt/Xilinx/12.4/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,5 @@
+EN x7seg NULL /home/l3/yangz/Documents/TPs/Archi/Archi/x7seg.vhd sub00/vhpl00 1442992992
+MO IBUF8_MXILINX_toplevel NULL toplevel.vf vlg54/_i_b_u_f8___m_x_i_l_i_n_x__toplevel.bin 1442992992
+MO toplevel NULL toplevel.vf vlg63/toplevel.bin 1442992992
+MO OBUF8_MXILINX_toplevel NULL toplevel.vf vlg12/_o_b_u_f8___m_x_i_l_i_n_x__toplevel.bin 1442992992
+AR x7seg behavioral /home/l3/yangz/Documents/TPs/Archi/Archi/x7seg.vhd sub00/vhpl01 1442992993

@@ -1,0 +1,2 @@
+vhdl work "x7seg.vhd"
+verilog work "toplevel.vf"

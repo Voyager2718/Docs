@@ -1,0 +1,10 @@
+public interface Room {
+	public void addNextRoom(Room r, String direction);
+	
+	public Room getNextRoom(String direction);
+
+	public boolean isPossibleDirection(String direction);
+	
+	public Room exit(String command);
+
+}

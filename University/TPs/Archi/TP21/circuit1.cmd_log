@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym circuit1 /home/l3/yangz/Documents/TPs/Archi/TP21/circuit1.sch /home/l3/yangz/Documents/TPs/Archi/TP21/circuit1.sym 

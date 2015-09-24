@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -refsym circuit2 /home/l3/yangz/Documents/TPs/Archi/TP21/circuit2.sch /home/l3/yangz/Documents/TPs/Archi/TP21/circuit2.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog circuit2_drc.vf -w /home/l3/yangz/Documents/TPs/Archi/TP21/circuit2.sch 

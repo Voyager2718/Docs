@@ -1,0 +1,5 @@
+set -tmpdir "/home/l3/yangz/Documents/TPs/Archi/Archi/xst/projnav.tmp"
+set -xsthdpdir "/home/l3/yangz/Documents/TPs/Archi/Archi/xst"
+elaborate
+-ifn x7seg.prj
+-ifmt mixed

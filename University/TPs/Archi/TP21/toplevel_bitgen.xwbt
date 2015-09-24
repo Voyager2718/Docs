@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/l3/yangz/Documents/TPs/Archi/TP21/toplevel.ncd
+OUTFILE=/home/l3/yangz/Documents/TPs/Archi/TP21/toplevel.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=/home/l3/yangz/Documents/TPs/Archi/TP21
+LICENSE=WebPack
+USER_INFO=0_0_579

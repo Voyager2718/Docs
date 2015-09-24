@@ -1,0 +1,12 @@
+
+public class CantGoException extends Exception {
+	private String message;
+
+	public CantGoException(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return this.message;
+	}
+}

@@ -1,0 +1,11 @@
+Le script a débuté sur mar. 22 sept. 2015 21:47:15 CEST
+marouane@marouane-X550LD:~/Bureau/tp_pds$ w[Kpwd
+/home/marouane/Bureau/tp_pds
+marouane@marouane-X550LD:~/Bureau/tp_pds$ ls
+maccess2.c  maccess+.c	Makefile~  prlimit.c   typescript
+maccess.c   Makefile	marouane   readme.txt
+marouane@marouane-X550LD:~/Bureau/tp_pds$ cat session.txt
+marouane@marouane-X550LD:~/Bureau/tp_pds$ exit
+exit
+
+Script terminé sur mar. 22 sept. 2015 21:49:41 CEST

@@ -1,0 +1,100 @@
+Release 12.4 ngdbuild M.81d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/12.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc TP2.ucf -p xc3s1200e-fg320-4 toplevel.ngc
+toplevel.ngd
+
+Reading NGO file "/home/l3/yangz/Documents/TPs/Archi/TP21/toplevel.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "TP2.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "s0" LOC = "J14";> [TP2.ucf(4)]: NET
+   "s0" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s0" LOC = "J14";> [TP2.ucf(4)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "s1" LOC = "J15";> [TP2.ucf(5)]: NET
+   "s1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s1" LOC = "J15";> [TP2.ucf(5)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "s2" LOC = "K15";> [TP2.ucf(6)]: NET
+   "s2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s2" LOC = "K15";> [TP2.ucf(6)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "s3" LOC = "K14";> [TP2.ucf(7)]: NET
+   "s3" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s3" LOC = "K14";> [TP2.ucf(7)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "s4" LOC = "E16";> [TP2.ucf(8)]: NET
+   "s4" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s4" LOC = "E16";> [TP2.ucf(8)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "s5" LOC = "P16";> [TP2.ucf(9)]: NET
+   "s5" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s5" LOC = "P16";> [TP2.ucf(9)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "s6" LOC = "E4";> [TP2.ucf(10)]: NET
+   "s6" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:204 - A target design object for the Locate constraint
+   '<NET "s6" LOC = "E4";> [TP2.ucf(10)]' could not be found and so the Locate
+   constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     7
+  Number of warnings:   7
+
+Total memory usage is 241596 kilobytes
+
+Total REAL time to NGDBUILD completion:  1 sec
+Total CPU time to NGDBUILD completion:   1 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "toplevel.bld"...
