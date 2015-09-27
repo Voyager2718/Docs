@@ -1,10 +1,10 @@
 from turtle import *
 
-def is_palindromic(str, depth = 0):    dots = "..." * depth    print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))    if(str==""):        print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))        return True    if(str[0]!=str[len(str)-1]):        print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))        return False    else:        res = is_palindromic(str[1:-1],depth+1)        if(res==0):            b = "False"        else:            b = "True"        print("{:s}<-{:s}".format(dots,b))    return res
+def is_palindromic(str, depth = 0):    dots = "..." * depth    print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))    if(str == ""):        print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))        return True    if(str[0]!=str[len(str)-1]):        print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))        return False    else:        res = is_palindromic(str[1:-1],depth+1)        if(res == 0):            b = "False"        else:            b = "True"        print("{:s}<-{:s}".format(dots,b))    return res
 
-def somme(a,b, depth = 0):    dots = "..." * depth    print("{:s}->somme({:d},{:d})".format(dots,a,b))    if(b==0):        print("{:s}<-{:d}".format(dots,a))        return a    if(b>=1):        res = somme(a+1,b-1,depth+1)        print("{:s}<-{:d}".format(dots,res))        return res    else:        res = somme(a-1,b+1,depth+1)        print("{:s}<-{:d}".format(dots,res))        return res
+def somme(a,b, depth = 0):    dots = "..." * depth    print("{:s}->somme({:d},{:d})".format(dots,a,b))    if(b == 0):        print("{:s}<-{:d}".format(dots,a))        return a    if(b>=1):        res = somme(a+1,b-1,depth+1)        print("{:s}<-{:d}".format(dots,res))        return res    else:        res = somme(a-1,b+1,depth+1)        print("{:s}<-{:d}".format(dots,res))        return res
 
-def binomial(a,b, depth = 0):    assert(a>=b)    dots = "..." * depth    print("{:s}->binomial({:d},{:d})".format(dots,a,b))    if(b==0):        print("{:s}<-1".format(dots))        return 1    if(b==a):        print("{:s}<-1".format(dots))        return 1    else:        res = binomial(a-1,b-1,depth+1)+binomial(a-1,b,depth+1)        print("{:s}<-{:d}".format(dots,res))    return res
+def binomial(a,b, depth = 0):    assert(a>=b)    dots = "..." * depth    print("{:s}->binomial({:d},{:d})".format(dots,a,b))    if(b == 0):        print("{:s}<-1".format(dots))        return 1    if(b == a):        print("{:s}<-1".format(dots))        return 1    else:        res = binomial(a-1,b-1,depth+1)+binomial(a-1,b,depth+1)        print("{:s}<-{:d}".format(dots,res))    return res
 	
 def movePen(x,y):
     penup()
@@ -13,16 +13,49 @@ def movePen(x,y):
 	
 def draw0(t,fromX=-300):    assert(isinstance(t,int))    assert(isinstance(fromX,int))    if(t == 0):        return    penup()    goto(fromX,0)    pendown()    fromX += 50    goto(fromX,50)    fromX += 50    goto(fromX,0)    draw0(t-1,fromX)
 
-def koch(n, l):
-        if n == 0:
+def draw1(n, l):
+        if(n == 0):
             forward(l)
         else:
             for angle in [60, -120, 60, 0]:
-                koch(n-1, l/3)
+                draw1(n-1, l/3)
                 left(angle)
 
-def c(n,s):
+def c(n,l,f,s=0):
     clearscreen()
     speed(s)
-    movePen(-300,0)
-    koch(n,600)
+    f(n,l)
+
+def draw2(n,l,t=3):
+    if(t == 0):
+        return
+    right(120)
+    draw1(n,l)
+    draw2(n,l,t-1)
+
+def draw3(n, l):
+    if(n == 0):
+        forward(l)
+    else:
+        for angle in [85, -170, 85, 0]:
+            draw3(n-1, 0.3804*l)
+            left(angle)
+
+def draw4(n,l,t=4):
+    if(t==0):
+            return
+    draw3(n,l)
+    left(90)
+    draw4(n,l,t-1)
+
+def iret(l):
+    for angle in (60,120,120):
+            left(angle)
+            forward(l)
+    left(60)
+
+def ret(l):
+    for angle in (120,120,120):
+            forward(l)
+            left(angle)
+
