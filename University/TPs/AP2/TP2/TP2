@@ -1,0 +1,47 @@
+def is_palindromic(str, depth = 0):
+    dots = "..." * depth
+    print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))
+    if(str==""):
+        print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))
+        return True
+    if(str[0]!=str[len(str)-1]):
+        print("{:s}->is_palindromic(\"{:s}\")".format(dots,str))
+        return False
+    else:
+        res = is_palindromic(str[1:-1],depth+1)
+        if(res==0):
+            b = "False"
+        else:
+            b = "True"
+        print("{:s}<-{:s}".format(dots,b))
+	return res
+
+def somme(a,b, depth = 0):
+    dots = "..." * depth
+    print("{:s}->somme({:d},{:d})".format(dots,a,b))
+    if(b==0):
+        print("{:s}<-{:d}".format(dots,a))
+        return a
+    if(b>=1):
+        res = somme(a+1,b-1,depth+1)
+        print("{:s}<-{:d}".format(dots,res))
+        return res
+    else:
+        res = somme(a-1,b+1,depth+1)
+        print("{:s}<-{:d}".format(dots,res))
+        return res
+
+def binomial(a,b, depth = 0):
+    assert(a>=b)
+    dots = "..." * depth
+    print("{:s}->binomial({:d},{:d})".format(dots,a,b))
+    if(b==0):
+        print("{:s}<-1".format(dots))
+        return 1
+    if(b==a):
+        print("{:s}<-1".format(dots))
+        return 1
+    else:
+        res = binomial(a-1,b-1,depth+1)+binomial(a-1,b,depth+1)
+        print("{:s}<-{:d}".format(dots,res))
+	return res

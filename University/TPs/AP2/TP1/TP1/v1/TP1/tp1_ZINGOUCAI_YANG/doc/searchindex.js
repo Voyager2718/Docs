@@ -1,1 +1,0 @@
-Search.setIndex({objtypes:{},titleterms:{tp1_zingoucai_yang:2,parti:[0,1]},titles:["Partie 2","Partie 1","tp1_ZINGOUCAI_YANG"],objnames:{},terms:{asd:[],blabla:1,bllaaaaa:0,parti:[]},envversion:43,filenames:["partie2","partie1","index"],objects:{}})

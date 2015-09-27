@@ -1,0 +1,9 @@
+Exercice 1
+Q1.
+egrep 'nez' Cyrano.txt --color=auto
+
+Q2.
+egrep --color=auto '[\(][[:alnum:][:space:]]*[\)]' Cyrano.txt
+
+Q3.
+egrep --color=auto '([[:alpha:]+[àâéàêîùûÀÂÉÈÊÎÔÙÛ]])*' Cyrano.txt
