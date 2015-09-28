@@ -1,0 +1,15 @@
+Marouane Ouaaka
+YANG Zhipeng
+
+Exercice 2
+Question 2.1
+SELECT fnom fournisseur FROM Fournisseurs;
+
+Question 2.2
+SELECT fnom FROM Fournisseurs WHERE fad LIKE '%Paris';
+
+Question 2.3
+SELECT DISTINCT fnom FROM Fournisseurs NATURAL JOIN Catalogue WHERE Catalogue.prix<20;
+
+Question 2.4
+
