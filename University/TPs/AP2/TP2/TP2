@@ -116,14 +116,20 @@ def draw4(n,l,t=4):
     left(90)
     draw4(n,l,t-1)
 
-def iret(l):
-    for angle in (60,120,120):
-            left(angle)
-            forward(l)
-    left(60)
-
-def ret(l):
-    for angle in (120,120,120):
-            forward(l)
-            left(angle)
-
+def draw5(length,depth):
+    if depth==0:
+        for i in range(0,3):
+            forward(length)
+            left(120)
+    else:
+        draw5(length/2,depth-1)
+        forward(length/2)
+        draw5(length/2,depth-1)
+        back(length/2)
+        left(60)
+        forward(length/2)
+        right(60)
+        draw5(length/2,depth-1)
+        left(60)
+        back(length/2)
+        right(60)
