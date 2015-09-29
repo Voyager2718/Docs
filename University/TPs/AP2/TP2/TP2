@@ -116,20 +116,20 @@ def draw4(n,l,t=4):
     left(90)
     draw4(n,l,t-1)
 
-def draw5(length,depth):
-    if depth==0:
+def draw5(l,n):
+    if n==0:
         for i in range(0,3):
-            forward(length)
+            forward(l)
             left(120)
     else:
-        draw5(length/2,depth-1)
-        forward(length/2)
-        draw5(length/2,depth-1)
-        back(length/2)
+        draw5(l/2,n-1)
+        forward(l/2)
+        draw5(l/2,n-1)
+        back(l/2)
         left(60)
-        forward(length/2)
+        forward(l/2)
         right(60)
-        draw5(length/2,depth-1)
+        draw5(l/2,n-1)
         left(60)
-        back(length/2)
+        back(l/2)
         right(60)
