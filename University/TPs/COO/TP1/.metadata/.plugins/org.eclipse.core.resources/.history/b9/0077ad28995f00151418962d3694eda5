@@ -1,8 +1,0 @@
-public class LockedRoom extends Room {
-	private boolean locked = true;
-
-	public LockedRoom() {
-		super("Locked");
-	}
-
-}

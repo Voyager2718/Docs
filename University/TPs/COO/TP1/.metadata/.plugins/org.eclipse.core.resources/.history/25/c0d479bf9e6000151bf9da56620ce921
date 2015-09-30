@@ -1,9 +1,0 @@
-public class ButtonRoom extends Room {
-	public ButtonRoom() {
-		super("Button");
-	}
-
-	public char getButton() {
-		return (char) (Math.random() * 65 + 25);
-	}
-}

@@ -1,7 +1,0 @@
-public class Equipement {
-	private String type;
-
-	public Equipement(String type) {
-		this.type = type;
-	}
-}

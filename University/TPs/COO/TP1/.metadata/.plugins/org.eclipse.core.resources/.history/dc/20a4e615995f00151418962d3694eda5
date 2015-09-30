@@ -1,5 +1,0 @@
-public class LockedRoom extends Room {
-	public LockedRoom() {
-		super("Locked");
-	}
-}

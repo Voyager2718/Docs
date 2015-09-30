@@ -1,6 +1,0 @@
-package Room;
-public class ButtonRoom extends Room {
-	public ButtonRoom() {
-		this.type = "Button";
-	}
-}

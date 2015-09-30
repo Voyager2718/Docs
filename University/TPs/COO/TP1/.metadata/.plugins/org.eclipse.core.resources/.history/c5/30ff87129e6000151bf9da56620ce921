@@ -1,6 +1,0 @@
-
-public interface R {
-	public String getType() {
-		return this.type;
-	}
-}
