@@ -1,3 +1,3 @@
-public class Sword implements Equipement {
+public class Sword implements Equipment {
 
 }

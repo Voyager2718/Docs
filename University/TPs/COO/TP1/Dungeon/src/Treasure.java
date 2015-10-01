@@ -1,4 +1,4 @@
-public class Treasure implements Equipement {
+public class Treasure implements Equipment {
 	private String name;
 	private int value;
 

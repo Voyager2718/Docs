@@ -7,10 +7,10 @@ public class MonsterRoom extends Room {
 	}
 
 	public void kill() {
-		this.killed = false;
+		this.killed = true;
 	}
 
-	public boolean getMonsterCondition() {
+	public boolean getMonsterKilled() {
 		return this.killed;
 	}
 }

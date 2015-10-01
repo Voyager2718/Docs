@@ -1,3 +1,3 @@
-public class Potion implements Equipement {
+public class Potion implements Equipment {
 
 }

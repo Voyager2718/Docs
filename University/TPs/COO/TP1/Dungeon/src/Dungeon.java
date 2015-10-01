@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Dungeon {
-	protected List<Equipement> equipements = new ArrayList<Equipement>();
+	protected List<Equipment> equipments = new ArrayList<Equipment>();
 	protected Entrance entrance = new Entrance();
 	protected R currentRoom = entrance;
 	protected final Scanner scanner = new Scanner(System.in);
@@ -51,15 +51,20 @@ public class Dungeon {
 		Exit e = new Exit();
 		NormalRoom n0 = new NormalRoom();
 		LockedRoom l1 = new LockedRoom();
-		((Room) this.currentRoom).addRoom("north", n0);
-		((Room) n0).addRoom("north", n1);
-		((Room) n1).addRoom("south", n0);
-		((Room) n1).addRoom("west", e);
-		this.equipements.add(new Treasure("Gold", 500));
-		this.equipements.add(new Potion());
-		this.equipements.add(new Sword());
-		this.equipements.add(new Key());
-		this.equipements.add(new Treasure("Diamond", 5000));
+		MonsterRoom m1 = new MonsterRoom();
+		((Room) this.currentRoom).addRoom("north", m1);
+		((Room) m1).addRoom("east", n0);
+		((Room) n0).addRoom("north", l1);
+		((Room) l1).addRoom("south", n0);
+		((Room) l1).addRoom("west", e);
+		this.equipments.add(new Treasure("Gold", 500));
+		this.equipments.add(new Potion());
+		this.equipments.add(new Potion());
+		this.equipments.add(new Sword());
+		this.equipments.add(new Sword());
+		this.equipments.add(new Sword());
+		this.equipments.add(new Key());
+		this.equipments.add(new Treasure("Diamond", 5000));
 	}
 
 	public R getCurrentRoom() {
@@ -72,25 +77,25 @@ public class Dungeon {
 
 	public boolean useEquipement(String equipement) {
 		equipement = equipement.toLowerCase();
-		for (int i = 0; i < this.equipements.size(); i++) {
+		for (int i = 0; i < this.equipments.size(); i++) {
 			if (equipement == "key")
-				if (this.equipements.get(i) instanceof Key) {
-					this.equipements.remove(i);
+				if (this.equipments.get(i) instanceof Key) {
+					this.equipments.remove(i);
 					return true;// If true, remove equipment successfully.
 				}
 			if (equipement == "potion")
-				if (this.equipements.get(i) instanceof Key) {
-					this.equipements.remove(i);
+				if (this.equipments.get(i) instanceof Key) {
+					this.equipments.remove(i);
 					return true;// If true, remove equipment successfully.
 				}
 			if (equipement == "sword")
-				if (this.equipements.get(i) instanceof Key) {
-					this.equipements.remove(i);
+				if (this.equipments.get(i) instanceof Key) {
+					this.equipments.remove(i);
 					return true;// If true, remove equipment successfully.
 				}
 			if (equipement == "treasure")
-				if (this.equipements.get(i) instanceof Treasure) {
-					this.equipements.remove(i);
+				if (this.equipments.get(i) instanceof Treasure) {
+					this.equipments.remove(i);
 					return true;// If true, remove equipment successfully.
 				}
 		}
@@ -102,19 +107,52 @@ public class Dungeon {
 		command = command.toLowerCase();
 		if (command.substring(0, 3).equals("go ")) {// Case go+direction
 			String direction = command.substring(3);
-			if (this.getCurrentRoom() instanceof Room) {
+			if (this.getCurrentRoom() instanceof NormalRoom || this.getCurrentRoom() instanceof Entrance) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
 					} catch (CantGoException e) {
 						System.out.println(e.getMessage());
 					}
+				else
+					System.out.println("I don't know what you mean.");
 			} else if (this.getCurrentRoom() instanceof LockedRoom) {
-
+				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
+					try {
+						if (!((LockedRoom) this.currentRoom).getLocked())
+							this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+						else
+							System.out.println(
+									"The exit of this room is locked. Try to enter \"use key\" to unlock this room.");
+					} catch (CantGoException e) {
+						System.out.println(e.getMessage());
+					}
+				else
+					System.out.println("I don't know what you mean.");
 			} else if (this.getCurrentRoom() instanceof MonsterRoom) {
-
+				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
+					try {
+						if (((MonsterRoom) this.currentRoom).getMonsterKilled())
+							this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+						else
+							System.out.println(
+									"This room have a monster lying on the exit. Try to enter \"use sword\" to kill it.");
+					} catch (CantGoException e) {
+						System.out.println(e.getMessage());
+					}
+				else
+					System.out.println("I don't know what you mean.");
 			} else if (this.getCurrentRoom() instanceof TreasureRoom) {
+				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
+					try {
+						System.out.println("This room have plenty of treasures! Already put them into beg.");
+						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
 
+					} catch (CantGoException e) {
+						System.out.println(e.getMessage());
+					}
+				else
+					System.out.println("I don't know what you mean.");
 			}
 		} else if (command.substring(0, 4).equals("use ")) {
 			if (command.substring(4).equals("sword")) {
@@ -153,6 +191,7 @@ public class Dungeon {
 						if (command2.equals("yes")) {
 							if (this.useEquipement("treasure")) {
 								System.out.println("You've got a key.");
+								this.equipments.add(new Key());
 								break;
 							} else {
 								System.out.println("The elf sent you back to entrance.");
@@ -171,29 +210,31 @@ public class Dungeon {
 			}
 		} else if (command.equals("description")) {
 			System.out.println(this.currentRoom.getDescription());
-		} else if (command.equals("equipements")) {
-			this.getEquipementsValue();
-		} else {
+		} else if (command.equals("equipments")) {
+			this.getEquipmentsValue();
+		} else if (command.equals("health"))
+			System.out.println("HP:" + this.getHealth());
+		else {
 			System.out.println("I don't know what you mean.");
 		}
 	}
 
-	public int getEquipementsValue() {
+	public int getEquipmentsValue() {
 		int potions = 0, swords = 0, keys = 0, treasureValue = 0;
-		for (int i = 0; i < this.equipements.size(); i++) {
-			if (this.equipements.get(i) instanceof Sword)
+		for (int i = 0; i < this.equipments.size(); i++) {
+			if (this.equipments.get(i) instanceof Sword)
 				swords++;
-			if (this.equipements.get(i) instanceof Key)
+			if (this.equipments.get(i) instanceof Key)
 				keys++;
-			if (this.equipements.get(i) instanceof Potion)
+			if (this.equipments.get(i) instanceof Potion)
 				potions++;
 		}
 		System.out.println("You have these:\n-------------------------");
-		for (int i = 0; i < this.equipements.size(); i++) {
-			if (this.equipements.get(i) instanceof Treasure) {
-				System.out.println(((Treasure) this.equipements.get(i)).getName() + "     ву"
-						+ ((Treasure) this.equipements.get(i)).getValue());
-				treasureValue += ((Treasure) this.equipements.get(i)).getValue();
+		for (int i = 0; i < this.equipments.size(); i++) {
+			if (this.equipments.get(i) instanceof Treasure) {
+				System.out.println(((Treasure) this.equipments.get(i)).getName() + "     ву"
+						+ ((Treasure) this.equipments.get(i)).getValue());
+				treasureValue += ((Treasure) this.equipments.get(i)).getValue();
 			}
 		}
 		System.out
@@ -202,7 +243,7 @@ public class Dungeon {
 	}
 
 	public void printEquipements() {
-		this.getEquipementsValue();
+		this.getEquipmentsValue();
 	}
 
 	public boolean gameIsWon() {

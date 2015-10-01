@@ -1,21 +1,20 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class TreasureRoom extends Room {
-	private List<Equipement> equipements = new ArrayList<Equipement>();
+	private List<Equipment> equipments = new ArrayList<Equipment>();
 
-	public TreasureRoom(Equipement equipements) {
+	public TreasureRoom(Equipment equipements) {
 		super("Treasure", "This is a room with treasures.");
-		this.equipements.add(equipements);
+		this.equipments.add(equipements);
 	}
 
-	public TreasureRoom(List<Equipement> equipements) {
+	public TreasureRoom(List<Equipment> equipements) {
 		super("Treasure", "This is a room with treasures.");
-		this.equipements = equipements;
+		this.equipments = equipements;
 	}
 
-	public List<Equipement> getEquipements() {
-		return this.equipements;
+	public List<Equipment> getEquipements() {
+		return this.equipments;
 	}
 }

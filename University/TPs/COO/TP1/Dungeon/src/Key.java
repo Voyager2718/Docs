@@ -1,4 +1,4 @@
 
-public class Key implements Equipement {
+public class Key implements Equipment {
 	
 }
