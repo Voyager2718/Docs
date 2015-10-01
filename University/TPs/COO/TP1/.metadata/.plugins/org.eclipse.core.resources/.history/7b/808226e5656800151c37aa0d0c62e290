@@ -1,5 +1,5 @@
 //Version 0.14
-//Class version 0.20
+//Class version 0.25
 public class NormalRoom extends Room {
 	protected int position;
 	protected boolean found;

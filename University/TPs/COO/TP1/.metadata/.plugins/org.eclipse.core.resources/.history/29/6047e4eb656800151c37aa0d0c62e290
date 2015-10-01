@@ -1,5 +1,5 @@
 //Version 0.14
-//Class version 0.12
+//Class version 0.25
 public class R {
 	protected String type;
 	protected String description;
