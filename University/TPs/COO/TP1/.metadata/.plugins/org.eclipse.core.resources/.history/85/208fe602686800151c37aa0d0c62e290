@@ -52,7 +52,7 @@ public class Dungeon {
 
 	public Dungeon() {
 		Exit e = new Exit();
-		ButtonRoom n0 = new ButtonRoom();
+		NormalRoom n0 = new NormalRoom();
 		LockedRoom l1 = new LockedRoom();
 		MonsterRoom m1 = new MonsterRoom();
 		((Room) this.currentRoom).addRoom("north", m1);
@@ -158,10 +158,8 @@ public class Dungeon {
 						while (true) {
 							System.out.println(
 									"A typing god appear, and said: You have to type these things! Or you can't go to the next room!");
-							System.out.println("Things to type:\n" + ((ButtonRoom) this.currentRoom).getButtons());
 							String toType = this.scanner.nextLine();
 							if (((ButtonRoom) this.currentRoom).getButtons().equals(toType)) {
-								System.out.println("The typing god allows you to go.");
 								break;
 							}
 						}

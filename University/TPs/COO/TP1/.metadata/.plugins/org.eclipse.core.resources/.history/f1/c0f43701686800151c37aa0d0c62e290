@@ -1,3 +1,6 @@
+
+//Version 0.15
+//Class version 0.26
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -149,6 +152,24 @@ public class Dungeon {
 					}
 				else
 					System.out.println("I don't know what you mean.");
+			} else if (this.getCurrentRoom() instanceof ButtonRoom) {
+				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
+					try {
+						while (true) {
+							System.out.println(
+									"A typing god appear, and said: You have to type these things! Or you can't go to the next room!");
+							String toType = this.scanner.nextLine();
+							if (((ButtonRoom) this.currentRoom).getButtons().equals(toType)){
+								break;
+							}
+						}
+						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+
+					} catch (CantGoException e) {
+						System.out.println(e.getMessage());
+					}
+				else
+					System.out.println("I don't know what you mean.");
 			} else if (this.getCurrentRoom() instanceof TreasureRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
@@ -161,7 +182,9 @@ public class Dungeon {
 				else
 					System.out.println("I don't know what you mean.");
 			}
-		} else if (command.substring(0, 4).equals("use ")) {
+		} else if (command.substring(0, 4).equals("use "))
+
+		{
 			if (command.substring(4).equals("sword")) {
 				if (this.currentRoom instanceof MonsterRoom) {
 					if (useEquipement("sword")) {
@@ -215,19 +238,42 @@ public class Dungeon {
 					}
 				}
 			}
-		} else if (command.equals("description")) {
+		} else if (command.equals("description"))
+
+		{
 			System.out.println(this.currentRoom.getDescription());
-		} else if (command.equals("equipments")) {
+		} else if (command.equals("equipments"))
+
+		{
 			this.getEquipmentsValue();
 		} else if (command.equals("health"))
+
+		{
 			System.out.println("HP:" + this.getHealth());
-		else if (command.substring(0, 7).equals("search")) {
-			
-			if (command.substring(7).equals("table")) {
-				System.out.println("You found the exit!");
-				
+		} else if (command.substring(0, 6).equals("search"))
+
+		{
+			if (!(this.currentRoom instanceof NormalRoom)) {
+				System.out.println("The \"search\" command is just for normal room. ");
+				return;
 			}
-		} else {
+			if (command.substring(7).equals("table")) {
+				if (((NormalRoom) this.currentRoom).getPosition() == "table") {
+					System.out.println("You found the exit!");
+					((NormalRoom) this.currentRoom).found();
+				} else
+					System.out.println("Exit is not here.");
+			} else if (command.substring(7).equals("picture")) {
+				if (((NormalRoom) this.currentRoom).getPosition() == "picture") {
+					System.out.println("You found the exit!");
+					((NormalRoom) this.currentRoom).found();
+				} else
+					System.out.println("Exit is not here.");
+			} else
+				System.out.println("I don't know what you mean.");
+		} else
+
+		{
 			System.out.println("I don't know what you mean.");
 		}
 
@@ -274,7 +320,10 @@ public class Dungeon {
 
 	public void start() {
 		while (!this.gameIsFinished()) {
-			System.out.println("You are in " + getCurrentRoom().getType() + "Room.");
+			if (this.currentRoom instanceof Entrance)
+				System.out.println("You are in " + getCurrentRoom().getType() + ".");
+			else
+				System.out.println("You are in " + getCurrentRoom().getType() + " Room.");
 			System.out.println("What do you want to do?");
 			System.out.print("> ");
 			interpretCommand();

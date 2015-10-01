@@ -52,7 +52,7 @@ public class Dungeon {
 
 	public Dungeon() {
 		Exit e = new Exit();
-		ButtonRoom n0 = new ButtonRoom();
+		NormalRoom n0 = new NormalRoom();
 		LockedRoom l1 = new LockedRoom();
 		MonsterRoom m1 = new MonsterRoom();
 		((Room) this.currentRoom).addRoom("north", m1);
@@ -152,26 +152,8 @@ public class Dungeon {
 					}
 				else
 					System.out.println("I don't know what you mean.");
-			} else if (this.getCurrentRoom() instanceof ButtonRoom) {
-				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
-					try {
-						while (true) {
-							System.out.println(
-									"A typing god appear, and said: You have to type these things! Or you can't go to the next room!");
-							System.out.println("Things to type:\n" + ((ButtonRoom) this.currentRoom).getButtons());
-							String toType = this.scanner.nextLine();
-							if (((ButtonRoom) this.currentRoom).getButtons().equals(toType)) {
-								System.out.println("The typing god allows you to go.");
-								break;
-							}
-						}
-						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+			} else if (false) {
 
-					} catch (CantGoException e) {
-						System.out.println(e.getMessage());
-					}
-				else
-					System.out.println("I don't know what you mean.");
 			} else if (this.getCurrentRoom() instanceof TreasureRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
@@ -184,9 +166,7 @@ public class Dungeon {
 				else
 					System.out.println("I don't know what you mean.");
 			}
-		} else if (command.substring(0, 4).equals("use "))
-
-		{
+		} else if (command.substring(0, 4).equals("use ")) {
 			if (command.substring(4).equals("sword")) {
 				if (this.currentRoom instanceof MonsterRoom) {
 					if (useEquipement("sword")) {
@@ -240,21 +220,13 @@ public class Dungeon {
 					}
 				}
 			}
-		} else if (command.equals("description"))
-
-		{
+		} else if (command.equals("description")) {
 			System.out.println(this.currentRoom.getDescription());
-		} else if (command.equals("equipments"))
-
-		{
+		} else if (command.equals("equipments")) {
 			this.getEquipmentsValue();
-		} else if (command.equals("health"))
-
-		{
+		} else if (command.equals("health")) {
 			System.out.println("HP:" + this.getHealth());
-		} else if (command.substring(0, 6).equals("search"))
-
-		{
+		} else if (command.substring(0, 6).equals("search")) {
 			if (!(this.currentRoom instanceof NormalRoom)) {
 				System.out.println("The \"search\" command is just for normal room. ");
 				return;
@@ -273,12 +245,9 @@ public class Dungeon {
 					System.out.println("Exit is not here.");
 			} else
 				System.out.println("I don't know what you mean.");
-		} else
-
-		{
+		} else {
 			System.out.println("I don't know what you mean.");
 		}
-
 	}
 
 	public int getEquipmentsValue() {

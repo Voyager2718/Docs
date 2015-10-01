@@ -20,8 +20,8 @@ public class ButtonRoom extends Room {
 		}
 		return sb.toString();
 	}
-
-	public String getButtons() {
-		return this.buttons;
+	
+	public String getButtons(){
+		
 	}
 }
