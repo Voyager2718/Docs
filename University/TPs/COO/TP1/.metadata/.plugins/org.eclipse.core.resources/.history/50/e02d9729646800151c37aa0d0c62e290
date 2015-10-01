@@ -238,8 +238,7 @@ public class Dungeon {
 					((NormalRoom) this.currentRoom).found();
 				} else
 					System.out.println("Exit is not here.");
-			} else
-				System.out.println("I don't know what you mean.");
+			}
 		} else {
 			System.out.println("I don't know what you mean.");
 		}
