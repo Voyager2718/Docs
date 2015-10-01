@@ -7,6 +7,7 @@ public class Dungeon {
 	protected R currentRoom = new Entrance();
 	protected final Scanner scanner = new Scanner(System.in);
 
+	// testing
 	protected int health = 100;
 	protected int money = 0;
 
@@ -29,23 +30,13 @@ public class Dungeon {
 	public int getHealth() {
 		return this.health;
 	}
-
-	public void earnMoney(int money) {
-		this.money += money;
-	}
-
-	public int getMoney() {
-		return this.money;
-	}
+	// end testing
 
 	public Dungeon() {
 		Exit e = new Exit();
-		NormalRoom n0 = new NormalRoom();
-		NormalRoom n1 = new NormalRoom();
-		((Room) this.currentRoom).addRoom("north", n0);
-		((Room) n0).addRoom("north", n1);
-		((Room) n1).addRoom("south", n0);
-		((Room) n1).addRoom("west", e);
+		NormalRoom n = new NormalRoom();
+		((Room) this.currentRoom).addRoom("north", n);
+		((Room) n).addRoom("south", e);
 	}
 
 	public R getCurrentRoom() {
@@ -60,7 +51,7 @@ public class Dungeon {
 		String command = this.scanner.nextLine();
 		if (command.substring(0, 3).equals("go ")) {// Case go+direction
 			String direction = command.substring(3);
-			if (this.getCurrentRoom() instanceof Room) {
+			if (this.getCurrentRoom() instanceof NormalRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));

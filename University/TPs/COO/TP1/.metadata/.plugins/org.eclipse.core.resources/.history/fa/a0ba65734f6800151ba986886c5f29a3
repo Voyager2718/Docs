@@ -42,10 +42,8 @@ public class Dungeon {
 		Exit e = new Exit();
 		NormalRoom n0 = new NormalRoom();
 		NormalRoom n1 = new NormalRoom();
-		((Room) this.currentRoom).addRoom("north", n0);
-		((Room) n0).addRoom("north", n1);
-		((Room) n1).addRoom("south", n0);
-		((Room) n1).addRoom("west", e);
+		((Room) this.currentRoom).addRoom("north", n);
+		((Room) n).addRoom("west", e);
 	}
 
 	public R getCurrentRoom() {

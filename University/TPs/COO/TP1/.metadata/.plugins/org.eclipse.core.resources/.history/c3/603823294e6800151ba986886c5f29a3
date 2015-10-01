@@ -1,0 +1,4 @@
+public class Treasure implements Equipement {
+	private String name;
+	public get
+}

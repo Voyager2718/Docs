@@ -1,0 +1,16 @@
+public class Treasure implements Equipement {
+	private String name;
+	private int value;
+	
+	public Treasure(String name, int value){
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public int getValue(){
+		return value;
+	}
+}
