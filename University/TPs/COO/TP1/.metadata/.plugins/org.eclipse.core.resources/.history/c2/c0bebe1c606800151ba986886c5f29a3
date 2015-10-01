@@ -1,0 +1,8 @@
+public class NormalRoom extends Room {
+	int position;
+
+	public NormalRoom() {
+		super("Normal", "This is a normal(intersection) room.");
+		this.position = (int) Math.random() * 10;
+	}
+}

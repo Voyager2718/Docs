@@ -1,0 +1,18 @@
+public class NormalRoom extends Room {
+	int position;
+	boolean found;
+
+	public NormalRoom() {
+		super("Normal", "This is a normal(intersection) room.");
+		this.position = (int) Math.random() * 10;
+	}
+
+	public String getPosition() {
+		if (this.position <= 3)
+			return "table";
+		if (this.position <= 5)
+			return "picture";
+		else
+			return "normal";
+	}
+}
