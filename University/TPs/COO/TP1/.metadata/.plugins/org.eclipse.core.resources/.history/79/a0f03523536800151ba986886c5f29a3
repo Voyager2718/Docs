@@ -63,7 +63,6 @@ public class Dungeon {
 
 	public void interpretCommand() {
 		String command = this.scanner.nextLine();
-		command = command.toLowerCase();
 		if (command.substring(0, 3).equals("go ")) {// Case go+direction
 			String direction = command.substring(3);
 			if (this.getCurrentRoom() instanceof Room) {

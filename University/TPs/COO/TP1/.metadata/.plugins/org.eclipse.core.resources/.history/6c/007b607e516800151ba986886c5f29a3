@@ -46,11 +46,6 @@ public class Dungeon {
 		((Room) n0).addRoom("north", n1);
 		((Room) n1).addRoom("south", n0);
 		((Room) n1).addRoom("west", e);
-		this.equipements.add(new Treasure("Gold", 500));
-		this.equipements.add(new Potion());
-		this.equipements.add(new Sword());
-		this.equipements.add(new Key());
-		this.equipements.add(new Treasure("Diamond", 5000));
 	}
 
 	public R getCurrentRoom() {
@@ -63,7 +58,6 @@ public class Dungeon {
 
 	public void interpretCommand() {
 		String command = this.scanner.nextLine();
-		command = command.toLowerCase();
 		if (command.substring(0, 3).equals("go ")) {// Case go+direction
 			String direction = command.substring(3);
 			if (this.getCurrentRoom() instanceof Room) {
@@ -85,23 +79,19 @@ public class Dungeon {
 		} else if (command.equals("description")) {
 			System.out.println(this.currentRoom.getDescription());
 		} else if (command.equals("equipements")) {
-			int potions = 0, swords = 0, keys = 0;
+			int potions = 0, swords = 0, key = 0;
 			for (int i = 0; i < this.equipements.size(); i++) {
 				if (this.equipements.get(i) instanceof Sword)
 					swords++;
 				if (this.equipements.get(i) instanceof Key)
-					keys++;
+					key++;
 				if (this.equipements.get(i) instanceof Potion)
 					potions++;
 			}
-			System.out.println("You have these:\n-------------------------");
+			System.out.println("You have these:");
 			for (int i = 0; i < this.equipements.size(); i++) {
-				if (this.equipements.get(i) instanceof Treasure)
-					System.out.println(((Treasure) this.equipements.get(i)).getName() + "     ¢ã"
-							+ ((Treasure) this.equipements.get(i)).getValue());
+				System.out.println();
 			}
-			System.out.println(
-					"Potions¡Á" + potions + " Swords¡Á" + swords + " Keys¡Á" + keys + "\n-------------------------");
 		} else {
 			System.out.println("I don't know what you mean.");
 		}

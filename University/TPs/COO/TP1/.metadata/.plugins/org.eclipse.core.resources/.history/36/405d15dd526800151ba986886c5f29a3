@@ -63,7 +63,6 @@ public class Dungeon {
 
 	public void interpretCommand() {
 		String command = this.scanner.nextLine();
-		command = command.toLowerCase();
 		if (command.substring(0, 3).equals("go ")) {// Case go+direction
 			String direction = command.substring(3);
 			if (this.getCurrentRoom() instanceof Room) {
@@ -97,11 +96,9 @@ public class Dungeon {
 			System.out.println("You have these:\n-------------------------");
 			for (int i = 0; i < this.equipements.size(); i++) {
 				if (this.equipements.get(i) instanceof Treasure)
-					System.out.println(((Treasure) this.equipements.get(i)).getName() + "     ¢ã"
-							+ ((Treasure) this.equipements.get(i)).getValue());
+					System.out.println(((Treasure) this.equipements.get(i)).getName()+"     ¢ã"((Treasure) this.equipements.get(i)).getValue());
 			}
-			System.out.println(
-					"Potions¡Á" + potions + " Swords¡Á" + swords + " Keys¡Á" + keys + "\n-------------------------");
+			System.out.println("Potions¡Á" + potions + " Swords¡Á" + swords + " Keys¡Á" + keys + "\n-------------------------");
 		} else {
 			System.out.println("I don't know what you mean.");
 		}
