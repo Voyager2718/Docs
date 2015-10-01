@@ -286,10 +286,7 @@ public class Dungeon {
 
 	public void start() {
 		while (!this.gameIsFinished()) {
-			if (this.currentRoom instanceof Entrance)
-				System.out.println("You are in " + getCurrentRoom().getType() + ".");
-			else
-				System.out.println("You are in " + getCurrentRoom().getType() + " Room.");
+			
 			System.out.println("What do you want to do?");
 			System.out.print("> ");
 			interpretCommand();
