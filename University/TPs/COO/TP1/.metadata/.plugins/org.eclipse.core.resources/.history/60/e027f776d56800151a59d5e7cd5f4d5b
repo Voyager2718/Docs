@@ -1,0 +1,12 @@
+import org.junit.*;
+
+public class DungeonTest {
+	protected Dungeon dungeon;
+
+	@Before
+	public void createDungeon() {
+		dungeon = new Dungeon();
+	}
+	
+	
+}

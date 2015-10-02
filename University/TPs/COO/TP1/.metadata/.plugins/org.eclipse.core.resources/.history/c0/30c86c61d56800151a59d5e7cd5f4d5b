@@ -1,0 +1,10 @@
+
+
+public class DungeonTest {
+	protected Dungeon dungeon;
+
+	@Test
+	public void createDungeon() {
+		dungeon = new Dungeon();
+	}
+}

@@ -1,0 +1,9 @@
+
+public class DungeonTest {
+	protected Dungeon dungeon;
+
+	@Before
+	public void createDungeon() {
+		this.dungeon = new Dungeon();
+	}
+}

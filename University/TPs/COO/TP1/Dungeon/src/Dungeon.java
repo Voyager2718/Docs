@@ -33,8 +33,8 @@ public class Dungeon {
 	 * function : if the player is injured he loses "hurt" points from his score
 	 * : health
 	 * 
-	 * @param hurt
-	 *            : int
+	 * @param hurt:
+	 *            hurt some HP
 	 */
 	public void hurt(int hurt) {
 		this.health -= hurt;
@@ -356,7 +356,7 @@ public class Dungeon {
 	 * function will execute when the player wins the game
 	 */
 	public boolean gameIsWon() {
-		return this.currentRoom instanceof Exit;
+		return this.currentRoom instanceof Exit && this.health > 0;
 	}
 
 	/**
@@ -364,7 +364,7 @@ public class Dungeon {
 	 */
 
 	public boolean gameIsLost() {
-		return this.currentRoom instanceof Trap;
+		return this.currentRoom instanceof Trap || this.health == 0;
 	}
 
 	public boolean gameIsFinished() {
