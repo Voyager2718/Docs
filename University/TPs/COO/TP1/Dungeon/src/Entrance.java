@@ -1,4 +1,3 @@
-
 /**
 * class Entrance : subclass of Room 
 */

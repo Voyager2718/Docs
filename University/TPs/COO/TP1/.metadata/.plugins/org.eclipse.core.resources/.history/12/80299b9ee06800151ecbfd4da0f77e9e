@@ -1,7 +1,0 @@
-package Equipments;
-/** 
-* interface Equipment 
-*/
-public interface Equipment {
-
-}

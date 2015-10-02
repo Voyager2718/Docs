@@ -1,4 +1,3 @@
-
 /**
 * Exit : subclass of R it represents the exit
 */

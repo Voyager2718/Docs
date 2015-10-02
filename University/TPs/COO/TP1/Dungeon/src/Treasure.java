@@ -1,4 +1,3 @@
-
 /** 
 * class Treasure implements Equipments she has two attributes, the constructor , the getters 
 */

@@ -1,4 +1,3 @@
-
 /**  
  * LockedRoom Subclass of Room, a room which you have to unlock
 */

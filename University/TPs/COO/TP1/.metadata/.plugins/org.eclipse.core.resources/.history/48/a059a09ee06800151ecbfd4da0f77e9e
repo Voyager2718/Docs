@@ -1,8 +1,0 @@
-package Equipments;
-/**
-* class implements Equipment
- */
-
-public class Sword implements Equipment {
-
-}

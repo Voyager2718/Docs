@@ -1,4 +1,3 @@
-
 /**  
 * Supper class, serves to give a description of the rooms and their types
 */

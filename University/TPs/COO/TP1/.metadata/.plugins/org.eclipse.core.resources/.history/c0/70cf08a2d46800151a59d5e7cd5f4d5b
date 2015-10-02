@@ -1,0 +1,5 @@
+public class DungeonTest {
+	protected Dungeon dungeon;
+	
+	
+}

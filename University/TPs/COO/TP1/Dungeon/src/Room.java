@@ -1,4 +1,3 @@
-
 /** 
  * subclass of R 
 */

@@ -1,4 +1,5 @@
-
+//Version 0.14
+//Class version 0.20
 
 /**  
 * Subclass of Room, a normal room which the player has to cross

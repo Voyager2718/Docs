@@ -1,11 +1,12 @@
-
+/** 
+* Subclass of Room, a room which contains a treasure
+*/
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Equipments.Equipment;
-
-public class TreasureRoom exipment> equipements = new ArrayList<Equipment>();
+public class TreasureRoom extends Room {
+	private List<Equipment> equipements = new ArrayList<Equipment>();
 
 	public TreasureRoom(Equipment equipements) {
 		super("Treasure", "This is a room with treasures.");

@@ -1,4 +1,3 @@
-
 /**
 * Key : class implements Equipment 
 */

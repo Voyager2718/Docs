@@ -1,4 +1,3 @@
-
 /**
 *  subclass of Room, room with a monster you have to kill it
 */
