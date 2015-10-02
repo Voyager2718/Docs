@@ -1,6 +1,6 @@
 
-//Version 0.91
-//Class version 0.30
+//Version 0.15
+//Class version 0.26
 
 /**
 * class Dungeon
@@ -110,11 +110,8 @@ public class Dungeon {
 
 	public void setCurrentRoom(R room) {
 		if (room instanceof TreasureRoom) {
-			System.out.println("This room have plenty of treasures! Already put them into beg.");
-			this.equipments.addAll(((TreasureRoom) room).getEquipements());
-		} // If the room added is a room with treasure, then print a phase tell
-			// play that he have already got the treasures or equipments, after
-			// that add them to list equipment.
+			((TreasureRoom) room).getEquipements();
+		}
 		this.currentRoom = room;
 	}
 
@@ -211,6 +208,9 @@ public class Dungeon {
 							}
 						}
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+						if (this.currentRoom instanceof TreasureRoom)
+							System.out.println("This room have plenty of treasures! Already put them into beg.");
+
 					} catch (CantGoException e) {
 						System.out.println(e.getMessage());
 					}
