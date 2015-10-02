@@ -55,7 +55,9 @@ public class Dungeon {
 		ButtonRoom n0 = new ButtonRoom();
 		LockedRoom l1 = new LockedRoom();
 		MonsterRoom m1 = new MonsterRoom();
-		((Room) this.currentRoom).addRoom("north", m1);
+		TreasureRoom t1 = new TreasureRoom(new Treasure("Gold", 500));
+		((Room) this.currentRoom).addRoom("north", t1);
+		((Room) t1).addRoom("east", m1);
 		((Room) m1).addRoom("east", n0);
 		((Room) n0).addRoom("north", l1);
 		((Room) l1).addRoom("south", n0);
@@ -121,6 +123,8 @@ public class Dungeon {
 							}
 						}
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+						if (this.currentRoom instanceof TreasureRoom)
+							System.out.println("This room have plenty of treasures! Already put them into beg.");
 					} catch (CantGoException e) {
 						System.out.println(e.getMessage());
 					}
@@ -129,9 +133,11 @@ public class Dungeon {
 			} else if (this.getCurrentRoom() instanceof LockedRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
-						if (!((LockedRoom) this.currentRoom).getLocked())
+						if (!((LockedRoom) this.currentRoom).getLocked()) {
 							this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
-						else
+							if (this.currentRoom instanceof TreasureRoom)
+								System.out.println("This room have plenty of treasures! Already put them into beg.");
+						} else
 							System.out.println(
 									"The exit of this room is locked. Try to enter \"use key\" to unlock this room.");
 					} catch (CantGoException e) {
@@ -142,9 +148,11 @@ public class Dungeon {
 			} else if (this.getCurrentRoom() instanceof MonsterRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
-						if (((MonsterRoom) this.currentRoom).getMonsterKilled())
+						if (((MonsterRoom) this.currentRoom).getMonsterKilled()) {
 							this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
-						else
+							if (this.currentRoom instanceof TreasureRoom)
+								System.out.println("This room have plenty of treasures! Already put them into beg.");
+						} else
 							System.out.println(
 									"This room have a monster lying on the exit. Try to enter \"use sword\" to kill it.");
 					} catch (CantGoException e) {
@@ -166,6 +174,8 @@ public class Dungeon {
 							}
 						}
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
+						if (this.currentRoom instanceof TreasureRoom)
+							System.out.println("This room have plenty of treasures! Already put them into beg.");
 
 					} catch (CantGoException e) {
 						System.out.println(e.getMessage());
@@ -175,9 +185,7 @@ public class Dungeon {
 			} else if (this.getCurrentRoom() instanceof TreasureRoom) {
 				if (((Room) this.getCurrentRoom()).directionAvailable(direction))
 					try {
-						System.out.println("This room have plenty of treasures! Already put them into beg.");
 						this.setCurrentRoom(((Room) this.getCurrentRoom()).getNextRoom(direction));
-
 					} catch (CantGoException e) {
 						System.out.println(e.getMessage());
 					}
@@ -331,7 +339,7 @@ public class Dungeon {
 			interpretCommand();
 		}
 		if (this.gameIsWon()) {
-			System.out.println("You won£¡\nWhat's more, according to your spectacular, you've got\n");
+			System.out.println("You won!\nWhat's more, according to your spectacular, you've got\n");
 
 		}
 		if (this.gameIsLost())

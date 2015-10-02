@@ -86,7 +86,7 @@ def draw1(n,l):
         forward(l)
     else:
         for angle in (60,-120,60,0):
-            draw(n-1,l/3)
+            draw1(n-1,l/3)
             left(angle)
 
 def c(n,l,f,s=0):
