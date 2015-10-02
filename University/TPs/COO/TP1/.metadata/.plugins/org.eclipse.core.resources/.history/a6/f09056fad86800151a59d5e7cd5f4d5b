@@ -226,7 +226,9 @@ public class Dungeon {
 				else
 					System.out.println("I don't know what you mean.");
 			}
-		} else if (command.substring(0, 4).equals("use ")) {
+		} else if (command.substring(0, 4).equals("use "))
+
+		{
 			if (command.substring(4).equals("sword")) {
 				if (this.currentRoom instanceof MonsterRoom) {
 					if (useEquipement("sword")) {
@@ -279,8 +281,7 @@ public class Dungeon {
 						}
 					}
 				}
-			} else
-				System.out.println("I don't know what you mean.");
+			}
 		} else if (command.equals("description"))
 
 		{

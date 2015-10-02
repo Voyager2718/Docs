@@ -279,8 +279,7 @@ public class Dungeon {
 						}
 					}
 				}
-			} else
-				System.out.println("I don't know what you mean.");
+			}
 		} else if (command.equals("description"))
 
 		{
