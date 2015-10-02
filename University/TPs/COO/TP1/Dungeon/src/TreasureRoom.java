@@ -1,22 +1,34 @@
-//Version 0.14
-//Class version 0.10
+/** 
+* Subclass of Room, a room which contains a treasure
+*/
+
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TreasureRoom extends Room {
-	private List<Equipment> equipments = new ArrayList<Equipment>();
+	private List<Equipement> equipements = new ArrayList<Equipement>();
 
-	public TreasureRoom(Equipment equipements) {
+	public TreasureRoom(Equipement equipements) {
 		super("Treasure", "This is a room with treasures.");
-		this.equipments.add(equipements);
+		this.equipements.add(equipements);
 	}
 
-	public TreasureRoom(List<Equipment> equipements) {
+
+
+	public TreasureRoom(List<Equipement> equipements) {
 		super("Treasure", "This is a room with treasures.");
-		this.equipments = equipements;
+		this.equipements = equipements;
 	}
 
-	public List<Equipment> getEquipements() {
-		return this.equipments;
+
+/**
+* @param: List<Equipement>
+	List of equipements
+* @return the appropriate equipement from the list
+*/
+
+	public List<Equipement> getEquipements() {
+		return this.equipements;
 	}
 }

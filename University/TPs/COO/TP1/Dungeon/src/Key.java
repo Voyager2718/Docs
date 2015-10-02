@@ -1,5 +1,6 @@
-//Version 0.14
-//Class version 0.10
+/**
+* Key : class implements Equipment 
+*/
 public class Key implements Equipment {
 	
 }

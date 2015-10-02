@@ -2,6 +2,10 @@ import java.util.Random;
 
 //Version 0.14
 //Class version 0.10
+
+/**
+ subclass of Room, room with a button you have to squeeze 
+*/
 public class ButtonRoom extends Room {
 	String buttons;
 
@@ -10,6 +14,12 @@ public class ButtonRoom extends Room {
 		this.buttons = this.getRandomString(10);
 	}
 
+/**
+* function 
+@ param : length integer
+return String
+
+*/
 	private String getRandomString(int length) {
 		String base = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		Random random = new Random();

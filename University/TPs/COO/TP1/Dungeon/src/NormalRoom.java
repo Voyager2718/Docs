@@ -1,5 +1,10 @@
 //Version 0.14
 //Class version 0.20
+
+/**  
+* Subclass of Room, a normal room which the player has to cross
+*/
+
 public class NormalRoom extends Room {
 	protected int position;
 	protected boolean found;
@@ -22,6 +27,9 @@ public class NormalRoom extends Room {
 			return "normal";
 	}
 
+/**
+*function execute if player found a next room 
+*/
 	public void found() {
 		this.found = true;
 	}

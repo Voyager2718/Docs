@@ -1,5 +1,6 @@
-//Version 0.14
-//Class version 0.14
+/** 
+* class Treasure implements Equipments she has two attributes, the constructor , the getters 
+*/
 public class Treasure implements Equipment {
 	private String name;
 	private int value;

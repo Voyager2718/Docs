@@ -1,5 +1,7 @@
-//Version 0.14
-//Class version 0.10
+/**
+*  subclass of Room, room with a monster you have to kill it
+*/
+
 public class MonsterRoom extends Room {
 	private boolean killed = false;
 

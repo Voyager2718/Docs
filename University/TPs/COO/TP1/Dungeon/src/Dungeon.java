@@ -1,6 +1,10 @@
 
 //Version 0.15
 //Class version 0.26
+
+/**
+* class Dungeon
+*/
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,6 +18,9 @@ public class Dungeon {
 	protected int health = 100;
 	protected int money = 0;
 
+
+/**function : if the player is injured he loses 10 points from his score 
+*/
 	public void hurt() {
 		this.health -= 10;
 		if (this.getHealth() <= 0) {
@@ -22,6 +29,12 @@ public class Dungeon {
 		}
 	}
 
+
+
+
+/**function : if the player is injured he loses "hurt" points from his score : health
+@param hurt : int 
+*/
 	public void hurt(int hurt) {
 		this.health -= hurt;
 		if (this.getHealth() <= 0) {
@@ -30,25 +43,51 @@ public class Dungeon {
 		}
 	}
 
+
+
+/**when the player will heal , he earns "10" points that will be added to his score : health
+*/
 	public void heal() {
 		this.health += 10;
 	}
 
+
+
+/**function : when the player will heal , he earns "heal" points that will be added to his score : health
+*/
 	public void heal(int heal) {
 		this.health += heal;
 	}
+
+
 
 	public int getHealth() {
 		return this.health;
 	}
 
+
+
+/**function : the player earns money and that will be added to his score : money
+*/
 	public void earnMoney(int money) {
 		this.money += money;
 	}
 
+
+
 	public int getMoney() {
 		return this.money;
 	}
+
+
+
+/**
+constructor of the class Dungeon : 
+* instantiating different rooms
+* instantiating different equipments
+* add the different objects in the lists
+
+*/
 
 	public Dungeon() {
 		Exit e = new Exit();
@@ -80,6 +119,15 @@ public class Dungeon {
 		this.currentRoom = room;
 	}
 
+
+
+
+
+/**
+* function
+@ param equpement : String
+
+*/
 	public boolean useEquipement(String equipement) {
 		equipement = equipement.toLowerCase();
 		for (int i = 0; i < this.equipments.size(); i++) {
@@ -302,13 +350,13 @@ public class Dungeon {
 		System.out.println("You have these:\n-------------------------");
 		for (int i = 0; i < this.equipments.size(); i++) {
 			if (this.equipments.get(i) instanceof Treasure) {
-				System.out.println(((Treasure) this.equipments.get(i)).getName() + "     ¢ã"
+				System.out.println(((Treasure) this.equipments.get(i)).getName() + "     â‚¬"
 						+ ((Treasure) this.equipments.get(i)).getValue());
 				treasureValue += ((Treasure) this.equipments.get(i)).getValue();
 			}
 		}
 		System.out
-				.println("Potions¡Á" + potions + " Swords¡Á" + swords + " Keys¡Á" + keys + "\n-------------------------");
+				.println("Potions x" + potions + " Swords x" + swords + " Keys x" + keys + "\n-------------------------");
 		return 100 * potions + swords * 1000 + keys * 50 + treasureValue;
 	}
 
@@ -316,9 +364,17 @@ public class Dungeon {
 		this.getEquipmentsValue();
 	}
 
+
+
+/** function will execute when the player wins the game
+*/
 	public boolean gameIsWon() {
 		return this.currentRoom instanceof Exit;
 	}
+
+
+/** function will execute when the player lost the game
+*/
 
 	public boolean gameIsLost() {
 		return this.currentRoom instanceof Trap;

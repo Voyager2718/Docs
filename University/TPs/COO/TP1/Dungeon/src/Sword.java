@@ -1,5 +1,7 @@
-//Version 0.14
-//Class version 0.10
+/**
+* class implements Equipment
+ */
+
 public class Sword implements Equipment {
 
 }

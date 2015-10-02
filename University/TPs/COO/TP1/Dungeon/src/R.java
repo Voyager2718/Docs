@@ -1,5 +1,6 @@
-//Version 0.14
-//Class version 0.12
+/**  
+* Supper class, serves to give a description of the rooms and their types
+*/
 public class R {
 	protected String type;
 	protected String description;

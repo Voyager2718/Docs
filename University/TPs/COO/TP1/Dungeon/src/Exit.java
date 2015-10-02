@@ -1,5 +1,6 @@
-//Version 0.14
-//Class version 0.10
+/**
+* Exit : subclass of R it represents the exit
+*/
 public class Exit extends R {
 	public Exit() {
 		super("Exit", "This is the exit, you won.");

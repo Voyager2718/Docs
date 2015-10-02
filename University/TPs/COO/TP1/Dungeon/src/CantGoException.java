@@ -1,10 +1,8 @@
-//Version 0.14
-//Class version 0.10
-
+/**
+* subclass of Exception, serves to generate exceptions when user try to go somewhere that have no room
+*/
 public class CantGoException extends Exception {
-	/**
-	 * If user try to go somewhere that have no room, throw this Exception.
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private String message;
 
