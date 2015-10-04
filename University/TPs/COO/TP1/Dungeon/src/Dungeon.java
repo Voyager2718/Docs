@@ -1,6 +1,6 @@
 
-//Version 0.91
-//Class version 0.30
+//Version 0.91.1
+//Class version 0.31
 
 /**
 * class Dungeon
@@ -380,7 +380,7 @@ public class Dungeon {
 		}
 		if (this.gameIsWon()) {
 			System.out.println("You won!\nWhat's more, according to your spectacular, you've got\n");
-
+			System.out.println(this.getEquipmentsValue() + "€");
 		}
 		if (this.gameIsLost())
 			System.out.println("You lost!");

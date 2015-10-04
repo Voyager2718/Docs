@@ -1,4 +1,4 @@
-YANG Zhipeng
+﻿YANG Zhipeng
 
 Question 1
 print("%x,%o,%X"%(999,999,999))
@@ -46,31 +46,78 @@ n=18,chr(ord('0')+n)=B
 n=19,chr(ord('0')+n)=C
 
 Question 4
-
+def integer_to_digit(n):
+    return chr(n+55)
 
 Question 5
-def entier_en_chiffre(n):
-     assert n <= 15 and n >= 0
-     if(n < 10):
-             return chr(n+48)
-     return chr(n+55)
+def integer_to_digit(n):
+    assert(n>=0 and n<=15)
+    if(n>=10):
+            return chr(n+55)
+    return chr(n+48)
 	 
 Question 6
 def ent_chn(n,b):
-     assert b != 1 and b <= 16
-     if (n == 0):
-             return ""
-     ord = n % b
-     c = entier_en_chiffre(ord)
-     return entier_en_chaine(n//b, b) + c
-	 
-def entier_en_chaine(n,b):
-     if(ent_chn(n,b)==""):
-             return "0"
-     return ent_chn(n,b)
-	 
-	 
+    assert b != 1 and b <= 16
+    if (n == 0):
+            return ""
+    ord = n % b
+    c = integer_to_digit(ord)
+    return integer_to_string(n//b, b) + c
+
+def integer_to_string(n,b):
+    if(ent_chn(n,b)==""):
+            return ""
+    return ent_chn(n,b)
+  
 Question 7
-def afficher():
-      for i in range(0,21):
-           builtins.print("{:3d}:{:8d}{:3d}  {}".format(i,int(entier_en_chaine(i,2)),int(entier_en_chaine(i,8)),entier_en_chaine(i,16)))
+def print():
+    for i in range(0,21):
+            builtins.print("{:3d} :{:5s} {:5s} {:5s}".format(i,integer_to_string(i,2),integer_to_string(i,8),integer_to_string(i,16)))
+
+Question 8
+(i opérateurs logiques 4)
+(e.g. i & 4 ou ^i)
+
+i & | ^ ~ << >>
+0 0 4 4 -1 0 0
+1 0 5 5 -2 16 0
+2 0 6 6 -3 32 0
+3 0 7 7 -4 48 0
+
+Question 9
+<< n ça veut dire dégaler à gauche n bits.
+>> n ça veut dire dégaler à droite n bits.
+
+Question 10
+def deux_puissance(n):
+    assert n >= 0
+    return 2 << n-1
+
+Question 11
+def pair(n):
+    return n&1==0
+
+Question 12
+def integer_to_binary_str(n):
+    if(n==0):
+        return "0"
+    return n_b(n)
+	
+def n_b(n,str=""):
+    if(n==0):
+        return ""
+    if(pair(n)):
+        return n_b(n>>1,str)+str+"0"
+    return n_b(n>>1,str)+str+"1"
+
+Question 13
+def binary_str_to_integer (str,n=0,depth=0):
+    if(str==""):
+            return 0
+    if(str[-1]=="0"):
+            return n+binary_str_to_integer(str[0:-1],n,depth+1)
+    if(str[-1]=="1"):
+            return pow(2,depth)+binary_str_to_integer(str[0:-1],n,depth+1)
+
+Question 14

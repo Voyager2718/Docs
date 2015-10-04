@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+  <meta name="generator" content="mimine" />
+  <meta name="author" content="EW" />
+  <title>Code UTF-8</title>
+  <meta http-equiv="Content-type" content=
+  "text/html; charset=utf-8" />
+</head>
+
+
+<body>
+
+<h1 align="center"> Le code UTF-8  </h1>
+
+(source : <a href="http://fr.wikipedia.org/wiki/UTF-8">wikipedia</a>)
+
+
+
+<h2> <span class="mw-headline">Description</span></h2>
+
+<p>
+UTF = UCS Transformation Format<br/>
+(UCS = Universal Character Set, norme ISO-10646)
+
+</p>
+
+<p>Le numéro de chaque caractère est donné par le standard Unicode.</p>
+<p>Les caractères de numéro 0 à 127 sont codés sur un octet dont le bit de poids fort est toujours nul.</p>
+<p>Les caractères de numéro supérieur à 127 sont codés sur plusieurs octets. Dans ce cas, les bits de poids fort du premier octet forment une suite de 1 de longueur égale au nombre d'octets utilisés pour coder le caractère, les octets suivants ayant <tt>10</tt> comme bits de poids fort.</p>
+
+<table class="wikitable" style="border: 1px solid rgb(170, 170, 170); margin-top: 0.5em; margin-bottom: 0.5em; border-collapse: collapse;" align="center" border="1" cellpadding="2" cellspacing="0">
+<caption><b>Définition du nombre d'octets utilisés</b></caption>
+<tbody><tr style="background: rgb(221, 221, 221) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<th>Représentation binaire UTF-8</th>
+<th>Signification</th>
+</tr>
+<tr align="left">
+<td><tt><b>0</b>xxxxxxx</tt></td>
+<td>1 octet codant 1 à 7 bits</td>
+</tr>
+<tr align="left" bgcolor="#efefef">
+
+<td><tt><b>110</b>xxxxx <b>10</b>xxxxxx</tt></td>
+<td>2 octets codant 8 à 11 bits</td>
+</tr>
+<tr align="left">
+<td><tt><b>1110</b>xxxx <b>10</b>xxxxxx <b>10</b>xxxxxx</tt></td>
+<td>3 octets codant 12 à 16 bits</td>
+
+</tr>
+<tr align="left" bgcolor="#efefef">
+<td><tt><b>11110</b>xxx <b>10</b>xxxxxx <b>10</b>xxxxxx <b>10</b>xxxxxx</tt></td>
+<td>4 octets codant 17 à 21 bits</td>
+</tr>
+</tbody></table>
+<p>Ce principe pourrait être étendu jusqu'à six octets pour un caractère, mais UTF-8 pose la limite à quatre. Ce principe permet également d'utiliser plus d'octets que nécessaire pour coder un caractère, mais UTF-8 l'interdit.</p>
+
+<table class="wikitable" style="border: 1px solid rgb(170, 170, 170); margin-top: 0.5em; margin-bottom: 0.5em; border-collapse: collapse;" align="center" border="1" cellpadding="2" cellspacing="0">
+<caption><b>Exemples de codage UTF-8</b></caption>
+<tbody><tr style="background: rgb(221, 221, 221) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<th>Caractère</th>
+<th>Numéro du caractère</th>
+<th>Codage binaire UTF-8</th>
+</tr>
+<tr align="left">
+<td>A</td>
+<td>65</td>
+<td><tt><b>0</b>1000001</tt></td>
+
+</tr>
+<tr align="left" bgcolor="#efefef">
+<td>é</td>
+<td>233</td>
+<td><tt><b>110</b>00011 <b>10</b>101001</tt></td>
+</tr>
+<tr align="left">
+<td>€</td>
+<td>8364</td>
+
+<td><tt><b>1110</b>0010 <b>10</b>000010 <b>10</b>101100</tt></td>
+</tr>
+<tr align="left" bgcolor="#efefef">
+<td>𝄞</td>
+<td>119070</td>
+<td><tt><b>11110</b>000 <b>10</b>011101 <b>10</b>000100 <b>10</b>011110</tt></td>
+
+</tr>
+</tbody></table>
+<p>Dans toute chaîne de caractères UTF-8, on remarque que&nbsp;:</p>
+<ul>
+<li>tout octet de bit de poids fort nul code un caractère US-ASCII sur un octet&nbsp;;</li>
+<li>tout octet de bits de poids fort valant <tt>11</tt> est le premier octet d'un caractère codé sur plusieurs octets&nbsp;;</li>
+
+<li>tout octet de bits de poids fort valant <tt>10</tt> est à l'intérieur d'un caractère codé sur plusieurs octets.</li>
+</ul>
+</body>
+</html>
