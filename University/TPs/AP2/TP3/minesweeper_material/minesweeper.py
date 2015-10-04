@@ -131,7 +131,6 @@ def neighborhood (x,y,height,width):
     """
     return the list of coordinates of the neighbors de cell (x,y) in a
     grid of size width*height
-
     :param x: x-coordinate of a cell
     :type x: int
     :param y: y-coordinate of a cell
@@ -140,7 +139,19 @@ def neighborhood (x,y,height,width):
     :rtype: list of tuple
     :UC: 0 <= x < height and 0 <= y < width
     """
-    pass
+    assert x>=0 and x<=height and y>=0 and y <= width and height >0 and width >0
+    neib = ()
+    tmp = ()
+    for i in (x-1,x,x+1):
+        for j in (y+1,y,y-1):
+            if i==0 and j==0:
+                continue
+            tmp+=((i,j),)
+    for i in range(0,8):
+        if(tmp[i][0]>=0 and tmp[i][0]<=width and tmp[i][1]>=0 and tmp[i][1]<=height):
+            neib+=(tmp[i],)
+    return neib
+    
 
 ##############################################
 # Functions for game's setup and management

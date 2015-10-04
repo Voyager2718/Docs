@@ -1,0 +1,22 @@
+Question
+constructeurs publics:
+__make_cell()
+__make_grid(width,height,nbombs)
+make_game(width=30,height=20,nbombs=99)
+
+s¨¦lecteurs:
+is_bomb(cell)
+is_hypothetic_bomb(cell)
+is_revealed(cell)
+number_of_bombs_in_neighborhood(cell)
+neighborhood(x,y,height,width)
+get_height(game)
+get_width(game)
+get_cell(game,x,y)
+get_state(game)
+
+modificateurs:
+reveal(cell)
+set_hypothetic(cell)
+unset_hypothetic(cell)
+reveal_all_cells_from(game,x,y)
