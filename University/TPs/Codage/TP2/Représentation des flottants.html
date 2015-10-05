@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere003.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="hevea 2.23">
+
+<link rel="stylesheet" href="./Représentation des flottants_files/Codage.css" type="text/css"><link rel="stylesheet" type="text/css" href="./Représentation des flottants_files/tp-nombre-caractere.css">
+<title>Représentation des flottants</title>
+</head>
+<body>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere002.html"><img src="./Représentation des flottants_files/previous_motif.gif" alt="Previous"></a>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/index.html"><img src="./Représentation des flottants_files/contents_motif.gif" alt="Up"></a>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere004.html"><img src="./Représentation des flottants_files/next_motif.gif" alt="Next"></a>
+<hr>
+<h2 id="sec11" class="section">3&nbsp;&nbsp;Représentation des flottants</h2>
+<p>
+<a id="sec:flottants"></a></p><p>Dans un interpréteur <span style="font-variant:small-caps">Python</span>, importez le module 
+<code>struct</code>.
+Tapez l’instruction 
+<code>bytes_stored</code><code>&nbsp;=&nbsp;</code><code>struct</code><code>.</code><code>pack</code><code>(</code><code><span style="color:#00B200"><code>'&gt;f'</code></span></code><code>,&nbsp;3.5)</code>.
+Cette instruction a pour effet de créer un objet de type <span style="font-family:monospace">bytes</span> qui
+contient la représentation sous forme de 4 octets du réel 3,5.</p><p>Il est possible d’accéder à chacun des octets de la même manière que dans une
+liste.</p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;14 </span></span>
+Réalisez une fonction 
+<code>byte_to_binary</code> qui prend en paramètre un
+octet qui renvoie sa représentation binaire sur 8 bits.
+</p><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;15 </span></span>
+Faîtes une fonction 
+<code>float_to_bin</code> qui prenne en paramètre un
+réel et qui renvoie une chaîne binaire correspondant au réel stocké.
+Cette fonction utilisera bien entendu la méthode 
+<code>struct</code><code>.</code><code>pack</code>.</p><p>Exemple :</p><table class="lstframe" style="padding:1ex;background-color:#E5CCFF
+;border-style:none none none double;"><tbody><tr><td class="lstlisting">   &gt;&gt;&gt; float_to_bin(3.5)
+   <span style="color:#00B200">'01000000011000000000000000000000'</span></td></tr>
+</tbody></table><p></p><div class="border"></div><p></p><p>Nous allons maintenant voir l’impact d’un changement de bit dans un réel.</p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;16 </span></span>
+Pour cela nous allons commencer par faire une fonction
+
+<code>change_a_bit</code> qui prend en paramètre une chaîne binaire et qui
+renvoie une chaîne binaire dans laquelle, à la position donnée en
+paramètre, le caractère, qui représente un bit, a été remplacé par le bit
+inverse.
+</p><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;17 </span></span>
+Réalisez une fonction 
+<code>binary_to_bytes</code> qui prend une chaîne
+binaire en entrée et qui la convertit, 8 bits par 8 bits, en une liste
+d’entiers.</p><table class="lstframe" style="padding:1ex;background-color:#E5CCFF
+;border-style:none none none double;"><tbody><tr><td class="lstlisting">   &gt;&gt;&gt; binary_to_bytes(<span style="color:#00B200">'110101101101011111011000'</span>)
+   [214, 215, 216]</td></tr>
+</tbody></table><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;18 </span></span>
+Faîtes une fonction 
+<code>change_a_bit_in_float</code> qui prend en
+paramètre un réel ainsi que la position à modifier dans la représentation
+binaire et qui renvoie la valeur du réel modifié.</p><p>Pour cela, sachez que 
+<code>struct</code><code>.</code><code>unpack</code><code>(</code><code><span style="color:#00B200"><code>'&gt;f'</code></span></code><code>,&nbsp;</code><code>bytes</code><code>([64,&nbsp;96,&nbsp;0,&nbsp;0]))</code>
+retourne un tuple dont le premier élément est le réel représenté
+par les 4 octets 64, 96, 0 et 0.
+</p><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;19 </span></span>
+Prenons le réel 2. Quelle modification implique une modification du premier
+bit ? Du dernier bit ? Du neuvième bit ? Pourquoi ?
+</p><p></p><div class="border"></div><p></p>
+<hr>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere002.html"><img src="./Représentation des flottants_files/previous_motif.gif" alt="Previous"></a>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/index.html"><img src="./Représentation des flottants_files/contents_motif.gif" alt="Up"></a>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere004.html"><img src="./Représentation des flottants_files/next_motif.gif" alt="Next"></a>
+
+
+<iframe frameborder="0" scrolling="no" style="border: 0px; display: none; background-color: transparent;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="null" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:false,&quot;ss&quot;:true}" style="display: none;"></div></body></html>

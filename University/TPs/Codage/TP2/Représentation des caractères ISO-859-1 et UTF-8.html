@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere004.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="hevea 2.23">
+
+<link rel="stylesheet" href="./Représentation des caractères ISO-859-1 et UTF-8_files/Codage.css" type="text/css"><link rel="stylesheet" type="text/css" href="./Représentation des caractères ISO-859-1 et UTF-8_files/tp-nombre-caractere.css">
+<title>Représentation des caractères ISO-859-1 et UTF-8</title>
+</head>
+<body>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere003.html"><img src="./Représentation des caractères ISO-859-1 et UTF-8_files/previous_motif.gif" alt="Previous"></a>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/index.html"><img src="./Représentation des caractères ISO-859-1 et UTF-8_files/contents_motif.gif" alt="Up"></a>
+<hr>
+<h2 id="sec12" class="section">4&nbsp;&nbsp;Représentation des caractères ISO-859-1 et UTF-8</h2>
+<p>
+<a id="sec:caracteres"></a></p>
+<h4 id="sec13" class="paragraph">Matériel fourni</h4>
+<ul class="itemize"><li class="li-itemize">
+Un fichier texte au format ISO-8859-1 contenant la fable <a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/cigale-ISO-8859-1.txt">«La Cigale et la Fourmi»</a>&nbsp;;
+</li><li class="li-itemize">un fichier texte au format UTF-8 contenant la fable <a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/cigale-UTF-8.txt">«La Cigale et la Fourmi»</a>&nbsp;;
+</li><li class="li-itemize">la table des caractères <a href="http://www.fil.univ-lille1.fr/~salson/codage/Cours/codeISO-8859.html">ISO-8859-1</a>&nbsp;;
+</li><li class="li-itemize">le principe du code <a href="http://www.fil.univ-lille1.fr/~salson/codage/Cours/codeUTF-8.html">UTF-8</a>.
+</li></ul>
+<h3 id="sec14" class="subsection">4.1&nbsp;&nbsp;La commande <span style="font-family:monospace">iconv</span></h3>
+<p>
+<a id="sec:iconv"></a></p><p>Sous Unix, la commande <span style="font-family:monospace">iconv</span> permet de convertir un fichier d’un codage dans un autre.</p><p>Ainsi, pour convertir un fichier texte du format ISO-8859-1 dans le format UTF-8, on utilise la commande</p><pre class="verbatim">&gt; iconv --from-code ISO-8859-1 --to-code UTF-8 --output fichier_converti fichier_a_convertir
+</pre><p>où <span style="font-family:monospace">fichier_converi</span> est le nom du fichier résultat et
+<span style="font-family:monospace">fichier_a_convertir</span> est le nom du fichier que l’on désire convertir.</p><p>Pour connaître la liste de tous les codages connus par cette commande
+</p><pre class="verbatim">$ iconv --list
+</pre><p>Le but du TP est de réaliser deux programmes l’un pour convertir de l’ISO-8859-1 vers l’UTF-8, l’autre pour la conversion dans l’autre sens (si elle est possible&nbsp;!).</p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;20 </span></span>
+Utilisez la commande <span style="font-family:monospace">iconv</span> pour 
+</p><ol class="enumerate" type="1"><li class="li-enumerate">
+convertir le fichier <span style="font-family:monospace">cigale-ISO-8859-1.txt</span> en un fichier équivalent codé en UTF-8&nbsp;;
+</li><li class="li-enumerate">convertir le fichier <span style="font-family:monospace">cigale-UTF-8.txt</span> en un fichier équivalent codé en ISO-8859-1.
+</li></ol><p>Vérifiez le résultat </p><ul class="itemize"><li class="li-itemize">
+en visualisant le contenu des deux fichiers obtenus à l’aide d’un éditeur de textes&nbsp;;
+</li><li class="li-itemize">puis en comparant les fichiers obtenus avec ceux qui vous sont
+fournis. Pour cela utilisez la commande <span style="font-family:monospace">diff</span>&nbsp;;<table class="lstframe" style="padding:1ex;background-color:#D8D8D8;border-style:solid solid double double;"><tbody><tr><td class="lstlisting">&gt; diff cigale-ISO-8859-1.txt moncigale-ISO-8859-1.txt</td></tr>
+</tbody></table></li><li class="li-itemize">et enfin en utilisant la commande <span style="font-family:monospace">file</span>&nbsp;;<table class="lstframe" style="padding:1ex;background-color:#D8D8D8;border-style:solid solid double double;"><tbody><tr><td class="lstlisting">&gt; file cigale-UTF-8.txt
+cigale-UTF-8.txt: UTF-8 Unicode text
+&gt; file cigale-ISO-8859-1.txt
+cigale-ISO-8859-1.txt: ISO-8859 text</td></tr>
+</tbody></table></li></ul><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;21 </span></span>
+Comparez les tailles (exprimées en octets) des deux fichiers <span style="font-family:monospace">cigale-ISO-8859-1.txt</span> et <span style="font-family:monospace">cigale-UTF-8.txt</span>. Expliquez la différence constatée. Pour connaître la taille d’un fichier, utilisez la commande <span style="font-family:monospace">ls</span> avec l’option <span style="font-family:monospace">-l</span>.
+Par exemple, pour le fichier <span style="font-family:monospace">cigale-UTF-8.txt</span> on obtient</p><table class="lstframe" style="padding:1ex;background-color:#D8D8D8;border-style:solid solid double double;"><tbody><tr><td class="lstlisting">&gt; ls -l cigale-UTF-8.txt
+-rw-r--r-- 1 eric eric 639 2010-09-29 07:12 cigale-UTF-8.txt</td></tr>
+</tbody></table><p>qui montre que le fichier a une taille de 639 octets.</p><p></p><div class="border"></div><p></p>
+<h3 id="sec15" class="subsection">4.2&nbsp;&nbsp;Conversion d’un fichier du format ISO-8859-1 au format UTF-8</h3>
+<p>La conversion d’un fichier texte du format ISO-8859-1 au format UTF-8 peut se faire simplement par lecture du fichier de départ octet par octet, et en écrivant dans le fichier d’arrivée un ou deux octets selon les cas suivants&nbsp;:</p><ol class="enumerate" type="1"><li class="li-enumerate">
+si l’octet lu a un bit de poids fort nul, c’est un caractère ASCII et on le recopie tel quel dans le fichier d’arrivée&nbsp;;
+</li><li class="li-enumerate">sinon, l’octet a une valeur comprise entre 160 et 255, et on doit recopier deux octets dans le fichier d’arrivée<div class="center"><span style="font-family:monospace">110xxxxx 10xxxxxx</span></div><p>où les 11 <span style="font-family:monospace">x</span> sont à remplacer par les bits de l’octet lu (les trois premiers <span style="font-family:monospace">x</span> étant des <span style="font-family:monospace">0</span>). Par exemple, le caractère <span style="font-family:monospace">É</span> a pour code <span style="font-family:monospace">C9=11001001</span> en ISO-8859-1. Son code en UTF-8 est <span style="font-family:monospace">11000011 10001001 = C3 89</span>.
+</p></li></ol><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;22 </span></span>
+Comment transformer un octet de valeur comprise entre 160 et 255 en deux octets conformes à la description donnée plus haut, uniquement en utilisant des opérations logiques sur les entiers&nbsp;?
+</p><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;23 </span></span>
+Écrivez une fonction en <span style="font-variant:small-caps">Python</span> nommée 
+<code>isolatin_to_utf8</code>
+qui prend en paramètre un flux d’entrée, qui lit un caractère ISO-8859-1
+dans ce flux et qui renvoie un tuple d’un ou deux octets correspondants au
+caractère UTF-8.</p><p>Pour lire octet par octet le flux donné en paramètre, nous utiliserons la
+méthode <span style="font-family:monospace">read</span> comme ceci : <span style="font-family:monospace">entree.read(1)[0]</span>, en supposant
+que le paramètre est appelé <span style="font-family:monospace">entree</span>.
+Quelques explications : <span style="font-family:monospace">read(1)</span> permet de lire un octet et
+<span style="font-family:monospace">read(1)[0]</span> permet d’accéder à la valeur de l’octet lu.
+Attention cette méthode lève une exception de type <span style="font-family:monospace">IndexError</span>
+lorsque aucun octet n’a été lu (à la fin du fichier).
+Lorsque la fin du fichier est atteinte, votre fonction renverra 
+<code>None</code>.
+</p><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;24 </span></span>
+Pour tester votre fonction, voici deux procédures qui s’occupent d’ouvrir
+les fichiers et écrire les octets produits par votre fonction dans le
+fichier cible.</p><table class="lstframe" style="padding:1ex;background-color:#FFFF7F;border-style:solid;"><tbody><tr><td class="lstlisting"><span style="font-weight:bold"><span style="color:#0000B2">def</span></span> convert_file(source, dest, conversion):
+    <span style="color:#00B200">''</span><span style="color:#00B200">'
+    Convert `source` file using the `conversion` function and writes the
+    output in the `dest` file.
+
+    :param source: The name of the source file
+    :type source: str
+    :param dest: The name of the destination file
+    :type dest: str
+    :param conversion: A function which takes in parameter a stream (opened\
+    in read and binary modes) and which returns a tuple of bytes.
+    :type conversion: function
+    '</span><span style="color:#00B200">''</span>
+    entree = open(source, <span style="color:#00B200">'rb'</span>)
+    sortie = open(dest, <span style="color:#00B200">'wb'</span>)
+
+    octets_sortie = conversion(entree)
+    <span style="font-weight:bold"><span style="color:#0000B2">while</span></span> octets_sortie != None:
+        sortie.write(bytes(octets_sortie))
+        octets_sortie = conversion(entree)
+    sortie.close()
+
+<span style="font-weight:bold"><span style="color:#0000B2">def</span></span> conversion_file_utf8_isolatin(source, dest):
+    <span style="color:#00B200">''</span><span style="color:#00B200">'
+    Converts `source` file from UTF-8 encoding to ISO-8859-1.
+    The output is written in the `dest` file.
+    '</span><span style="color:#00B200">''</span>
+    convert_file(source, dest, utf8_to_isolatin)</td></tr>
+</tbody></table><p>Testez votre fonction sur le fichier <a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/cigale-ISO-8859-1.txt"><span style="font-family:monospace">cigale-ISO-8859-1.txt</span></a>, en
+lançant la procédure 
+<code>convert_file_utf8_isolatin</code>. La
+procédure prend deux paramètres le nom du fichier source (le fichier au format
+ISO-8859-1) et le nom du fichier cible (le nom du fichier à créer au format
+UTF-8) Vérifiez que vous obtenez le fichier attendu..
+</p><p></p><div class="border"></div><p></p>
+<h3 id="sec16" class="subsection">4.3&nbsp;&nbsp;Conversion d’un fichier du format UTF-8 au format ISO-8859-1</h3>
+<p>La conversion d’un fichier du format UTF-8 au format ISO-8859-1 n’est pas toujours possible. Nous ne considérerons donc pour ce TP que les fichiers pour lesquels cette conversion est possible.</p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;25 </span></span>
+Écrivez en <span style="font-variant:small-caps">Python</span> la fonction 
+<code>utf8_to_isolatin</code> qui prend en
+paramètre un flux et qui renvoie un tuple composé d’un seul octet, celui
+correspondant 
+au caractère ISO-8859-1 équivalent du premier caractère UTF-8 lu dans le flux.
+</p><p></p><div class="border"></div><p></p><p><span style="color:blue"><span style="font-weight:bold">Question&nbsp;26 </span></span>
+Testez votre fonction, via la procédure
+
+<code>convert_file_utf8_isolatin</code> qui est donnée ci-après, sur le fichier
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/cigale-UTF-8.txt"><span style="font-family:monospace">cigale-UTF-8.txt</span></a>.</p><table class="lstframe" style="padding:1ex;background-color:#FFFF7F;border-style:solid;"><tbody><tr><td class="lstlisting"><span style="font-weight:bold"><span style="color:#0000B2">def</span></span> convert_file_isolatin_utf8(source, dest):
+    <span style="color:#00B200">''</span><span style="color:#00B200">'
+    Converts `source` file from ISO-8859-1 encoding to UTF-8.
+    The output is written in the `dest` file.
+    '</span><span style="color:#00B200">''</span>
+    convert_file(source, dest, isolatin_to_utf8)</td></tr>
+</tbody></table><p></p><div class="border"></div>
+
+<p></p><hr>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/tp-nombre-caractere003.html"><img src="./Représentation des caractères ISO-859-1 et UTF-8_files/previous_motif.gif" alt="Previous"></a>
+<a href="http://www.fil.univ-lille1.fr/~salson/codage/TP/TP-Nombres-caracteres/index.html"><img src="./Représentation des caractères ISO-859-1 et UTF-8_files/contents_motif.gif" alt="Up"></a>
+
+
+<iframe frameborder="0" scrolling="no" style="border: 0px; display: none; background-color: transparent;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="null" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:false,&quot;ss&quot;:true}" style="display: none;"></div></body></html>

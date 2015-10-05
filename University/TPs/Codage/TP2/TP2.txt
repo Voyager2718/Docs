@@ -121,3 +121,36 @@ def binary_str_to_integer (str,n=0,depth=0):
             return pow(2,depth)+binary_str_to_integer(str[0:-1],n,depth+1)
 
 Question 14
+def byte_to_binary(n):
+    return "".join(str(1 & int(n) >> i) for i in range(8)[::-1])
+
+Question 15
+import struct
+def float_to_bin(n):
+    bytes_stored=struct.pack('>f',n)
+    s=""
+    for i in bytes_stored:
+        s+=byte_to_binary(i)
+    return s
+
+Question 16
+def change_a_bit(binary,position):
+    if(binary[position]=="0"):
+        return binary[0:position]+"1"+binary[position+1:]
+    else:
+        return binary[0:position]+"0"+binary[position+1:]
+
+Question 17
+def binary_to_bytes(str):
+    return [binary_str_to_integer(str[0:8]),binary_str_to_integer(str[8:16]),binary_str_to_integer(str[16:])]
+
+Question 18
+def change_a_bit_in_float(float,position):
+    f = float_to_bin(float)
+    f = change_a_bit(f,position)
+    return binary_to_bytes(f)
+
+Question 19
+
+
+Question 20
