@@ -1,2 +1,0 @@
-Le plus petit d¨¦calage j est: i+1.
-

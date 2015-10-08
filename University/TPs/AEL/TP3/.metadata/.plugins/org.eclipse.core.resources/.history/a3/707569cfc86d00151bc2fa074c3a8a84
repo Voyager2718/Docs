@@ -1,8 +1,0 @@
-package question3;
-
-public class Q3 {
-	private int[] calculerFonctionPrefixe(String motif) {
-		pref[1]
-		return null;
-	}
-}
