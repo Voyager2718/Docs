@@ -1,0 +1,15 @@
+package question3;
+
+public class Q3 {
+	private int[] calculerFonctionPrefixe(String motif) {
+		int[] pref = new int[motif.length()];
+		pref[1] = 0;
+		int k = 0;
+		for (int q = 1; q < motif.length(); q++) {
+			while (k > 0 && motif[k] != motif[q - 1]) {
+
+			}
+		}
+		return null;
+	}
+}

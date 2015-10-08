@@ -1,0 +1,9 @@
+package question3;
+
+public class Q3 {
+	private int[] calculerFonctionPrefixe(String motif) {
+		int[] pref = new int[motif.length()];
+		pref[1] = 0;
+		return null;
+	}
+}

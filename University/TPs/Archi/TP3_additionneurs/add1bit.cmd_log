@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym add1bit /home/l2/deplechin/Documents/Archi_tp/TP3_additionneurs/add1bit.sch /home/l2/deplechin/Documents/Archi_tp/TP3_additionneurs/add1bit.sym 

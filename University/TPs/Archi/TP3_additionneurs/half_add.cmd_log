@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym half_add /home/l2/deplechin/Documents/Archi_tp/TP3_additionneurs/half_add.sch /home/l2/deplechin/Documents/Archi_tp/TP3_additionneurs/half_add.sym 

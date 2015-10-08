@@ -1,0 +1,35 @@
+package question3;
+
+public class Q3 {
+	private int[] calculerFonctionPrefixe(String motif) {
+		int[] pref = new int[motif.length()];
+		pref[0] = 0;
+		int k = 0;
+		for (int q = 2; q < motif.length(); q++) {
+			while (k > 0 && motif.charAt(k) != motif.charAt(q - 1)) {
+				k = pref[k];
+			}
+			if (motif.charAt(k) == motif.charAt(q - 1))
+				k = k + 1;
+			pref[q] = k;
+		}
+		return pref;
+	}
+
+	private int KMPAlgorithm() {
+		
+	}
+
+	public void pref(String motif) {
+		int[] pref = new int[motif.length()];
+		pref = this.calculerFonctionPrefixe(motif);
+		for (int i = 0; i < motif.length(); i++)
+			System.out.print(pref[i] + " ");
+		System.out.println();
+	}
+
+	public static void main(String args[]) {
+		Q3 q3 = new Q3();
+		q3.pref("abcabcabc");
+	}
+}
