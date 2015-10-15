@@ -92,7 +92,7 @@ def number_of_bombs_in_neighborhood (cell):
     """
     return cell['nbombs_neighborhood']
 
-def reveal(cell):
+def reveal (cell):
     """
     :param cell: a cell of a minesweeper's grid
     :type cell: cell
@@ -126,7 +126,7 @@ def unset_hypothetic (cell):
     """
     if not is_revealed (cell):
         cell['hypothetic_bomb'] = False
-        
+
 def neighborhood (x,y,height,width):
     """
     return the list of coordinates of the neighbors de cell (x,y) in a
@@ -139,16 +139,15 @@ def neighborhood (x,y,height,width):
     :rtype: list of tuple
     :UC: 0 <= x < height and 0 <= y < width
     """
-    assert x>=0 and x<=height and y>=0 and y <= width and height >0 and width >0
     neib = ()
     tmp = ()
     for i in (x-1,x,x+1):
         for j in (y+1,y,y-1):
-            if i==0 and j==0:
+            if i==x and j==y:
                 continue
             tmp+=((i,j),)
     for i in range(0,8):
-        if(tmp[i][0]>=0 and tmp[i][0]<=width and tmp[i][1]>=0 and tmp[i][1]<=height):
+        if(tmp[i][0]>=0 and tmp[i][0]<height and tmp[i][1]>=0 and tmp[i][1]<width):
             neib+=(tmp[i],)
     return neib
     
@@ -204,6 +203,9 @@ def make_game (width=30,height=20,nbombs=99):
             'nbombs' : nbombs,
             'grid' : __make_grid (width,height,nbombs)}
 
+def get_bombs(game):
+    return game['nbombs']
+
 def get_height (game):
     """
     :param game: a minesweeper game
@@ -246,7 +248,28 @@ def get_state (game):
     :rtype: GameState
     :UC: none
     """
-    pass
+    hy = 0
+    clr = 0
+    for j in range(0,get_width(game)):
+        for i in range(0,get_height(game)):
+            #if(game['grid'][i][j]['bomb']==True and game['grid'][i][j]['hypothetic_bomb']==True):
+            #    hy+=1
+            #    if(hy==game['nbombs']):
+            #        return GameState(1)
+            #elif(game['grid'][i][j]['bomb']==False and game['grid'][i][j]['hidden']==True):
+            #    clr+=1
+            #    if(clr>=get_width(game)*get_height(game)-get_bombs(game)):
+            #        return GameState(3)
+            #elif(game['grid'][i][j]['bomb']==True and game['grid'][i][j]['hidden']==False):
+            #    return GameState(2)
+            if(is_revealed(get_cell(game,i,j)) and is_bomb(get_cell(game,i,j))):
+                return GameState(2)
+            if(not is_revealed(get_cell(game,i,j)) and not is_bomb(get_cell(game,i,j))):
+                return GameState(3)
+    return GameState(1)
+
+def get_cell_bombs(cell):
+    return cell['nbombs_neighborhood']
 
 def reveal_all_cells_from (game, x, y):
     """
@@ -257,9 +280,30 @@ def reveal_all_cells_from (game, x, y):
     :Side effect: reveal all cells of game game from the initial cell (x,y).
     :UC: 0 <= x < height of game and O <= y < width of game 
     """
-    pass
+    if (not(is_revealed(get_cell(game,x,y)) and not (is_hypothetic_bomb(get_cell(game,x,y))))):
+        reveal(get_cell(game,x,y))
+        if (not (is_bomb(get_cell(game,x,y)) or get_cell_bombs(get_cell(game,x,y)) != 0)):
+            neigh = neighborhood(x,y,get_height(game),get_width(game))
+            for i,j in neigh:
+                reveal_all_cells_from(game,i,j)
+
+
+def discover(game,x,y):
+    if(is_hypothetic_bomb(game['grid'][x][y])):
+        return
+    reveal(game['grid'][x][y])
+
+def flag(game,x,y):
+    set_hypothetic(game['grid'][x][y])
+
+def unflag(game,x,y):
+    unset_hypothetic(game['grid'][x][y])
+
+def mines(game):
+    for i in range(game['width']):
+        for j in range(game['height']):
+            if(game['grid'][j][i]['bomb']==True):
+                print(i,j)
 
 if __name__ == '__main__':
-    pass    
-
-
+    pass
