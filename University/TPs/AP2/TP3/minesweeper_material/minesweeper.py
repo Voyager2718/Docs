@@ -248,20 +248,12 @@ def get_state (game):
     :rtype: GameState
     :UC: none
     """
-    hy = 0
-    clr = 0
     for j in range(0,get_width(game)):
         for i in range(0,get_height(game)):
-            #if(game['grid'][i][j]['bomb']==True and game['grid'][i][j]['hypothetic_bomb']==True):
-            #    hy+=1
-            #    if(hy==game['nbombs']):
-            #        return GameState(1)
-            #elif(game['grid'][i][j]['bomb']==False and game['grid'][i][j]['hidden']==True):
-            #    clr+=1
-            #    if(clr>=get_width(game)*get_height(game)-get_bombs(game)):
-            #        return GameState(3)
-            #elif(game['grid'][i][j]['bomb']==True and game['grid'][i][j]['hidden']==False):
-            #    return GameState(2)
+            if(is_bomb(get_cell(game,i,j)) and is_hypothetic_bomb(get_cell(game,i,j))):
+                return GameState(1)
+    for j in range(0,get_width(game)):
+        for i in range(0,get_height(game)):
             if(is_revealed(get_cell(game,i,j)) and is_bomb(get_cell(game,i,j))):
                 return GameState(2)
             if(not is_revealed(get_cell(game,i,j)) and not is_bomb(get_cell(game,i,j))):
@@ -304,6 +296,3 @@ def mines(game):
         for j in range(game['height']):
             if(game['grid'][j][i]['bomb']==True):
                 print(i,j)
-
-if __name__ == '__main__':
-    pass
