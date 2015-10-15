@@ -279,6 +279,37 @@ def reveal_all_cells_from (game, x, y):
             for i,j in neigh:
                 reveal_all_cells_from(game,i,j)
 
+def draw(game):
+    h = get_height(game)
+    w = get_width(game)
+    drawNum(w)
+    for i in range(h):
+        drawLine(w)
+        print(i,end="")
+        for j in range(w):
+            print("|",p(get_cell(game,i,j)),"",end="")
+        print("|")
+    drawLine(w)
+
+def p(cell):
+    if(is_revealed(cell)):
+            if(is_bomb(cell)):
+                    return "B"
+            return str(get_cell_bombs(cell))
+    if(is_hypothetic_bomb(cell)):
+            return "?"
+    return " "
+
+def drawLine(len):
+    print(" ",end="")
+    for i in range(len):
+            print("+---",end="")
+    print("+")
+
+def drawNum(len):
+    for i in range(len):
+        print("  "+str(i)+" ", end="")
+    print("")
 
 def discover(game,x,y):
     if(is_hypothetic_bomb(game['grid'][x][y])):
