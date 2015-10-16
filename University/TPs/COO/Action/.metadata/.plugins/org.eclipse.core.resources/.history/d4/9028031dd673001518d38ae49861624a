@@ -1,0 +1,9 @@
+package resources;
+
+public class ResourcefulUser<R extends Resource> {
+	protected R resource;
+	
+	pulic R getResource(){
+		
+	}
+}

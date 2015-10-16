@@ -1,0 +1,31 @@
+package resources;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;;
+
+public abstract class ResourcePool<T extends Resource> {
+	protected List<T> availableResources = new ArrayList<T>();
+	protected List<T> givenResources = new ArrayList<T>();
+
+	public Resource createResource() {
+		return new T();
+	}
+
+	public ResourcePool(int nbResource) {
+		this.availableResources.add(createResource());
+	}
+
+	public T provideResource() throws NoSuchElementException {
+		if (availableResources.isEmpty())
+			throw new NoSuchElementException("No this resource.");
+		T resource = availableResources.remove(0);
+		givenResources.add(resource);
+		return resource;
+	}
+
+	public void freeResource(T resource) throws IllegalArgumentException {
+		if (!givenResources.contains(resource))
+			throw new IllegalArgumentException();
+	}
+}

@@ -1,0 +1,11 @@
+package swim;
+
+public class Swimmer {
+	protected String name;
+
+	public Swimmer(String name) {
+		this.name = name;
+	}
+	
+	
+}

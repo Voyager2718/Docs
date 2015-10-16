@@ -1,0 +1,6 @@
+package swim;
+
+public class Swimmer {
+	protected String name;
+	
+}

@@ -1,0 +1,13 @@
+package resources;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class ResourcePool<T extends Resource> {
+	protected List<T> availableResources = new ArrayList<T>();
+	protected List<T> givenResources = new ArrayList<T>();
+
+	public ResourcePool(int nbResource) {
+		
+	}
+}
