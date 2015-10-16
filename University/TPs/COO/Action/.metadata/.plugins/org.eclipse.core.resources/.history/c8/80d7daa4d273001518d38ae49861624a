@@ -1,6 +1,0 @@
-package resources;
-
-public abstract class ResourcePool<T extends Resource> {
-	protected List<T> availableResources = new ArrayList<T>;
-
-}
