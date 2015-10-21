@@ -1,14 +1,22 @@
 package swim;
 
 import resources.BasketPool;
+import resources.ResourcePool;
 
 public class Swimmer {
 	protected String name;
 	protected BasketPool baskets;
+	protected int undressTime;
+	protected int swimTime;
+	protected int dressTime;
 
-	public Swimmer(String name) {
-		baskets = new BasketPool(0);
+	public Swimmer(String name, ResourcePool basket, ResourcePool cubicles, int undressTime, int swimTime,
+			int dressTime) {
+		baskets = new BasketPool(6);
+
 		this.name = name;
+		this.undressTime = undressTime;
+		this.swimTime = swimTime;
+		this.dressTime = dressTime;
 	}
-
 }

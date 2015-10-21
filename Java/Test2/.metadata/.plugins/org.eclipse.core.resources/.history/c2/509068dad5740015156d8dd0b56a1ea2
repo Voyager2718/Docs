@@ -1,0 +1,8 @@
+package test;
+
+public class TestUnit {
+	@Test
+	public void valueTest() {
+		Test test = new Test(100);
+	}
+}

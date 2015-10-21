@@ -1,0 +1,20 @@
+package test;
+
+class Father {
+	protected int a;
+}
+
+class Son {
+	protected int a;
+
+	public Son(int a_F, int a_S) {
+		this.a = a_S;
+		super.a = a_F;
+	}
+}
+
+public class Test {
+	public static void main(String args[]) {
+
+	}
+}

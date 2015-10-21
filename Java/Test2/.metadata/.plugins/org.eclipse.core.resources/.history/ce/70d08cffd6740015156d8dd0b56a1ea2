@@ -1,0 +1,11 @@
+¡¢¡¢package test;
+
+import org.junit.Test;
+
+public class TestUnit {
+	@Test
+	public void valueTest() {
+		Test test = new Test(100);
+		assertEquals(100, test.getValue());
+	}
+}

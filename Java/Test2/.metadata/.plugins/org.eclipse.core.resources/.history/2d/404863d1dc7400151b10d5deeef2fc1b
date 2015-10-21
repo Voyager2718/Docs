@@ -1,0 +1,16 @@
+package test;
+
+class Father{
+	protected int a;
+}
+
+class Son{
+	protected int a;
+	
+}
+
+public class Test {
+	public static void main(String args[]) {
+
+	}
+}

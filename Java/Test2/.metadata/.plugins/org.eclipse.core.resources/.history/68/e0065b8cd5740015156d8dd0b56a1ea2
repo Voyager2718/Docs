@@ -1,0 +1,12 @@
+package test;
+public class Test {
+	private int testValue;
+	
+	public Test(int v){
+		testValue = v;
+	}
+	
+	public static void main(String args[]) {
+		
+	}
+}

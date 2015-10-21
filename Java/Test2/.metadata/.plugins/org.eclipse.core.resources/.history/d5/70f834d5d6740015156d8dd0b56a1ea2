@@ -1,0 +1,12 @@
+import static org.junit.Assert.*;
+import org.junit.*;
+
+package test;
+
+public class TestUnit {
+	@Test
+	public void valueTest() {
+		Test test = new Test(100);
+		assertEquals(100, test.getValue());
+	}
+}
