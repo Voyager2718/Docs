@@ -1,4 +1,5 @@
 import sys
+import stack
 def bracket(str):
     dict = {'(':')','{':'}','[':']'}
     ouv = []
@@ -8,7 +9,7 @@ def bracket(str):
                 ouv+=[str[i]]
         elif(str[i]==")" or str[i]=="]" or str[i]=='}'):
             fer+=[str[i]]
-            if(dict[ouv.pop()]!=fer.pop()):
+            if(dict[stack.pop(ouv)]!=stack.pop(fer)):
                 return False
     if(len(ouv)!=0 or len(fer)!=0):
         return False

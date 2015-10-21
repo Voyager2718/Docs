@@ -1,5 +1,6 @@
 import sys
 import builtins
+import stack
 def bracket(str):
     dict = {'(':')','{':'}','[':']'}
     ouv = []
@@ -24,23 +25,23 @@ def bracket(str):
             ferLines+=[line]
             ferChars+=[char]
             if(len(ouv)!=0):
-                o = ouv.pop()
-                f = fer.pop()
-                ol = ouvLines.pop()
-                fl = ferLines.pop()
-                oc = ouvChars.pop()
-                fc = ferChars.pop()
+                o = stack.pop(ouv)
+                f = stack.pop(fer)
+                ol = stack.pop(ouvLines)
+                fl = stack.pop(ferLines)
+                oc = stack.pop(ouvChars)
+                fc = stack.pop(ferChars)
             else:
-                f = fer.pop()
-                fl = ferLines.pop()
-                fc = ferChars.pop()
+                f = stack.pop(fer)
+                fl = stack.pop(ferLines)
+                fc = stack.pop(ferChars)
                 return "No open parenthese matching parenthese "+f+" at line "+builtins.str(fl)+" char "+builtins.str(fc)+"."
             if(dict[o]!=f):
                 return "Closed parenthese "+f+" at line "+builtins.str(fl)+" char "+builtins.str(fc)+" don't match the open parenthese "+o+" at line "+builtins.str(ol)+" char "+builtins.str(oc)+"."
     if(len(ouv)!=0 and len(fer)==0):
-        o = ouv.pop()
-        ol = ouvLines.pop()
-        oc = ouvChars.pop()
+        o = stack.pop(ouv)
+        ol = stack.pop(ouvLines)
+        oc = stack.pop(ouvChars)
         return "Parenthese "+o+" at line "+builtins.str(ol)+" char "+builtins.str(oc)+" has no matching closed parenthese."
     return "Well parenthesed."
 
