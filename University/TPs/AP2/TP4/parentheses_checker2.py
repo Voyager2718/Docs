@@ -23,17 +23,26 @@ def bracket(str):
             fer+=[str[i]]
             ferLines+=[line]
             ferChars+=[char]
-            o = ouv.pop()
-            f = fer.pop()
-            ol = ouvLines.pop()
-            fl = ferLines.pop()
-            oc = ouvChars.pop()
-            fc = ferChars.pop()
+            if(len(ouv)!=0):
+                o = ouv.pop()
+                f = fer.pop()
+                ol = ouvLines.pop()
+                fl = ferLines.pop()
+                oc = ouvChars.pop()
+                fc = ferChars.pop()
+            else:
+                f = fer.pop()
+                fl = ferLines.pop()
+                fc = ferChars.pop()
+                return "No open parenthese matching parenthese "+f+" at line "+builtins.str(fl)+" char "+builtins.str(fc)+"."
             if(dict[o]!=f):
-                return "Closed parenthese "+f+" at line "+builtins.str(fl)+" char "+builtins.str(fc)+" don't match the open parenthese "+o+" at line "+builtins.str(ol)+" char "+builtins.str(oc)
-    if(len(ouv)!=0 or len(fer)!=0):
-        return "Bad parenthesed"
-    return "Well parenthesed"
+                return "Closed parenthese "+f+" at line "+builtins.str(fl)+" char "+builtins.str(fc)+" don't match the open parenthese "+o+" at line "+builtins.str(ol)+" char "+builtins.str(oc)+"."
+    if(len(ouv)!=0 and len(fer)==0):
+        o = ouv.pop()
+        ol = ouvLines.pop()
+        oc = ouvChars.pop()
+        return "Parenthese "+o+" at line "+builtins.str(ol)+" char "+builtins.str(oc)+" has no matching closed parenthese."
+    return "Well parenthesed."
 
 if __name__ == "__main__":
     path = sys.argv[1]
