@@ -1,0 +1,30 @@
+package test;
+
+abstract class Father {
+	protected int a;
+
+	public Father(int a) {
+		this.a = a;
+	}
+
+	public int getA() {
+		return a;
+	}
+}
+
+class Son extends Father {
+	public int getSuperA() {
+		return super.a;
+	}
+
+	public int getA() {
+		return a;
+	}
+}
+
+public class Test {
+	public static void main(String args[]) {
+		Son son = new Son();
+		System.out.println(son.getA() + " " + son.getSuperA());
+	}
+}

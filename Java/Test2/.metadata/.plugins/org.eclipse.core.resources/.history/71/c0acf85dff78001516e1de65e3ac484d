@@ -1,0 +1,21 @@
+package test;
+
+abstract class Father {
+	private int a;
+
+	public Father() {
+		a = 10;
+	}
+
+	abstract public int getA();
+}
+
+class Son extends Father {
+
+}
+
+public class Test {
+	public static void main(String args[]) {
+
+	}
+}

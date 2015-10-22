@@ -1,24 +1,36 @@
 package test;
 
-class Father {
-	public int a;
+abstract class Father {
+	protected int a;
+
+	public Father(int a) {
+		this.a = a;
+	}
+
+	abstract public int getA();
+
+	public float _getA() {
+		return (float) a;
+	}
 }
 
 class Son extends Father {
-	protected int b;
-
-	public Son(int a_F, int a_S) {
-		b = a_S;
-		super.a = a_F;
+	public Son(int a) {
+		super(a);
 	}
 
-	public void p() {
-		System.out.println(b + " " + super.a);
+	public int getSuperA() {
+		return super.a;
+	}
+
+	public int getA() {
+		return a;
 	}
 }
 
 public class Test {
 	public static void main(String args[]) {
-		(new Son(10, 20)).p();
+		Son son = new Son(20);
+		System.out.println(son.getA() + " " + son.getSuperA() + " " + son._getA());
 	}
 }
