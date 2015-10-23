@@ -3,12 +3,12 @@ import builtins
 import stack
 def bracket(str):
     dict = {'(':')','{':'}','[':']'}
-    ouv = []
-    fer = []
-    ouvLines = []
-    ferLines = []
-    ouvChars = []
-    ferChars = []
+    ouv = stack.create()
+    fer = stack.create()
+    ouvLines = stack.create()
+    ferLines = stack.create()
+    ouvChars = stack.create()
+    ferChars = stack.create()
     line = 1
     char = 0
     for i in range(len(str)):
