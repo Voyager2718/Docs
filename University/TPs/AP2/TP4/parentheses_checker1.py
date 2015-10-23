@@ -2,8 +2,8 @@ import sys
 import stack
 def bracket(str):
     dict = {'(':')','{':'}','[':']'}
-    ouv = []
-    fer = []
+    ouv = stack.create()
+    fer = stack.create()
     for i in range(len(str)):
         if(str[i]=='(' or str[i]=='[' or str[i]=='{'):
                 ouv+=[str[i]]
