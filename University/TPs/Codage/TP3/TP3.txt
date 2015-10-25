@@ -1,0 +1,19 @@
+Question 1.
+YANG:WUFORwo=
+
+YAN:WUFOCg==
+
+YA:WUEK
+
+Question 2.
+Supposons que n est le taille, donc on a:
+si n % 3 == 0 : pas de =
+si n % 3 == 1 : ==
+si n % 3 == 2 : =
+
+Question 3.
+Supposons que n est le taille, donc on a:
+sup(n/3)*4+1
+
+Question 4.
+
