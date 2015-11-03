@@ -1,0 +1,36 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.junit.Test;
+
+import resources.Basket;
+import resources.Resource;
+import resources.ResourcePool;
+
+public abstract class ResourcePoolTest<T extends Resource> {
+	abstract public ResourcePool<T> createResourcePool(int nbResource);
+	public ResourcePool<T> resourcePool;
+	final int nbResource = 10;
+	
+	ResourcePoolTest(){
+		this.resourcePool = this.createResourcePool(nbResource);
+	}
+
+	@Test(expected=NoSuchElementException.class)
+	public void notEnoughResource() throws NoSuchElementException {
+		List<T> resources = new ArrayList<T>();
+		for(int i = 0; i< nbResource;i++)
+			resources.add(resourcePool.provideResource());
+		resourcePool.provideResource();
+	}
+	
+	@Test
+	public void resourceTypeError(){
+		T res = 
+		this.resourcePool.provideResource();
+		this.resourcePool.freeResource(res);
+	}
+}

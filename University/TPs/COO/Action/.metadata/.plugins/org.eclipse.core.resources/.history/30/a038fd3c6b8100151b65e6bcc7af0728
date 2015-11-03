@@ -1,0 +1,7 @@
+package action;
+
+import resources.Basket;
+
+public abstract class BasketPoolTest extends ResourcePoolTest<Basket>{
+	
+}

@@ -1,0 +1,22 @@
+package action;
+
+import org.junit.Test;
+
+import resources.Basket;
+import resources.BasketPool;
+import resources.ResourcePool;
+
+public class BasketPoolTest extends ResourcePoolTest<Basket> {
+	@Test
+	public void getDescription() {
+		Basket b = this.resourcePool.provideResource();
+		assert(b.description().equals("This is a basket."));
+	}
+
+	@Override
+	public ResourcePool<Basket> createResourcePool(int nbResource) {
+		return new BasketPool(nbResource);
+	}
+	
+	
+}

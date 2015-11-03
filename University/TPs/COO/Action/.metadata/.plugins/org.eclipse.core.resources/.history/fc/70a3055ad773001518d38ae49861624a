@@ -1,9 +1,0 @@
-package resources;
-
-public class Basket implements Resource {
-	@override
-	public String description() {
-		return "This is a basket.";
-	}
-
-}

@@ -1,0 +1,16 @@
+package action;
+
+public class TakeResourceActionTest extends ActionTest {
+
+	@Override
+	public Action createAction() {
+		
+	}
+
+	@Override
+	public Action createFinishedAction() throws ActionFinishedException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,13 @@
+package action;
+
+import org.junit.Test;
+
+import resources.Basket;
+
+public abstract class BasketPoolTest extends ResourcePoolTest<Basket> {
+	@Test
+	public void getDescription() {
+		Basket b = this.resourcePool.provideResource();
+		
+	}
+}

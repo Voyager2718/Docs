@@ -1,0 +1,15 @@
+package action;
+
+import org.junit.Test;
+
+import resources.Basket;
+
+public class BasketPoolTest implements ResourcePoolTest<Basket> {
+	@Test
+	public void getDescription() {
+		Basket b = this.resourcePool.provideResource();
+		assert(b.description().equals("This is a basket."));
+	}
+	
+	
+}

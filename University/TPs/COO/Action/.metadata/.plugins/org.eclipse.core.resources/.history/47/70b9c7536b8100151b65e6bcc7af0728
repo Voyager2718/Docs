@@ -1,0 +1,10 @@
+package action;
+
+import resources.Basket;
+
+public abstract class BasketPoolTest extends ResourcePoolTest<Basket>{
+	@Test
+	public void getDescription(){
+		ass
+	}
+}
