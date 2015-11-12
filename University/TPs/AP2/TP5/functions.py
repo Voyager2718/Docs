@@ -38,4 +38,22 @@ def set_performances(cand, perf):
             fp.write(';'+perf[i]['hours']+';'+perf[i]['minutes']+';'+perf[i]['seconds'])
         fp.write('\n')
     fp.close()
-	
+
+def list_sort(arr,column):
+    less = []
+    pivotList = []
+    more = []
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        for i in arr:
+            if i[column] < pivot[column]:
+                less.append(i)
+            elif i[column] > pivot[column]:
+                more.append(i)
+            else:
+                pivotList.append(i)
+        less = list_sort(less,column)
+        more = list_sort(more,column)
+        return less + pivotList + more
