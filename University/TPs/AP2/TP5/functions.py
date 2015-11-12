@@ -1,3 +1,4 @@
+#Version 0.8
 def read_competitors(path):
     fp = open(path,"r")
     fp.readline()
@@ -39,6 +40,8 @@ def set_performances(cand, perf):
         fp.write('\n')
     fp.close()
 
+#How to use :
+#list_sort(a list that should be sorted, the column that you want to consider.)
 def list_sort(arr,column):
     less = []
     pivotList = []
