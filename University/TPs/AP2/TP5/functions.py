@@ -1,4 +1,4 @@
-#Version 0.8
+#Version 0.9
 def read_competitors(path):
     fp = open(path,"r")
     fp.readline()
@@ -24,19 +24,16 @@ def read_performances(path):
 
 def set_performances(cand, perf):
     def findPerformance(number,perf):
-        if(number >= len(perf)):
-            return ''
         for i in range(len(perf)):
             if(perf[i]['number']==str(number)):
                 return perf[i]
         return ''
-    comp = read_competitors('inscrits.csv')
-    fp = open('inscrits1.csv','w')
+    fp = open('results.csv','w')
     fp.write('Prenoms;Noms;Sexes;Date naiss.;hours;minutes;seconds\n')
-    for i in range(len(comp)):
-        fp.write(comp[i]['surname']+';'+comp[i]['name']+';'+comp[i]['gender']+';'+comp[i]['date'])
-        if(findPerformance(i,perf)):
-            fp.write(';'+perf[i]['hours']+';'+perf[i]['minutes']+';'+perf[i]['seconds'])
+    for i in range(len(cand)):
+        fp.write(cand[i]['surname']+';'+cand[i]['name']+';'+cand[i]['gender']+';'+cand[i]['date'])
+        if(findPerformance(i+1,perf)):
+            fp.write(';'+findPerformance(i+1,perf)['hours']+';'+findPerformance(i+1,perf)['minutes']+';'+findPerformance(i+1,perf)['seconds'])
         fp.write('\n')
     fp.close()
 
@@ -60,3 +57,5 @@ def list_sort(arr,column):
         less = list_sort(less,column)
         more = list_sort(more,column)
         return less + pivotList + more
+
+#def 
