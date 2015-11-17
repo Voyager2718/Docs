@@ -38,8 +38,8 @@ def set_performances(cand, perf):
     fp.close()
 
 #How to use :
-#list_sort(a list that should be sorted, the column that you want to consider.)
-def list_sort(arr,column):
+#quicksort(a list that should be sorted, the column that you want to consider.)
+def quicksort(arr,column):
     less = []
     pivotList = []
     more = []
@@ -54,8 +54,11 @@ def list_sort(arr,column):
                 more.append(i)
             else:
                 pivotList.append(i)
-        less = list_sort(less,column)
-        more = list_sort(more,column)
+        less = quicksort(less,column)
+        more = quicksort(more,column)
         return less + pivotList + more
 
-#def 
+def print_results(cand):
+    print('{0:15}{1:15}{2:6}{3:6}{4:20}'.format('Prenom','Nom','Sex','Num.','Performance'))
+    for c in cand:
+         print('{0:15}{1:15}{2:6}{3:6}{4:20}'.format(c['surname'],c['name'],c['gender'],c['num'],c['perf']['hours']+':'+c['perf']['minutes']+':'+c['perf']['seconds']))
