@@ -84,7 +84,7 @@ def save_results(cand,path):
     fp = open(path,'w')
     fp.write('Prenoms;Noms;Sexes;Date naiss.;Performance\n')
     for c in cand:
-        fp.write(cand[i]['surname']+';'+cand[i]['name']+';'+cand[i]['gender']+';'+cand[i]['date'])
+        fp.write(c['surname']+';'+c['name']+';'+c['gender']+';'+c['date'])
         if(c['perf'] != None):
             fp.write(to2(c['perf']['hours'])+':'+to2(c['perf']['minutes'])+':'+to2(c['perf']['seconds']))
         fp.write('\n')
