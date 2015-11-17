@@ -1,4 +1,4 @@
-#Version 0.9
+#Version 0.91
 def read_competitors(path):
     fp = open(path,"r")
     fp.readline()
@@ -6,8 +6,9 @@ def read_competitors(path):
     line = fp.readline()[:-1]
     i = 1
     while(line):
-            res+=[{'num':i,'surname':str.split(line,';')[0],'name':str.split(line,';')[1],'gender':str.split(line,';')[2],'date':str.split(line,';')[3]}]
+            res+=[{'num':str(i),'surname':str.split(line,';')[0],'name':str.split(line,';')[1],'gender':str.split(line,';')[2],'date':str.split(line,';')[3],'perf':None}]
             line = fp.readline()[:-1]
+            i += 1
     fp.close()
     return res
 
@@ -61,4 +62,30 @@ def quicksort(arr,column):
 def print_results(cand):
     print('{0:15}{1:15}{2:6}{3:6}{4:20}'.format('Prenom','Nom','Sex','Num.','Performance'))
     for c in cand:
-         print('{0:15}{1:15}{2:6}{3:6}{4:20}'.format(c['surname'],c['name'],c['gender'],c['num'],c['perf']['hours']+':'+c['perf']['minutes']+':'+c['perf']['seconds']))
+        print('{0:15}{1:15}{2:6}{3:6}'.format(c['surname'],c['name'],c['gender'],c['num']),end='')
+        if(c['perf']!=None):
+            print('{4:20}'.format(c['perf']['hours']+':'+c['perf']['minutes']+':'+c['perf']['seconds']),end='')
+        print()
+
+def save_results(cand,path):
+    """
+	A function to save result to a file
+	Parameters
+	----
+	cand : Candidates list.
+	path : The path of the file.
+	"""
+    def to2(n):
+        if(len(n)==1):
+            return "0"+n
+        elif(len(n)==2):
+            return n
+        return ''
+    fp = open(path,'w')
+    fp.write('Prenoms;Noms;Sexes;Date naiss.;Performance\n')
+    for c in cand:
+        fp.write(cand[i]['surname']+';'+cand[i]['name']+';'+cand[i]['gender']+';'+cand[i]['date'])
+        if(c['perf'] != None):
+            fp.write(to2(c['perf']['hours'])+':'+to2(c['perf']['minutes'])+':'+to2(c['perf']['seconds']))
+        fp.write('\n')
+    fp.close()
