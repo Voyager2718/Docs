@@ -40,7 +40,7 @@ def set_performances(cand, perf):
 
 #How to use :
 #quicksort(a list that should be sorted, the column that you want to consider.)
-def quicksort(arr,column):
+def quicksort(arr,func):
     less = []
     pivotList = []
     more = []
@@ -49,22 +49,31 @@ def quicksort(arr,column):
     else:
         pivot = arr[0]
         for i in arr:
-            if i[column] < pivot[column]:
+            if func(i,pivot) == -1:
                 less.append(i)
-            elif i[column] > pivot[column]:
+            elif func(i,pivot) == 1:
                 more.append(i)
             else:
                 pivotList.append(i)
-        less = quicksort(less,column)
-        more = quicksort(more,column)
+        less = quicksort(less,func)
+        more = quicksort(more,func)
         return less + pivotList + more
 
+def course_chicon(a,b):
+    if(a>b):return 1
+    if(a<b):return -1
+    return 0
+
 def print_results(cand):
+    def to2(n):
+        if(n<10):
+            return '0'+str(n)
+        return str(n)
     print('{0:15}{1:15}{2:6}{3:6}{4:20}'.format('Prenom','Nom','Sex','Num.','Performance'))
     for c in cand:
         print('{0:15}{1:15}{2:6}{3:6}'.format(c['surname'],c['name'],c['gender'],c['num']),end='')
         if(c['perf']!=None):
-            print('{4:20}'.format(c['perf']['hours']+':'+c['perf']['minutes']+':'+c['perf']['seconds']),end='')
+            print('{0:20}'.format(to2(c['perf']['hours'])+':'+to2(c['perf']['minutes'])+':'+to2(c['perf']['seconds']),end=''))
         print()
 
 def save_results(cand,path):
@@ -75,17 +84,11 @@ def save_results(cand,path):
 	cand : Candidates list.
 	path : The path of the file.
 	"""
-    def to2(n):
-        if(len(n)==1):
-            return "0"+n
-        elif(len(n)==2):
-            return n
-        return ''
     fp = open(path,'w')
     fp.write('Prenoms;Noms;Sexes;Date naiss.;Performance\n')
     for c in cand:
         fp.write(c['surname']+';'+c['name']+';'+c['gender']+';'+c['date'])
         if(c['perf'] != None):
-            fp.write(to2(c['perf']['hours'])+':'+to2(c['perf']['minutes'])+':'+to2(c['perf']['seconds']))
+            fp.write(str(c['perf']['hours'])+':'+str(c['perf']['minutes'])+':'+str(c['perf']['seconds']))
         fp.write('\n')
     fp.close()
