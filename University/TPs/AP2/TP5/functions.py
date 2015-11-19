@@ -1,4 +1,4 @@
-#Version 0.91
+#Version 0.93
 def read_competitors(path):
     fp = open(path,"r")
     fp.readline()
@@ -59,9 +59,30 @@ def quicksort(arr,func):
         more = quicksort(more,func)
         return less + pivotList + more
 
-def course_chicon(a,b):
+def compare_name(a,b):
     if(a>b):return 1
     if(a<b):return -1
+    return 0
+
+def compare_performance(a,b):
+    if(a['perf']==None and b['perf']==None):
+        return 0
+    if(a['perf']==None):
+        return 1
+    if(b['perf']==None):
+        return -1
+    if(a['perf']['hours']<b['perf']['hours']):
+        return -1
+    elif(a['perf']['hours']>b['perf']['hours']):
+        return 1
+    if(a['perf']['minutes']<b['perf']['minutes']):
+        return -1
+    elif(a['perf']['minutes']>b['perf']['minutes']):
+        return 1
+    if(a['perf']['seconds']<b['perf']['seconds']):
+        return -1
+    elif(a['perf']['seconds']>b['perf']['seconds']):
+        return 1
     return 0
 
 def print_results(cand):
