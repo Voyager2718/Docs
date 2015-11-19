@@ -38,6 +38,17 @@ def set_performances(cand, perf):
         fp.write('\n')
     fp.close()
 
+def set_performances2(cand, perf):
+    def findPerformance(number,perf):
+        for i in range(len(perf)):
+            if(perf[i]['number']==str(number)):
+                return perf[i]
+        return ''
+    for i in range(len(cand)):
+        if(findPerformance(i+1,perf)):
+            p = {'hours':int(findPerformance(i+1,perf)['hours']),'minutes':int(findPerformance(i+1,perf)['minutes']),'seconds':int(findPerformance(i+1,perf)['seconds'])}
+            cand[i]['perf'] = p
+
 #How to use :
 #quicksort(a list that should be sorted, the column that you want to consider.)
 def quicksort(arr,func):
@@ -94,7 +105,7 @@ def print_results(cand):
     for c in cand:
         print('{0:15}{1:15}{2:6}{3:6}'.format(c['surname'],c['name'],c['gender'],c['num']),end='')
         if(c['perf']!=None):
-            print('{0:20}'.format(to2(c['perf']['hours'])+':'+to2(c['perf']['minutes'])+':'+to2(c['perf']['seconds']),end=''))
+            print('{0:20}'.format(to2(c['perf']['hours'])+':'+to2(c['perf']['minutes'])+':'+to2(c['perf']['seconds'])),end='')
         print()
 
 def save_results(cand,path):
