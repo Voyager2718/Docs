@@ -1,4 +1,4 @@
-#Version 0.93
+#Version 0.95
 def read_competitors(path):
     fp = open(path,"r")
     fp.readline()
@@ -71,8 +71,8 @@ def quicksort(arr,func):
         return less + pivotList + more
 
 def compare_name(a,b):
-    if(a>b):return 1
-    if(a<b):return -1
+    if(a['name']>b['name']):return 1
+    if(a['name']<b['name']):return -1
     return 0
 
 def compare_performance(a,b):
