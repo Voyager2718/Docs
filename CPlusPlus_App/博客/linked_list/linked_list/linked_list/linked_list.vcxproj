@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1614E8F7-3313-467E-B4EF-046E509B12FE}</ProjectGuid>
-    <RootNamespace>blog</RootNamespace>
+    <ProjectGuid>{815FFEBA-40FA-4C47-8EBC-67FAB56F9535}</ProjectGuid>
+    <RootNamespace>linked_list</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,15 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="inherit.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="singlyList.cpp" />
-    <ClCompile Include="stack.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inherit.h" />
-    <ClInclude Include="singlyList.h" />
-    <ClInclude Include="stack.h" />
+    <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="slist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,4 @@
-#Version 0.95
+#Version 0.95.1
 def read_competitors(path):
     fp = open(path,"r")
     fp.readline()
