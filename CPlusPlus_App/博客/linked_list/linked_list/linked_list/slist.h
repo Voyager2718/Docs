@@ -15,29 +15,16 @@ private:
 
 public:
 	slist() :_size(0), _pnode(nullptr) {}
-
-	~slist(){
-		if (_pnode == nullptr)
-			return;
-		if (_pnode->next)
-			;//TODO : free the list
-	}
-
+	~slist(){ empty(); }
 	void push_front(T);
-
 	void push_back(T);
-
 	T pop_front(void);
-
 	T pop_back(void);
-
 	T get(int);
-
 	int size(void);
-
 	T remove(int);
-
-
+	void empty(void);
+	bool isEmpty(void);
 };
 
 template <typename T>
@@ -65,17 +52,6 @@ void slist<T>::push_back(T element){
 		tmp_node->next = node;
 	}
 	_size++;
-}
-
-template <typename T>
-T slist<T>::get(int index){
-	if (index >= _size)
-		throw new IndexOutOfRangeException();
-	_node *tmp_node = _pnode;
-	for (int i = 0; i < index; i++){
-		tmp_node = tmp_node->next;
-	}
-	return tmp_node->element;
 }
 
 template<typename T>
@@ -113,6 +89,17 @@ T slist<T>::pop_back(void){
 }
 
 template <typename T>
+T slist<T>::get(int index){
+	if (index >= _size)
+		throw new IndexOutOfRangeException();
+	_node *tmp_node = _pnode;
+	for (int i = 0; i < index; i++){
+		tmp_node = tmp_node->next;
+	}
+	return tmp_node->element;
+}
+
+template <typename T>
 int slist<T>::size(){
 	return _size;
 }
@@ -131,5 +118,26 @@ T slist<T>::remove(int index){
 	delete(tmp_node1);
 	_size--;
 	return e;
+}
+
+template <typename T>
+void slist<T>::empty(){
+	if (_size == 0)
+		return;
+	_node *tmp_node = _pnode;
+	while (tmp_node->next != nullptr)
+	{
+		tmp_node = tmp_node->next;
+		delete(_pnode);
+		_pnode = tmp_node;
+	}
+	delete(_pnode);
+	_pnode = nullptr;
+	_size = 0;
+}
+
+template <typename T>
+bool slist<T>::isEmpty(){
+	return _size == 0;
 }
 #endif

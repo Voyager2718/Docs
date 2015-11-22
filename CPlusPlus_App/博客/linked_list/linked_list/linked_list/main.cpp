@@ -15,5 +15,9 @@ int main(int argc, char *argv[]){
 	list->remove(2);
 	for (int i = 0; i < list->size(); i++)
 		cout << list->get(i) << endl;
+	list->empty();
+	list->empty();
+	for (int i = 0; i < list->size(); i++)
+		cout << list->get(i) << endl;
 	system("pause");
 }
