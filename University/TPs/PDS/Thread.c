@@ -4,8 +4,8 @@
 #include<stdio.h>
 #include<string.h>
 
-#define MAX_THREAD 10
-#define MAX_LENGTH 100
+#define MAX_THREAD 100
+#define MAX_LENGTH 1000
 
 struct _gene{
 	char str[MAX_LENGTH];
@@ -37,9 +37,9 @@ int main(int argc, char *argv[]){
 	pthread_t thread_id[MAX_THREAD];
 	
 	struct _gene genes[MAX_THREAD];
-	int *returnedValue[MAX_LENGTH];
+	int *returnedValue[MAX_THREAD];
 	
-	int amountOfThreads = 2; //TODO : amountOfThreads > 1 ?
+	int amountOfThreads = 20; //TODO : amountOfThreads > 1 ?
 	
 	int i, pos = 0, sum = 0;
 	
