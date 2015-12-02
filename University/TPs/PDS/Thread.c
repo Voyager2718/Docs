@@ -32,21 +32,20 @@ void substr(char* string, char *substring, int fromPosition, int length){
 	*(substring + i) = '\0';
 }
 
-int main(int argc, char *argv[]){
-	char *gene;
-	if(argc > 0){
+void readFile(char *arg, char **gene){
 		FILE *fp;long fsize;
-		if(!(fp = fopen(argv[1], "r"))){
+		if(!(fp = fopen(arg, "r"))){
 			printf("No file specified.\n");
 			exit(EXIT_FAILURE);
 		}
 		fseek(fp, 0, SEEK_END);
 		fsize = ftell(fp);
 		rewind(fp);
-		gene = (char *) malloc (sizeof(char) * fsize);
-		fread(gene, 1, fsize, fp);
-	}
-	
+		*gene = (char *) malloc (sizeof(char) * fsize);
+		fread(*gene, 1, fsize, fp);
+}
+
+int callCalc(char *gene){
 	pthread_t thread_id[MAX_THREAD];
 	
 	struct _gene genes[MAX_THREAD];
@@ -80,5 +79,21 @@ int main(int argc, char *argv[]){
 	
 	for(i = 0; i < amountOfThreads; i ++)
 		sum += *(returnedValue[i]);
+	
+	return sum;
+}
+
+int main(int argc, char *argv[]){
+	char *gene;
+	
+	if(argc < 1){
+		printf("No file specified.\n");
+		exit(EXIT_FAILURE);
+	}
+	
+	readFile(argv[1], &gene);
+	
+	int sum = callCalc(gene);
+	
 	printf("The amount of C and G is %d.\n", sum);
 }
