@@ -6,10 +6,10 @@
 
 #define MAX_THREAD 100
 #define MAX_LENGTH 5000
-#define AMOUNT_THREAD 5
+#define AMOUNT_THREAD 10
 
 struct _gene{
-	char *str;
+	char str[MAX_LENGTH];
 	int size;
 };
 
@@ -33,42 +33,52 @@ void substr(char* string, char *substring, int fromPosition, int length){
 }
 
 int main(int argc, char *argv[]){
-	char gene[] = "ATCGATGGCTATAGCTAGCTAAGCCGATAACGTACGTACGATCGATCGGGCTAGCTAGCTAGCTAGCTGACTGATCGATCGATGCTAGCTAGCTACGTAGCTACGATCGATGCTGGCTAGCTAGCTGT";
+	char *gene;
+	if(argc > 0){
+		FILE *fp;long fsize;
+		if(!(fp = fopen(argv[1], "r"))){
+			printf("No file specified.\n");
+			exit(EXIT_FAILURE);
+		}
+		fseek(fp, 0, SEEK_END);
+		fsize = ftell(fp);
+		rewind(fp);
+		gene = (char *) malloc (sizeof(char) * fsize);
+		fread(gene, 1, fsize, fp);
+	}
 	
 	pthread_t thread_id[MAX_THREAD];
 	
 	struct _gene genes[MAX_THREAD];
 	int *returnedValue[MAX_THREAD];
 	
+	int amountOfThreads = AMOUNT_THREAD; //TODO : amountOfThreads > 1 ?
+	
 	int i, pos = 0, sum = 0;
 	
-	int amountOfThread = AMOUNT_THREAD;
-	
-	for(i = 0; i < amountOfThread; i ++){
-		char *tmp = (char *) malloc (sizeof(char) * MAX_LENGTH);
-		i != amountOfThread - 1?substr(gene, tmp, pos, (int)(strlen(gene)/amountOfThread)):substr(gene, tmp, pos, MAX_LENGTH);
-		pos += (int)(strlen(gene)/amountOfThread);
-		genes[i].str = tmp;
+	for(i = 0; i < amountOfThreads; i ++){
+		char tmp[MAX_LENGTH];
+		i != amountOfThreads - 1?substr(gene, tmp, pos, (int)(strlen(gene)/amountOfThreads)):substr(gene, tmp, pos, MAX_LENGTH);
+		pos += (int)(strlen(gene)/amountOfThreads);
+		strcpy(genes[i].str, tmp);
 		genes[i].size = strlen(genes[i].str);
 		//printf("%s\n", genes[i].str);
 		//printf("%d\n", genes[i].size);
 	}
 	
-	for(i = 0; i < amountOfThread; i ++){
+	for(i = 0; i < amountOfThreads; i ++){
 		if(pthread_create(&thread_id[i], NULL, (void*)*calc, &genes[i]))
 			printf("An exception occured while creating a thread.\n");
 	}
 	
-	for(i = 0; i < amountOfThread; i ++){
+	for(i = 0; i < amountOfThreads; i ++){
 		if(pthread_join(thread_id[i], (void**)&(returnedValue[i]))){
 			printf("An exception occured while waiting a thread.\n");
 			exit(EXIT_FAILURE);
 		}
 	}
 	
-	for(i = 0; i < amountOfThread; i ++){
+	for(i = 0; i < amountOfThreads; i ++)
 		sum += *(returnedValue[i]);
-		free(genes[i].str);
-	}
-	printf("Number of C and G : %d\n", sum);
+	printf("The amount of C and G is %d.\n", sum);
 }
