@@ -45,7 +45,7 @@ void readFile(char *arg, char **gene){
 	fread(*gene, 1, fsize, fp);
 }
 
-int callCalc(char *gene){
+int callCalc(char *gene, void*(*func)(struct _gene*)){
 	pthread_t thread_id[MAX_THREAD];
 	
 	struct _gene genes[MAX_THREAD];
@@ -66,7 +66,7 @@ int callCalc(char *gene){
 	}
 	
 	for(i = 0; i < amountOfThreads; i ++){
-		if(pthread_create(&thread_id[i], NULL, (void*)*calc, &genes[i]))
+		if(pthread_create(&thread_id[i], NULL, (void*)func, &genes[i]))
 			printf("An exception occured while creating a thread.\n");
 	}
 	
@@ -93,7 +93,7 @@ int main(int argc, char *argv[]){
 	
 	readFile(argv[1], &gene);
 	
-	int sum = callCalc(gene);
+	int sum = callCalc(gene, calc);
 	
 	printf("The amount of C and G is %d.\n", sum);
 }
