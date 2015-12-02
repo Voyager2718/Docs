@@ -5,10 +5,11 @@
 #include<string.h>
 
 #define MAX_THREAD 100
-#define MAX_LENGTH 1000
+#define MAX_LENGTH 5000
+#define AMOUNT_THREAD 5
 
 struct _gene{
-	char str[MAX_LENGTH];
+	char *str;
 	int size;
 };
 
@@ -39,33 +40,33 @@ int main(int argc, char *argv[]){
 	struct _gene genes[MAX_THREAD];
 	int *returnedValue[MAX_THREAD];
 	
-	int amountOfThreads = 20; //TODO : amountOfThreads > 1 ?
-	
 	int i, pos = 0, sum = 0;
 	
-	for(i = 0; i < amountOfThreads; i ++){
-		char tmp[MAX_LENGTH];
-		i != amountOfThreads - 1?substr(gene, tmp, pos, (int)(strlen(gene)/amountOfThreads)):substr(gene, tmp, pos, MAX_LENGTH);
-		pos += (int)(strlen(gene)/amountOfThreads);
-		strcpy(genes[i].str, tmp);
+	int amountOfThread = AMOUNT_THREAD;
+	
+	for(i = 0; i < amountOfThread; i ++){
+		char *tmp = (char *)malloc(sizeof(char)*MAX_LENGTH);
+		i != amountOfThread - 1?substr(gene, tmp, pos, (int)(strlen(gene)/amountOfThread)):substr(gene, tmp, pos, MAX_LENGTH);
+		pos += (int)(strlen(gene)/amountOfThread);
+		genes[i].str = tmp;
 		genes[i].size = strlen(genes[i].str);
 		printf("%s\n", genes[i].str);
 		printf("%d\n", genes[i].size);
 	}
 	
-	for(i = 0; i < amountOfThreads; i ++){
+	for(i = 0; i < amountOfThread; i ++){
 		if(pthread_create(&thread_id[i], NULL, (void*)*calc, &genes[i]))
 			printf("An exception occured while creating a thread.\n");
 	}
 	
-	for(i = 0; i < amountOfThreads; i ++){
+	for(i = 0; i < amountOfThread; i ++){
 		if(pthread_join(thread_id[i], (void**)&(returnedValue[i]))){
 			printf("An exception occured while waiting a thread.\n");
 			exit(EXIT_FAILURE);
 		}
 	}
 	
-	for(i = 0; i < amountOfThreads; i ++)
+	for(i = 0; i < amountOfThread; i ++)
 		sum += *(returnedValue[i]);
 	printf("%d\n", sum);
 }
