@@ -45,13 +45,13 @@ int main(int argc, char *argv[]){
 	int amountOfThread = AMOUNT_THREAD;
 	
 	for(i = 0; i < amountOfThread; i ++){
-		char *tmp = (char *)malloc(sizeof(char)*MAX_LENGTH);
+		char *tmp = (char *) malloc (sizeof(char) * MAX_LENGTH);
 		i != amountOfThread - 1?substr(gene, tmp, pos, (int)(strlen(gene)/amountOfThread)):substr(gene, tmp, pos, MAX_LENGTH);
 		pos += (int)(strlen(gene)/amountOfThread);
 		genes[i].str = tmp;
 		genes[i].size = strlen(genes[i].str);
-		printf("%s\n", genes[i].str);
-		printf("%d\n", genes[i].size);
+		//printf("%s\n", genes[i].str);
+		//printf("%d\n", genes[i].size);
 	}
 	
 	for(i = 0; i < amountOfThread; i ++){
@@ -68,5 +68,5 @@ int main(int argc, char *argv[]){
 	
 	for(i = 0; i < amountOfThread; i ++)
 		sum += *(returnedValue[i]);
-	printf("%d\n", sum);
+	printf("Number of C and G : %d\n", sum);
 }
