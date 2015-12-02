@@ -66,7 +66,9 @@ int main(int argc, char *argv[]){
 		}
 	}
 	
-	for(i = 0; i < amountOfThread; i ++)
+	for(i = 0; i < amountOfThread; i ++){
 		sum += *(returnedValue[i]);
+		free(genes[i].str);
+	}
 	printf("Number of C and G : %d\n", sum);
 }
