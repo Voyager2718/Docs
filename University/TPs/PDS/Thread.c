@@ -33,16 +33,16 @@ void substr(char* string, char *substring, int fromPosition, int length){
 }
 
 void readFile(char *arg, char **gene){
-		FILE *fp;long fsize;
-		if(!(fp = fopen(arg, "r"))){
-			printf("No file specified.\n");
-			exit(EXIT_FAILURE);
-		}
-		fseek(fp, 0, SEEK_END);
-		fsize = ftell(fp);
-		rewind(fp);
-		*gene = (char *) malloc (sizeof(char) * fsize);
-		fread(*gene, 1, fsize, fp);
+	FILE *fp;long fsize;
+	if(!(fp = fopen(arg, "r"))){
+		printf("No file specified.\n");
+		exit(EXIT_FAILURE);
+	}
+	fseek(fp, 0, SEEK_END);
+	fsize = ftell(fp);
+	rewind(fp);
+	*gene = (char *) malloc (sizeof(char) * fsize);
+	fread(*gene, 1, fsize, fp);
 }
 
 int callCalc(char *gene){
