@@ -1,0 +1,26 @@
+package generic;
+
+class A<C> {
+	public C a;
+
+	public A() {
+//		this.a = new C();
+	}
+}
+
+class B<C> extends A<Float> {
+	public C b;
+
+	public B() {
+//		this.a = new C();
+	}
+}
+
+public class Generic {
+	public static void main(String args[]) {
+		B<Integer> b = new B<Integer>();
+		System.out.println("b.b instanceof Integer: " + (b.b instanceof Integer));
+		System.out.println("b.a instanceof Float: " + (b.a instanceof Float));
+		//System.out.println("b.b instanceof Integer: " + (b.a instanceof Integer));
+	}
+}

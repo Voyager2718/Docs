@@ -1,0 +1,51 @@
+Architecte Logiciel
+Métiers de l'architecture informatique
+
+Dessine le plan et en explique les détails
+Visio, PPT, UML
+
+Architecte SI
+	--Vue d'ensemble du SI
+	--Urbanisation
+	--Vue métier, vue fonctionnelle
+Architecte technique
+	--infrastructure systèmes et réseaux, cloud
+	--Sécurité, Haute disponibilité
+	--Système d'exploitation
+
+Une application informatique d'entreprise
+	Couches logicielle
+	Interface Utilisateur
+	App/Services
+	Objet métier
+	Access aux données
+	Stockage
+	
+Outils
+	Developpement | produits
+	Framework Langage | Intégration
+
+Une application doit être
+	Simple
+	Performante
+	Robuste
+	Sécurisée
+	Maintenable
+	Peu couteuse
+	Evolutive
+	Intégrée au SI
+
+Comprendre le besoin
+
+Rôle et respon de l'architecte logiciel
+	Technique
+	Organisationnelle
+	Veille technologique
+
+Distinguer les technologiques trouvés sur Internet
+
+Un secteur très évolutif
+	Infrastructure as a Service(IaaS)
+	Platform as a Service(PaaS)
+	Soft as a Service(SaaS)
+

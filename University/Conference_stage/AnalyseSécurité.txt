@@ -1,0 +1,30 @@
+Analyste sécurité
+
+Présentation
+	Tests d'intrusion ponctuels
+	Détection, qualification de failles de sécurité
+	Proposition de correction/mitigation de vulnérabilités
+
+Rôles et fonctions
+	Détecter et comprendre les incidents de sécurité
+	Qualifier les problèmes de sécurité
+	Proposer des plans d'action adaptés à chaque contexte
+	Présenter et commenter les résultats des analyses
+	Accopagner les clients à améliorer le sécurité
+
+Aptitudes
+	Curiosité
+	Pragmatisme
+	Pro activité
+	Compétences techniques variées
+	Discrétion
+	Autodiscipline
+	Rigueur
+
+Vie professionnelle
+	Métier en constante évolution
+	Apprentissage permanant
+
+Perspectives d'évolution du métier
+	Analyste au sein d'un Centre Opérationnel de Sécurité
+	Pentesteur

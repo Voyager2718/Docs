@@ -1,0 +1,33 @@
+Développeur Web
+Parcours professionnel
+Développeur - Chef de projet(Gérer risque, plan,..) - Directeur de projet - Directeur de production
+Développeur - Leader technique - Expect technique
+
+Développeur -> 
+	Chef de projet technique
+		Etude des besoins client
+		Planification
+		Encadrement
+		Respect délais, budget, qualité
+
+Compétences techniques
+	Au moins un langage de programmation
+	Utilisation d'un IDE
+	Culture de l'informatique
+
+Qualités humaines
+	Capacité d'analyse
+	Rigueur
+	Capacité à travailler en équipe
+	Curiosité(Technique)
+	Ouverture d'esprit
+
+Gestion de projet
+	Taille et envergure des projets
+	Taille des équipes à encadrer
+	Méthodologie
+
+Expertise technique
+	Technologies maitrisées
+	Durée des interventions projets
+	Missions de conseil et d'audit
