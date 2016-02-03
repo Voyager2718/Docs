@@ -1,37 +1,29 @@
 package generic;
 
-class A<C> {
-	public C a;
+class A {
+	public String f() {
+		return g();
+	}
 
-	public A() {
-
+	public String g() {
+		return "A.g()";
 	}
 }
 
-class MyException extends Exception{
-	
-}
-
-class B<C, D> extends A<D> {
-	public C b;
-
-	public B() {
-		
-	}
-}
-
-class C {
-	public Integer i;
-
-	public C() {
-		this.i = new Integer(10);
+class B extends A {
+	public String g() {
+		return "B.g()";
 	}
 }
 
 public class Generic {
-	public static void main(String args[]) {
-		B<Integer, Float> b = new B<Integer, Float>();
-		System.out.println("b.b instanceof Integer: " + (b.b instanceof Integer));
-		System.out.println("b.a instanceof Float: " + (b.a instanceof Float));
+	public static void main(String[] args) {
+		A a = new B();
+		B b = new B();
+		System.out.println(a.f());
+		System.out.println(b.f());
+		System.out.println(((B)a).f());
+		System.out.println(((A)b).f());
+		//System.out.println( ((B)new A()).f() );
 	}
 }

@@ -1,0 +1,28 @@
+package generic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class A<T>{
+	public List<?>list;
+	
+	public A(List<?> list){
+		this.list = list;
+	}
+	
+	public void set(T a){
+		this.list.add(a, null);
+	}
+	
+	public Object get(){
+		return this.list.get(0);
+	}
+}
+
+public class Generic {
+	public static void main(String args[]) {
+		A a = new A(new ArrayList<Integer>());
+		a.set(10);
+		System.out.println(a.get());
+	}
+}

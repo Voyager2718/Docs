@@ -1,0 +1,8 @@
+class A{
+	public String f(){
+		return g();
+	}
+	public String g(){
+		
+	}
+}

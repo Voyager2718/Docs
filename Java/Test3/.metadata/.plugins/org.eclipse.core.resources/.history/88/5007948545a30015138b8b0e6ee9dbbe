@@ -1,0 +1,18 @@
+class A{
+	public String f(){
+		return g();
+	}
+	public String g(){
+		return "A.g()";
+	}
+}
+
+class B{
+	public String g(){
+		return "B.g()";
+	}
+}
+
+public class Generic{
+	
+}
