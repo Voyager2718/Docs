@@ -1,0 +1,92 @@
+Capture de trames
+Question 1.
+Ifconfig  est utilisé pour configurer (et maintenir ensuite) les interfaces réseau résidentes dans le noyau.
+
+Question 2.
+Les interfaces eth0 et lo sont actives.
+
+Question 3.
+eth0
+
+Question 4.
+eth0
+IPv4 192.168.5.64
+MAC 98:90:96:bb:78:d4
+
+lo
+IPv4 127.0.0.1
+
+Question 5.
+PING 192.168.5.65 (192.168.5.65) 56(84) bytes of data.
+64 bytes from 192.168.5.65: icmp_seq=1 ttl=64 time=1.28 ms
+64 bytes from 192.168.5.65: icmp_seq=2 ttl=64 time=0.685 ms
+64 bytes from 192.168.5.65: icmp_seq=3 ttl=64 time=0.658 ms
+64 bytes from 192.168.5.65: icmp_seq=4 ttl=64 time=0.673 ms
+
+Question 6.
+La lantence du réseau. Après combien de milli-secondes que j'ai reçu la réponse.
+
+Question 7.
+Parce que
+	a) C'est dangereux parce que l'adresse MAC est fixé. Alors les gens peuvent cracker.
+	b) L'adresse ip indique la porte du réseau, mais l'adresse MAC indique la machine. On veut le réseau.
+
+Question 8.
+ICMP est utilisé.
+
+Question 9.
+Couches réseau protocol
+
+Question 10.
+ip.dst == 192.168.5.56
+ip.dst == 192.168.5.64
+
+Question 11.
+host 192.168.5.56
+
+Ethernet
+Question 1.
+01 signfie que c'est ICMP
+
+Question 2.
+La destination et la source
+
+Question 3.
+eth0: negotiated 100baseTx-FD, link ok
+C'est pour valider ou configurer le status d'un réseau du Meida Independent Interface.
+
+Question 4.
+eth0: no link
+eth0 est déconnecté.
+
+Question 5.
+PING 192.168.5.59 (192.168.5.59) 56(84) bytes of data.
+64 bytes from 192.168.5.59: icmp_seq=1 ttl=64 time=0.421 ms
+64 bytes from 192.168.5.59: icmp_seq=2 ttl=64 time=0.239 ms
+64 bytes from 192.168.5.59: icmp_seq=3 ttl=64 time=0.343 ms
+64 bytes from 192.168.5.59: icmp_seq=4 ttl=64 time=0.303 ms
+64 bytes from 192.168.5.59: icmp_seq=5 ttl=64 time=0.301 ms
+64 bytes from 192.168.5.59: icmp_seq=6 ttl=64 time=0.335 ms
+64 bytes from 192.168.5.59: icmp_seq=7 ttl=64 time=0.365 ms
+
+Concentrateur
+Question 1.
+64 bytes from 192.168.5.57: icmp_seq=164 ttl=64 time=1.01 ms
+64 bytes from 192.168.5.57: icmp_seq=165 ttl=64 time=0.998 ms
+64 bytes from 192.168.5.57: icmp_seq=166 ttl=64 time=0.948 ms
+64 bytes from 192.168.5.57: icmp_seq=167 ttl=64 time=0.964 ms
+64 bytes from 192.168.5.57: icmp_seq=168 ttl=64 time=1.00 ms
+64 bytes from 192.168.5.57: icmp_seq=169 ttl=64 time=1.05 ms
+64 bytes from 192.168.5.57: icmp_seq=170 ttl=64 time=1.04 ms
+64 bytes from 192.168.5.57: icmp_seq=171 ttl=64 time=1.27 ms
+64 bytes from 192.168.5.57: icmp_seq=172 ttl=64 time=0.960 ms
+64 bytes from 192.168.5.57: icmp_seq=173 ttl=64 time=1.19 ms
+64 bytes from 192.168.5.57: icmp_seq=174 ttl=64 time=0.956 ms
+
+
+Question 2.
+
+
+Routeur
+Question 1.
+
