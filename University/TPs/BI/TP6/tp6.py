@@ -29,7 +29,8 @@ def bwt(path, p = True, r = True):
     gnomes = addIndex(gnomes)
     gnomes2 = gnomes
     gnomes2 = sorted(gnomes2)
+    ret = getReal(gnomes,gnomes2)
     t = time() - t
-    if p : print(getReal(gnomes,gnomes2))
+    if p : print(ret)
     print(t,'s')
-    if r : return getReal(gnomes, gnomes2)
+    if r : return ret
