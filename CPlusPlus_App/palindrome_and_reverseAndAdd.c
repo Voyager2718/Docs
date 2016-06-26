@@ -87,14 +87,18 @@ char* inverseString(char* str){
 int inverseAdd(struct cell_m* list){
 	int i = 0;
 	char str[16];
-	char* str2;
+	char* str2 = NULL;
 	int sum = 0;
 	for(i; i < getLength(list); i++){
 		sprintf(str, "%d", getCell(list, i)->decimal);
+		if(str2){
+			free(str2);
+		}
 		str2 = inverseString(str);
 		sum += atoi(str2);
 		sum += getCell(list, i)->decimal;
 	}
+	free(str2);
 	return sum;
 }
 
