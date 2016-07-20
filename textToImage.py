@@ -28,7 +28,29 @@ def main():
             print('Fatal Error: Enter a integer.')
             print('-'  * 25)
             continue
-        bgColor = (255, 255, 255)
+        print('Enter background rgb or color name:')
+        bgColor = input().replace('(', '').replace(')', '')
+        try:
+            bgColor = tuple((int(x.strip()) for x in bgColor.split(',')))
+        except ValueError:
+            try:
+                bgColor = bgColor.replace(' ', '').lower()
+                bgColor = {
+                    'black': (0, 0, 0),
+                    'white': (255, 255, 255),
+                    'gray': (128, 128, 128),
+                    'red': (255, 0, 0),
+                    'lime': (0, 255, 0),
+                    'green': (0, 255, 0), 
+                    'blue': (0, 0, 255),
+                    'yellow': (255, 255, 0),
+                    'orange': (255, 128, 0),
+                    'cray': (0, 255, 255)
+                }[bgColor]
+            except KeyError:
+                print('Fatal Error: Enter a RGB color like (128, 128, 128) or a color name within white, black, gray, red, lime, green, blue, yellow, orange, cray.')
+                print('-'  * 25)
+                continue
         print('Enter a font file:')
         font = input()
         try:
@@ -45,8 +67,30 @@ def main():
             print('Fatal Error: Enter a integer.')
             print('-'  * 25)
             continue
+        print('Enter font rgb or color name:')
+        fontColor = input().replace('(', '').replace(')', '')
+        try:
+            fontColor = tuple((int(x.strip()) for x in fontColor.split(',')))
+        except ValueError:
+            try:
+                fontColor = fontColor.replace(' ', '').lower()
+                fontColor = {
+                    'black': (0, 0, 0),
+                    'white': (255, 255, 255),
+                    'gray': (128, 128, 128),
+                    'red': (255, 0, 0),
+                    'lime': (0, 255, 0),
+                    'green': (0, 255, 0), 
+                    'blue': (0, 0, 255),
+                    'yellow': (255, 255, 0),
+                    'orange': (255, 128, 0),
+                    'cray': (0, 255, 255)
+                }[fontColor]
+            except KeyError:
+                print('Fatal Error: Enter a RGB color like (128, 128, 128) or a color name within white, black, gray, red, lime, green, blue, yellow, orange, cray.')
+                print('-'  * 25)
+                continue
         print('Enter a path to save the image:')
-        fontColor = (0, 0, 0) 
         path = input()
         valid = True
     draw(text, (int(sizeX), int(sizeY)), bgColor, font, fontSize, fontColor, path)
