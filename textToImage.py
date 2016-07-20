@@ -7,6 +7,12 @@ def draw(text, size, bgColor, font, fontSize, fontColor, path):
     draw.text((10, 10), text, fontColor, font = font)
     img.save(path)
 
+def fatal(string):
+    print('\033[91m{} \033[00m'.format(string))
+
+def success(string, path):
+    print('\033[93m{} {} \033[00m'.format(string, path))
+
 def main():
     valid = False
     while(not valid):
@@ -17,7 +23,7 @@ def main():
         try:
             sizeX = int(sizeX)
         except ValueError:
-            print('Fatal Error: Enter a integer.')
+            fatal('Fatal Error: Enter a integer.')
             print('-'  * 25)
             continue
         print('Enter your image sizeY:')
@@ -25,7 +31,7 @@ def main():
         try:
             sizeY = int(sizeY)
         except ValueError:
-            print('Fatal Error: Enter a integer.')
+            fatal('Fatal Error: Enter a integer.')
             print('-'  * 25)
             continue
         print('Enter background rgb or color name:')
@@ -48,7 +54,7 @@ def main():
                     'cray': (0, 255, 255)
                 }[bgColor]
             except KeyError:
-                print('Fatal Error: Enter a RGB color like (128, 128, 128) or a color name within white, black, gray, red, lime, green, blue, yellow, orange, cray.')
+                fatal('Fatal Error: Enter a RGB color like (128, 128, 128) or a color name within white, black, gray, red, lime, green, blue, yellow, orange, cray.')
                 print('-'  * 25)
                 continue
         print('Enter a font file:')
@@ -87,14 +93,14 @@ def main():
                     'cray': (0, 255, 255)
                 }[fontColor]
             except KeyError:
-                print('Fatal Error: Enter a RGB color like (128, 128, 128) or a color name within white, black, gray, red, lime, green, blue, yellow, orange, cray.')
+                fatal('Fatal Error: Enter a RGB color like (128, 128, 128) or a color name within white, black, gray, red, lime, green, blue, yellow, orange, cray.')
                 print('-'  * 25)
                 continue
         print('Enter a path to save the image:')
         path = input()
         valid = True
     draw(text, (int(sizeX), int(sizeY)), bgColor, font, fontSize, fontColor, path)
-    print('Success!\nSaved to', path)
+    success('Success!\nSaved to', path)
 
 if __name__ == '__main__':
     main()
